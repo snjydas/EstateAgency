@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 @Entity
 public class Deal {
 	@Id
@@ -14,11 +15,12 @@ public class Deal {
 	private LocalDate dealDate;
 	private double dealCost;
 	private Customer customer;
+
 	private Property property;
-	
+
 	public Deal(LocalDate dealDate, double dealCost, Customer customer, Property property) {
 		super();
-	
+
 		this.dealDate = dealDate;
 		this.dealCost = dealCost;
 		this.customer = customer;
@@ -64,5 +66,5 @@ public class Deal {
 	public void setProperty(Property property) {
 		this.property = property;
 	}
-	
+
 }
