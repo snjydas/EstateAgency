@@ -25,31 +25,7 @@ public class ICustomerServiceImpl implements ICustomerService {
 	}
 
 	@Override
-	public Customer removeCustomer(Customer customer) throws CustomerNotFoundException{
-		if ((cDao.fetchCustomer(custId)).isPresent()) {
-			return cDao.deleteCustomer(customer);
-		} 
-		else {
-			throw new CustomerNotFoundException();
-		}
-	}
-
-	@Override
-	public Customer removeCustomer(int custId) {
-		return (Customer) cDao.deleteCustomer(custId);
-	}
-
-	@Override
-	public Customer viewCustomer(int custId) //throws CustomerNotFoundException {
-		if (cDao.fetchCustomer(custId).isPresent()) {
-			return cDao.fetchCustomer(custId);
-		} else {
-		throw new CustomerNotFoundException();
-		}	
-	}
-
-	@Override
-	public Customer viewCustomer(int custId) {
+	public Customer viewCustomer(int custId) throws CustomerNotFoundException {
 		return cDao.fetchCustomer(custId);
 	}
 
