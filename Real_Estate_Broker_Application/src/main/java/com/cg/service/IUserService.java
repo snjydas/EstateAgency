@@ -1,10 +1,13 @@
 package com.cg.service;
 
+import org.springframework.stereotype.Service;
+
 import com.cg.entity.User;
 
+@Service
 public interface IUserService {
 	
-	User login(User user);
-	
-	User logout(User user);
+	public User login(User user);
+	public User logout(User user);
+
 }
