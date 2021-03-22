@@ -2,11 +2,13 @@ package com.cg.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import com.cg.entity.Property;
 import com.cg.exception.PropertyNotFoundException;
 import com.cg.pojo.PropertyCriteria;
 
-public interface IPropertyRepo {
+public interface IPropertyRepo extends JpaRepository <Property,Integer> {
 	
 	public Property saveProperty(Property property);
 	
