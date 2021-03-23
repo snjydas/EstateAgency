@@ -10,15 +10,16 @@ import com.cg.entity.Deal;
 import com.cg.entity.Property;
 import com.cg.repository.IDealRepo;
 
-public class IDealServiceImpl implements IDealService{
+public class IDealServiceImpl implements IDealService {
 
 	@Autowired
 	IDealRepo dealDao;
+
 	@Override
 	public Deal addDeal(Property property, Customer customer) {
-		LocalDate today= LocalDate.now();
-		return dealDao.saveAndFlush(new Deal(today, property.getOfferCost(), customer,property));
-		
+		LocalDate today = LocalDate.now();
+		return dealDao.saveAndFlush(new Deal(today, property.getOfferCost(), customer, property));
+
 	}
 
 	@Override

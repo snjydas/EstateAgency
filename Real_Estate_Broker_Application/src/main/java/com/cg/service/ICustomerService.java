@@ -6,7 +6,7 @@ import com.cg.entity.Customer;
 import com.cg.exception.CustomerNotFoundException;
 
 public interface ICustomerService {
-	
+
 	public Customer addCustomer(Customer customer);
 
 	public Customer editCustomer(Customer customer);

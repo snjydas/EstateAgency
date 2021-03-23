@@ -17,19 +17,20 @@ public class IPropertyServiceImpl implements IPropertyService {
 
 	@Override
 	public Property addProperty(Property property) {
-		return pDao.saveProperty(property);
-		
+		pDao.saveAndFlush(property);
+		return property;
 	}
 
 	@Override
 	public Property editProperty(Property property) {
-		return pDao.updateProperty(property);
+		pDao.saveAndFlush(property);
+		return property;
 	}
 
 	@Override
-	public Property removeProperty(int propId) throws PropertyNotFoundException {
-
-		return pDao.deleteProperty(propId);
+	public List<Property> removeProperty(int propId) throws PropertyNotFoundException {
+		pDao.deleteById(propId);
+		return pDao.fetchAllProperties();
 	}
 
 	@Override
@@ -43,8 +44,9 @@ public class IPropertyServiceImpl implements IPropertyService {
 	}
 
 	@Override
-	public List<Property> listPropertyByCriteria(PropertyCriteria criteria) {
-		return pDao.fetchPropertyByCriteria(criteria);
+	public List<Property> ListPropertyByCriteria(PropertyCriteria criteria) {
+
+		return pDao.findPropertyByCriteria(criteria);
 	}
 
 }

@@ -1,9 +1,8 @@
 package com.cg.controller;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,49 +20,51 @@ import com.cg.service.IPropertyService;
 @RestController
 @RequestMapping("/property")
 public class PropertyController {
-	
-		@Autowired
-		IPropertyService propertyService;
-		
-		@GetMapping
-		public List<Property> printAllProperties(){
-			return  propertyService.listAllProperties();	
+
+	@Autowired
+	IPropertyService propertyService;
+
+	@PostMapping(value = "/add")
+	public Property addProperty(@RequestBody Property property) {
+		return propertyService.addProperty(property);
+	}
+
+	@PutMapping(value = "/edit")
+	public Property updatePropertyData(@RequestBody Property property) {
+		return propertyService.editProperty(property);
+
+	}
+
+	@DeleteMapping("{propId}")
+	public List<Property> deleteProperty(@PathVariable int propId) throws PropertyNotFoundException {
+		List<Property> p = null;
+		try {
+			p = propertyService.removeProperty(propId);
+		} catch (Exception e) {
+			throw new PropertyNotFoundException();
 		}
-		
-		
-		@GetMapping("/{propId}") 
-		  public Property findPropertyById(@PathVariable int propId)throws PropertyNotFoundException{
-			  Property p=null;
-			  try {
-				  p=propertyService.viewProperty(propId);
-			  }
-				catch(Exception e) {
-					throw new PropertyNotFoundException();
-				}
-				return p;
-		  }
-		
-		
-		@PostMapping(value = "/create")
-		public  List<Property> addProperty(@RequestBody Property property) {
-			return (List<Property>) propertyService.addProperty(property);
+		return p;
+	}
+
+	@GetMapping("/{propId}")
+	public Property findPropertyById(@PathVariable int propId) throws PropertyNotFoundException {
+		Property p = null;
+		try {
+			p = propertyService.viewProperty(propId);
+		} catch (Exception e) {
+			throw new PropertyNotFoundException();
 		}
-		
-		
-		@DeleteMapping("{propId}")
-		public List<Property> removePropertyData(@PathVariable int propId) throws PropertyNotFoundException{
-			return  (List<Property>) propertyService.removeProperty(propId);
-		}
-		
-		@PutMapping(value="/update")
-		public List<Property> updateTraineeData(@RequestBody Property property){
-			return  (List<Property>) propertyService.editProperty(property);
-			
-		}
-		
-		@GetMapping("name/{traineeName}")
-		public List<Property> listPropertyByCriteria(@PathVariable PropertyCriteria criteria) {
-			return propertyService.listPropertyByCriteria(criteria);
-		}
-		
+		return p;
+	}
+
+	@GetMapping
+	public List<Property> printAllProperties() {
+		return propertyService.listAllProperties();
+	}
+
+	@GetMapping("criteria/{configuration}")
+	public List<Property> listPropertyByConfiguration(@PathVariable PropertyCriteria criteria) {
+		return propertyService.ListPropertyByCriteria(criteria);
+	}
+
 }

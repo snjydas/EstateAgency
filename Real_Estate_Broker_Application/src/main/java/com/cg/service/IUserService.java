@@ -6,8 +6,9 @@ import com.cg.entity.User;
 
 @Service
 public interface IUserService {
-	
+
 	public User login(User user);
+
 	public User logout(User user);
 
 }
