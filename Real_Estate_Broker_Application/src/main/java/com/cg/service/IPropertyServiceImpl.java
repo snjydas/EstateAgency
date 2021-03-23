@@ -34,7 +34,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 
 	@Override
 	public Property viewProperty(int propId) throws PropertyNotFoundException {
-			return pDao.fetchProperty(propId);
+		return pDao.findById(propId).get();
 	}
 
 	@Override

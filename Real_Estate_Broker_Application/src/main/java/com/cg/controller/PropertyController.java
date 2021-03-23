@@ -31,16 +31,17 @@ public class PropertyController {
 		}
 		
 		
-		@GetMapping("/{propId}")
-		public ResponseEntity<Property> viewProperty(@PathVariable("propId")int propId) throws PropertyNotFoundException {
-			Property p =  propertyService.viewProperty(propId);
-			if(p!=null) {
-				return new ResponseEntity<Property>(p,HttpStatus.OK);
-			}
-			else {
-				return  new ResponseEntity<Property>(HttpStatus.NOT_FOUND);
-			}
-		}
+		@GetMapping("/{propId}") 
+		  public Property findPropertyById(@PathVariable int propId)throws PropertyNotFoundException{
+			  Property p=null;
+			  try {
+				  p=propertyService.viewProperty(propId);
+			  }
+				catch(Exception e) {
+					throw new PropertyNotFoundException();
+				}
+				return p;
+		  }
 		
 		
 		@PostMapping(value = "/create")

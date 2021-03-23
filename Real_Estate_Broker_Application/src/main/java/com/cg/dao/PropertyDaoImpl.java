@@ -7,6 +7,8 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import com.cg.entity.Property;
+import com.cg.pojo.PropertyCriteria;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,7 +24,20 @@ public class PropertyDaoImpl implements PropertyDao{
 		TypedQuery<Property> q=em.createQuery("select p from Property p",Property.class);
 		return q.getResultList();
 	}
-}
+
+	@Override
+	public List<Property> fetchPropertyByCriteria(PropertyCriteria criteria) {
+		TypedQuery<Property> q=em.createQuery("select p from Property p where p.name like :p",Property.class);
+q.setParameter("p", criteria+"%");
+return q.getResultList();
+	}
+
+//	@Override
+//	public Property saveProperty(Property property) {
+//		em.persist(property);
+//		return property;
+//	}
+//}
 	/*@Override
 	public List<Student> createStudent(Student stu) {
 		em.persist(stu);
@@ -43,4 +58,4 @@ public class PropertyDaoImpl implements PropertyDao{
 //		return q.getResultList();
 //	}
 //
-//}
+}
