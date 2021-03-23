@@ -4,11 +4,12 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.cg.dao.PropertyDao;
 import com.cg.entity.Property;
 import com.cg.exception.PropertyNotFoundException;
 import com.cg.pojo.PropertyCriteria;
 
-public interface IPropertyRepo extends JpaRepository<Property, Integer> {
+public interface IPropertyRepo  extends PropertyDao,JpaRepository<Property, Integer> {
 
 	public Property saveProperty(Property property);
 
