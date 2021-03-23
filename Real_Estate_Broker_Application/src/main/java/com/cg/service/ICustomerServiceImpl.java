@@ -14,29 +14,31 @@ public class ICustomerServiceImpl implements ICustomerService {
 
 	@Override
 	public Customer addCustomer(Customer customer) {
-		cDao.saveCustomer(customer);
-		return (Customer) cDao.fetchAllCustomers();
+		cDao.saveAndFlush(customer);
+		return customer;
 	}
 
 	@Override
 	public Customer editCustomer(Customer customer) {
-		cDao.updateCustomer(customer);
-		return (Customer) cDao.fetchAllCustomers();
+		cDao.saveAndFlush(customer);
+		return customer;
 	}
 
 	@Override
-	public Customer viewCustomer(int custId) throws CustomerNotFoundException {
-		return cDao.fetchCustomer(custId);
+	public Customer removeCustomer(int custId) {
+		Customer c=cDao.findById(custId).get();
+		cDao.deleteById(custId);
+		return c;
 	}
 
 	@Override
-	public Customer removeCustomer(Customer customer) throws CustomerNotFoundException {
-		return (Customer) cDao.deleteCustomer(customer);
+	public Customer viewCustomer(int custId) {
+		return cDao.findById(custId).get();
 	}
 
 	@Override
 	public List<Customer> listAllCustomers() {
-		return cDao.fetchAllCustomers();
+		return cDao.findAll();
 	}
 
 }

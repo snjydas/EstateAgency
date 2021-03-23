@@ -11,7 +11,7 @@ public interface ICustomerService {
 
 	public Customer editCustomer(Customer customer);
 
-	public Customer removeCustomer(Customer customer) throws CustomerNotFoundException;
+	public Customer removeCustomer(int custId) throws CustomerNotFoundException;
 
 	public Customer viewCustomer(int custid) throws CustomerNotFoundException;
 
