@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ICustomerServiceImpl implements ICustomerService {
 	@Autowired
 	ICustomerRepo cDao;
-
 	@Override
 	public Customer addCustomer(Customer customer) {
 		cDao.saveAndFlush(customer);
