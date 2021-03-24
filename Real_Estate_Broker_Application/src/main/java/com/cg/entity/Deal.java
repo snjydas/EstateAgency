@@ -2,10 +2,14 @@ package com.cg.entity;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Deal {
@@ -15,6 +19,8 @@ public class Deal {
 	private LocalDate dealDate;
 	private double dealCost;
 	private Customer customer;
+@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+@JoinColumn(name="customer")
 
 	private Property property;
 

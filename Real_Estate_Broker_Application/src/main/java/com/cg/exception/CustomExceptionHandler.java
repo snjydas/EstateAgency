@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class CustomExceptionHandler {
 	@ResponseBody
 	@ResponseStatus(value = HttpStatus.NOT_FOUND)
-	@ExceptionHandler({ PropertyNotFoundException.class,CustomerNotFoundException.class,PropertyNotFoundException.class })
+	@ExceptionHandler({ Exception.class })
 	public ErrorMapper handleConflict(Exception ex, HttpServletRequest req) {
 		String msg = ex.getMessage();
 		String uri = req.getRequestURL().toString();
