@@ -3,6 +3,7 @@ package com.cg.entity;
 import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -18,12 +19,16 @@ public class Deal {
 	private int dealId;
 	private LocalDate dealDate;
 	private double dealCost;
+	@OneToOne
+	@JoinColumn(name="customer_id", referencedColumnName = "user_id")
 	private Customer customer;
-	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "customer")
-
+	@OneToOne
+	@JoinColumn(name="property_id", referencedColumnName = "propId")
 	private Property property;
 
+	public Deal() {
+		
+	}
 	public Deal(LocalDate dealDate, double dealCost, Customer customer, Property property) {
 		super();
 
@@ -74,3 +79,4 @@ public class Deal {
 	}
 
 }
+

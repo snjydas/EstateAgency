@@ -4,21 +4,23 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.cg.entity.Customer;
 import com.cg.entity.Deal;
 import com.cg.entity.Property;
 import com.cg.repository.IDealRepo;
 
+@Service
 public class IDealServiceImpl implements IDealService {
 
 	@Autowired
 	IDealRepo dealDao;
 
 	@Override
-	public Deal addDeal(Property property, Customer customer) {
+	public Deal addDeal(Deal d) {
 		LocalDate today = LocalDate.now();
-		return dealDao.saveAndFlush(new Deal(today, property.getOfferCost(), customer, property));
+		return dealDao.saveAndFlush(d);
 
 	}
 
