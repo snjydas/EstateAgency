@@ -29,7 +29,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 
 	@Override
 	public Property removeProperty(int propId) throws PropertyNotFoundException {
-		Property p=pDao.findById(propId).get();
+		Property p = pDao.findById(propId).get();
 		pDao.deleteById(propId);
 		return p;
 	}
