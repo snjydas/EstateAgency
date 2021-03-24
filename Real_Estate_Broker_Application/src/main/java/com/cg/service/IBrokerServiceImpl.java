@@ -24,7 +24,13 @@ public class IBrokerServiceImpl implements IBrokerService{
 
 	@Override
 	public Broker editBroker(Broker bro) throws BrokerNotFoundException {
-		bDao.saveAndFlush(bro);
+		try {
+			bDao.findById(bro.getUserid());
+			bDao.saveAndFlush(bro);
+		}
+		catch(Exception e) {
+			throw new BrokerNotFoundException("Given Broker is inappropriate!");
+		}
 		return bro;
 	}
 
@@ -36,7 +42,7 @@ public class IBrokerServiceImpl implements IBrokerService{
 			return op.get();
 		}	
 		else	
-		throw new BrokerNotFoundException();
+		throw new BrokerNotFoundException("Broker with given ID not found,Please Recheck the input!");
 	}
 
 	@Override
