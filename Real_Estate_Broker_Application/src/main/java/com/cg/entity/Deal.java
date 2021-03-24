@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Deal {
@@ -15,7 +16,7 @@ public class Deal {
 	private LocalDate dealDate;
 	private double dealCost;
 	private Customer customer;
-
+@OneToOne
 	private Property property;
 
 	public Deal(LocalDate dealDate, double dealCost, Customer customer, Property property) {
