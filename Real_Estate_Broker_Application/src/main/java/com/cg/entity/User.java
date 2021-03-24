@@ -1,41 +1,32 @@
 package com.cg.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 @Entity
-public class User {
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class User {
+
 	@Id
-	private String userid;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int userId;
 	private String password;
 	private String role;
+	@Column(unique = true)
 	private String mobile;
+	@Column(unique = true)
 	private String email;
-	private String city;
-	
-	
-
-    public User() {
-		super();
-		// TODO Auto-generated constructor stub
+	public int getUserId() {
+		return userId;
 	}
-	public User(String userid,String password,String role,String mobile,String email,String city) {
-    	super();
-    	this.userid=userid;
-    	this.password=password;
-    	this.role=role;
-    	this.mobile=mobile;
-    	this.email=email;
-    	this.city=city;
-    	
-    	
-    }
-	public String getUserid() {
-		return userid;
-	}
-	public void setUserid(String userid) {
-		this.userid = userid;
-	}
+	/*public void setUserId(int userId) {
+		this.userId = userId;
+	}*/
 	public String getPassword() {
 		return password;
 	}
@@ -66,5 +57,20 @@ public class User {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	private String city;
+	public User(int userId, String password, String role, String mobile, String email, String city) {
+		super();
+		this.userId = userId;
+		this.password = password;
+		this.role = role;
+		this.mobile = mobile;
+		this.email = email;
+		this.city = city;
 	}
-    
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}
