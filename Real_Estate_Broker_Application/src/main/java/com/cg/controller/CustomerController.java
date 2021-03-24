@@ -17,32 +17,32 @@ import com.cg.exception.CustomerNotFoundException;
 import com.cg.service.ICustomerService;
 
 @RestController
-@RequestMapping("/customer1")
+@RequestMapping("/customer")
 public class CustomerController {
 
 	@Autowired
 	ICustomerService cService;
-	
+
 	@PostMapping("/add")
 	public Customer addCustomer(@RequestBody Customer c) {
 		return cService.addCustomer(c);
 	}
-	
+
 	@PutMapping("/update")
 	public Customer editCustomer(@RequestBody Customer c) {
 		return cService.editCustomer(c);
 	}
-	
+
 	@DeleteMapping("/id/{custId}")
 	public Customer removeCustomer(@PathVariable int custId) throws CustomerNotFoundException {
-		
+
 		try {
 			return cService.removeCustomer(custId);
 		} catch (CustomerNotFoundException e) {
 			throw new CustomerNotFoundException();
 		}
 	}
-	
+
 	@GetMapping("/id/{custId}")
 	public Customer viewCustomer(@PathVariable int custId) {
 		try {
@@ -53,10 +53,10 @@ public class CustomerController {
 		}
 		return null;
 	}
-	
+
 	@GetMapping("/all")
-	public List<Customer> listAllCustomers(){
+	public List<Customer> listAllCustomers() {
 		return cService.listAllCustomers();
 	}
-	
+
 }

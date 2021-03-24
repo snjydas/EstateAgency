@@ -21,13 +21,12 @@ public class UserController {
 
 	@PostMapping(value = "/login")
 	public ResponseEntity<String> validateLogin(@RequestBody User user) {
-		
 
 		if (user != null) {
 			User user1 = loginService.login(user);
 			return new ResponseEntity<String>("Login Success", HttpStatus.OK);
 		} else {
-			
+
 			return new ResponseEntity<String>("Login Failed, Please Try Again", HttpStatus.NOT_FOUND);
 		}
 	}
@@ -40,10 +39,10 @@ public class UserController {
 		User user1 = logoutService.login(user);
 
 		if (user1 != null) {
-			
-			return new ResponseEntity<String>("Logout Success", HttpStatus.OK); 
+
+			return new ResponseEntity<String>("Logout Success", HttpStatus.OK);
 		} else {
-			
+
 			return new ResponseEntity<String>("Logout Failed, Please Try Again", HttpStatus.NOT_FOUND);
 		}
 
