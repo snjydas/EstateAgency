@@ -20,12 +20,12 @@ public class DealController {
 	@Autowired
 	IDealService dealService;
 
-	@PostMapping("/add")
+	@PostMapping(value = "/add")
 	public Deal addDeal(@RequestBody Property property, Customer customer) {
 		return dealService.addDeal(property, customer);
 	}
 
-	@GetMapping("/all")
+	@GetMapping
 	public List<Deal> printAllDeal() {
 		return dealService.listAllDeals();
 	}
