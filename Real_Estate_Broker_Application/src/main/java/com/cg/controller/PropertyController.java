@@ -29,15 +29,15 @@ public class PropertyController {
 		return propertyService.addProperty(property);
 	}
 
-	@PutMapping(value = "/edit")
+	@PutMapping(value = "/update")
 	public Property updatePropertyData(@RequestBody Property property) {
 		return propertyService.editProperty(property);
 
 	}
 
 	@DeleteMapping("{propId}")
-	public List<Property> deleteProperty(@PathVariable int propId) throws PropertyNotFoundException {
-		List<Property> p = null;
+	public Property deleteProperty(@PathVariable int propId) throws PropertyNotFoundException {
+		Property p = null;
 		try {
 			p = propertyService.removeProperty(propId);
 		} catch (Exception e) {
@@ -45,6 +45,7 @@ public class PropertyController {
 		}
 		return p;
 	}
+
 
 	@GetMapping("/{propId}")
 	public Property findPropertyById(@PathVariable int propId) throws PropertyNotFoundException {

@@ -12,8 +12,7 @@ public interface IPropertyService {
 
 	public Property editProperty(Property property);
 
-	public List<Property> removeProperty(int propId) throws PropertyNotFoundException;
-	// public Property removeProperty(int propId) throws PropertyNotFoundException;
+	public Property removeProperty(int propId) throws PropertyNotFoundException;
 
 	public Property viewProperty(int propId) throws PropertyNotFoundException;
 
