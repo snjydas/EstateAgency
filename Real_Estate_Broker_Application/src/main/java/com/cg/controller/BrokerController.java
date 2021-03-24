@@ -37,6 +37,13 @@ public class BrokerController {
 	public Broker removeBroker(@PathVariable int broId) throws BrokerNotFoundException{
 		return bService.removeBroker(broId);
 	}
+<<<<<<< HEAD
+=======
+	@GetMapping("/id/{broId}")
+	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException{
+		return bService.viewBroker(broId);
+	}
+>>>>>>> f79943c5b3f5670bd38b7f9182ce9fbc1b0c9424
 	@GetMapping("/all")
 	public List<Broker> listAllBrokers(){
 		return bService.listAllBrokers();
