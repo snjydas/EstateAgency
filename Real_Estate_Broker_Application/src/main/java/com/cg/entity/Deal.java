@@ -20,7 +20,7 @@ public class Deal {
 	private double dealCost;
 	private Customer customer;
 @OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
-@JoinColumn(name="customer_FK")
+@JoinColumn(name="customer")
 
 	private Property property;
 
