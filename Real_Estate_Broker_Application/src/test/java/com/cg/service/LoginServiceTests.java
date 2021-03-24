@@ -16,7 +16,7 @@ import com.cg.repository.IUserRepository;
 public class LoginServiceTests {
 
 	@Autowired
-	LoginServiceImpl loginService;
+	IUserService loginService;
 
 	@MockBean
 	IUserRepository repository;
