@@ -33,7 +33,7 @@ public class CustomerController {
 		return cService.editCustomer(c);
 	}
 
-	@DeleteMapping("/id/{custId}")
+	@DeleteMapping("/remove/{custId}")
 	public Customer removeCustomer(@PathVariable int custId) throws CustomerNotFoundException {
 
 		try {

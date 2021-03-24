@@ -35,7 +35,7 @@ public class PropertyController {
 
 	}
 
-	@DeleteMapping("/id/{propId}")
+	@DeleteMapping("/remove/{propId}")
 	public Property deleteProperty(@PathVariable int propId) throws PropertyNotFoundException {
 		Property p = null;
 		try {
