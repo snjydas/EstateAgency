@@ -2,7 +2,10 @@ package com.cg.entity;
 
 import java.util.List;
 
+import javax.persistence.Id;
+
 public class Customer extends User {
+	@Id
 	private int custId;
 	private String custName;
 	private List<Property> properties;
