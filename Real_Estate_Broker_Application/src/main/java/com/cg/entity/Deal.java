@@ -19,8 +19,8 @@ public class Deal {
 	private LocalDate dealDate;
 	private double dealCost;
 	private Customer customer;
-@OneToOne(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
-@JoinColumn(name="customer")
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "customer")
 
 	private Property property;
 
