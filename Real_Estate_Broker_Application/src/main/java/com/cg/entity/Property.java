@@ -21,7 +21,7 @@ public class Property {
 	private String street;
 	private boolean status; // Available(true)/ Sold(false)
 	@ManyToOne(targetEntity = Broker.class)
-	@JoinColumn(name="Broker",referencedColumnName = "user_id")
+	@JoinColumn(name="Broker",referencedColumnName = "user_Id")
 	
 	private Broker broker;
 

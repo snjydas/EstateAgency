@@ -11,7 +11,7 @@ public class Customer extends User {
 
 	private String custName;
 	@OneToMany
-	@JoinColumn(name = "cust_id")
+	@JoinColumn(name = "custId")
 	private List<Property> properties;
 
 	public Customer() {

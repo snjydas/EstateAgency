@@ -10,11 +10,11 @@ import javax.persistence.InheritanceType;
 
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int user_id;
+	private int userId;
 	private String password;
 	private String role;
 	@Column(unique = true)
@@ -33,11 +33,11 @@ public abstract class User {
 	public User() {
 		super();
 	}
-	public int getUserid() {
-		return user_id;
+	public int getUserId() {
+		return userId;
 	}
-	public void setUserid(int userid) {
-		this.user_id = userid;
+	public void setUserId(int userid) {
+		this.userId = userid;
 	}
 	public String getPassword() {
 		return password;
