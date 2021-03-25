@@ -17,7 +17,9 @@ import com.cg.service.IDealService;
 @RestController
 @RequestMapping("/deal")
 public class DealController {
-	@Autowired IDealService dealService;
+	@Autowired
+	IDealService dealService;
+
 	@PostMapping(value = "/add")
 	public Deal addDeal(@RequestBody Property property, Customer customer) {
 		return dealService.addDeal(property, customer);

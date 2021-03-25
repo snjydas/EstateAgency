@@ -35,7 +35,7 @@ public class PropertyController {
 
 	}
 
-	@DeleteMapping("{propId}")
+	@DeleteMapping("/remove/{propId}")
 	public Property deleteProperty(@PathVariable int propId) throws PropertyNotFoundException {
 		Property p = null;
 		try {
@@ -46,8 +46,7 @@ public class PropertyController {
 		return p;
 	}
 
-
-	@GetMapping("/{propId}")
+	@GetMapping("/id/{propId}")
 	public Property findPropertyById(@PathVariable int propId) throws PropertyNotFoundException {
 		Property p = null;
 		try {
@@ -58,13 +57,13 @@ public class PropertyController {
 		return p;
 	}
 
-	@GetMapping
+	@GetMapping("/all")
 	public List<Property> printAllProperties() {
 		return propertyService.listAllProperties();
 	}
 
-	@GetMapping("criteria/{configuration}")
-	public List<Property> listPropertyByConfiguration(@PathVariable PropertyCriteria criteria) {
+	@GetMapping("criteria/{criteria}")
+	public List<Property> listPropertyByCriteria(@PathVariable PropertyCriteria criteria) {
 		return propertyService.ListPropertyByCriteria(criteria);
 	}
 
