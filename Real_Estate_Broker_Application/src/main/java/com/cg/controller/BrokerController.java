@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.cg.entity.Broker;
 import com.cg.exception.BrokerNotFoundException;
+import com.cg.exception.CustomerNotFoundException;
 import com.cg.service.IBrokerService;
 
 @RestController
@@ -29,12 +30,20 @@ public class BrokerController {
 
 	@PutMapping("/update")
 	public Broker editBroker(@RequestBody Broker bro) throws BrokerNotFoundException {
-		return bService.editBroker(bro);
+		try {
+			return bService.editBroker(bro);
+		} catch (BrokerNotFoundException e) {
+			throw new BrokerNotFoundException("The entered custId is not found! Enter a valid custId to edit.");
+		}
 	}
 
 	@DeleteMapping("/remove/{broId}")
 	public Broker removeBroker(@PathVariable int broId) throws BrokerNotFoundException {
-		return bService.removeBroker(broId);
+		try {
+			return bService.removeBroker(broId);
+		} catch (BrokerNotFoundException e) {
+			throw new BrokerNotFoundException("The entered broId is not found! Enter a valid broId to delete.");
+		}
 	}
 
 	@GetMapping("/all")
@@ -46,14 +55,8 @@ public class BrokerController {
 	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException {
 		try {
 			bService.viewBroker(broId);
-<<<<<<< HEAD
-		}
-		catch(Exception e) {
-			throw e;
-=======
 		} catch (Exception e) {
-			throw new BrokerNotFoundException("Broker with given ID is not found, Please Recheck the input!");
->>>>>>> 2b937e512ff20a091603bfa11ba62eb1c1cd42f9
+			throw new BrokerNotFoundException("The entered broId is not found! Enter a valid broId to view.");
 		}
 		return bService.viewBroker(broId);
 	}
