@@ -25,10 +25,10 @@ public class PropertyDaoImpl implements PropertyDao {
 		return q.getResultList();
 	}
 
-//	@Override
-//	public List<Property> fetchPropertyByCriteria(PropertyCriteria criteria) {
-//		TypedQuery<Property> q = em.createQuery("select p from Property p where p.name like :p", Property.class);
-//		q.setParameter("p", criteria + "%");
-//		return q.getResultList();
-//	}
+	@Override
+	public List<Property> fetchPropertyByCriteria(PropertyCriteria criteria) {
+		TypedQuery<Property> q = em.createQuery("select p from Property p where p.configuration =:i", Property.class);
+		q.setParameter("i", criteria.getConfig() + "%");
+		return q.getResultList();
+	}
 }
