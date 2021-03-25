@@ -16,7 +16,7 @@ import com.cg.exception.BrokerNotFoundException;
 import com.cg.service.IBrokerService;
 
 @RestController
-@RequestMapping("/broker")
+@RequestMapping("real-estate-broker-application/broker")
 public class BrokerController {
 	@Autowired
 	IBrokerService bService;
