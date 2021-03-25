@@ -18,18 +18,24 @@ public class IBrokerServiceImpl implements IBrokerService {
 
 	@Override
 	public Broker addBroker(Broker bro) {
+		bro.setRole("Broker");
 		bDao.saveAndFlush(bro);
 		return bro;
 	}
 
 	@Override
 	public Broker editBroker(Broker bro) throws BrokerNotFoundException {
+<<<<<<< HEAD
+		bro.setRole("Broker");
+		bDao.saveAndFlush(bro);
+=======
 		try {
 			bDao.findById(bro.getUserid());
 			bDao.saveAndFlush(bro);
 		} catch (Exception e) {
 			throw new BrokerNotFoundException("Given Broker is inappropriate!");
 		}
+>>>>>>> 2b937e512ff20a091603bfa11ba62eb1c1cd42f9
 		return bro;
 	}
 
@@ -45,7 +51,12 @@ public class IBrokerServiceImpl implements IBrokerService {
 
 	@Override
 	public Broker viewBroker(int broId) throws BrokerNotFoundException {
-		return bDao.findById(broId).get();
+		Optional<Broker> op = bDao.findById(broId);
+		if(op.isPresent()) {
+			return op.get();
+		}	
+		else	
+		throw new BrokerNotFoundException("Broker with given ID not found,Please Recheck the input!");
 	}
 
 	@Override
