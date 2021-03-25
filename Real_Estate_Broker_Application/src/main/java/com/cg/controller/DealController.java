@@ -1,5 +1,6 @@
 package com.cg.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.entity.Customer;
 import com.cg.entity.Deal;
+
 import com.cg.entity.Property;
 import com.cg.service.IDealService;
 
 @RestController
 @RequestMapping("/deal")
 public class DealController {
-	@Autowired
-	IDealService dealService;
-
+	@Autowired IDealService dealService;
 	@PostMapping(value = "/add")
-	public Deal addDeal(@RequestBody Property property, Customer customer) {
-		return dealService.addDeal(property, customer);
+	public Deal addDeal(@RequestBody Deal d) {
+		d.setDealDate(LocalDate.now());
+		return dealService.addDeal(d);
 	}
 
 	@GetMapping

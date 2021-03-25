@@ -8,7 +8,7 @@ import com.cg.entity.Property;
 
 public interface IDealService {
 
-	public Deal addDeal(Property property, Customer customer);
+	public Deal addDeal(Deal d);
 
 	public List<Deal> listAllDeals();
 }

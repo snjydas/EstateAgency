@@ -12,8 +12,4 @@ import com.cg.entity.Property;
 @Repository
 public interface IDealRepo extends JpaRepository<Deal, Integer> {
 
-	public Deal saveDeal(Property property, Customer customer);
-
-	public List<Deal> fetchAllDeals();
-
 }

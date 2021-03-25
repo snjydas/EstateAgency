@@ -10,12 +10,12 @@ import com.cg.entity.Broker;
 import com.cg.exception.BrokerNotFoundException;
 import com.cg.repository.IBrokerRepo;
 
-
 @Service
-public class IBrokerServiceImpl implements IBrokerService{
+public class IBrokerServiceImpl implements IBrokerService {
 
 	@Autowired
 	IBrokerRepo bDao;
+
 	@Override
 	public Broker addBroker(Broker bro) {
 		bDao.saveAndFlush(bro);
@@ -24,19 +24,23 @@ public class IBrokerServiceImpl implements IBrokerService{
 
 	@Override
 	public Broker editBroker(Broker bro) throws BrokerNotFoundException {
-		bDao.saveAndFlush(bro);
+		try {
+			bDao.findById(bro.getUserid());
+			bDao.saveAndFlush(bro);
+		} catch (Exception e) {
+			throw new BrokerNotFoundException("Given Broker is inappropriate!");
+		}
 		return bro;
 	}
 
 	@Override
 	public Broker removeBroker(int broId) throws BrokerNotFoundException {
 		Optional<Broker> op = bDao.findById(broId);
-		if(op.isPresent()) {
+		if (op.isPresent()) {
 			bDao.deleteById(broId);
 			return op.get();
-		}	
-		else	
-		throw new BrokerNotFoundException();
+		} else
+			throw new BrokerNotFoundException("Broker with given ID not found,Please Recheck the input!");
 	}
 
 	@Override
@@ -48,6 +52,5 @@ public class IBrokerServiceImpl implements IBrokerService{
 	public List<Broker> listAllBrokers() {
 		return bDao.findAll();
 	}
-	
 
 }

@@ -1,8 +1,5 @@
 package com.cg.controller;
 
-
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,26 +20,35 @@ import com.cg.service.IBrokerService;
 public class BrokerController {
 	@Autowired
 	IBrokerService bService;
-	
+
 	@PostMapping("/add")
 	public Broker addBroker(@RequestBody Broker bro) {
-		
+
 		return bService.addBroker(bro);
 	}
+
 	@PutMapping("/update")
-	public Broker editBroker(@RequestBody Broker bro) throws BrokerNotFoundException{
+	public Broker editBroker(@RequestBody Broker bro) throws BrokerNotFoundException {
 		return bService.editBroker(bro);
 	}
+
 	@DeleteMapping("/remove/{broId}")
-	public Broker removeBroker(@PathVariable int broId) throws BrokerNotFoundException{
+	public Broker removeBroker(@PathVariable int broId) throws BrokerNotFoundException {
 		return bService.removeBroker(broId);
 	}
-	@GetMapping("/id/{broId}")
-	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException{
-		return bService.viewBroker(broId);
-	}
+
 	@GetMapping("/all")
-	public List<Broker> listAllBrokers(){
+	public List<Broker> listAllBrokers() {
 		return bService.listAllBrokers();
+	}
+
+	@GetMapping("/id/{broId}")
+	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException {
+		try {
+			bService.viewBroker(broId);
+		} catch (Exception e) {
+			throw new BrokerNotFoundException("Broker with given ID is not found, Please Recheck the input!");
+		}
+		return bService.viewBroker(broId);
 	}
 }
