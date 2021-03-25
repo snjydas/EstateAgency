@@ -14,15 +14,15 @@ public abstract class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int userId;
+	private int userid;
 	private String password;
 	private String role;
 	@Column(unique = true)
 	private String mobile;
 	@Column(unique = true)
 	private String email;
-	public int getUserId() {
-		return userId;
+	public int getUserid() {
+		return userid;
 	}
 	/*public void setUserId(int userId) {
 		this.userId = userId;
@@ -58,9 +58,9 @@ public abstract class User {
 		this.city = city;
 	}
 	private String city;
-	public User(int userId, String password, String role, String mobile, String email, String city) {
+	public User(int userid, String password, String role, String mobile, String email, String city) {
 		super();
-		this.userId = userId;
+		this.userid = userid;
 		this.password = password;
 		this.role = role;
 		this.mobile = mobile;
