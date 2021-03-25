@@ -5,11 +5,8 @@ import com.cg.repository.IPropertyRepo;
 import com.cg.entity.Customer;
 import com.cg.entity.Property;
 import com.cg.exception.CustomerNotFoundException;
-import com.cg.exception.PropertyNotFoundException;
-
 import java.util.*;
 import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,10 +15,9 @@ public class ICustomerServiceImpl implements ICustomerService {
 	@Autowired
 	ICustomerRepo cDao;
 
-	
 	@Autowired
 	IPropertyRepo pDao;
-	
+
 	@Override
 	public Customer addCustomer(Customer customer) {
 		customer.setRole("Customer");
@@ -32,9 +28,9 @@ public class ICustomerServiceImpl implements ICustomerService {
 	@Override
 	public Customer editCustomer(Customer customer) {
 		customer.setRole("Customer");
-		List<Integer> l=customer.getProperties().stream().map(p->p.getPropId()).collect(Collectors.toList());
-		List<Property> p=new ArrayList<Property>();
-		for(int i:l) {
+		List<Integer> l = customer.getProperties().stream().map(p -> p.getPropId()).collect(Collectors.toList());
+		List<Property> p = new ArrayList<Property>();
+		for (int i : l) {
 			p.add(pDao.findById(i).get());
 		}
 		customer.setProperties(p);
@@ -43,14 +39,14 @@ public class ICustomerServiceImpl implements ICustomerService {
 	}
 
 	@Override
-	public Customer removeCustomer(int custId) throws CustomerNotFoundException{
-		Customer c=cDao.findById(custId).get();
+	public Customer removeCustomer(int custId) throws CustomerNotFoundException {
+		Customer c = cDao.findById(custId).get();
 		cDao.deleteById(custId);
 		return c;
 	}
 
 	@Override
-	public Customer viewCustomer(int custId) throws CustomerNotFoundException{
+	public Customer viewCustomer(int custId) throws CustomerNotFoundException {
 		return cDao.findById(custId).get();
 	}
 
@@ -58,7 +54,5 @@ public class ICustomerServiceImpl implements ICustomerService {
 	public List<Customer> listAllCustomers() {
 		return cDao.findAll();
 	}
-	
-	
 
 }
