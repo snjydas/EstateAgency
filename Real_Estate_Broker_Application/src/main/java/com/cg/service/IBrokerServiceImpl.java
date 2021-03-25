@@ -25,7 +25,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	@Override
 	public Broker editBroker(Broker bro) throws BrokerNotFoundException {
 		try {
-			bDao.findById(bro.getUserid());
+			bDao.findById(bro.getUserId());
 			bDao.saveAndFlush(bro);
 		} catch (Exception e) {
 			throw new BrokerNotFoundException("Given Broker is inappropriate!");
