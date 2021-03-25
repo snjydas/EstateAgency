@@ -39,6 +39,17 @@ public abstract class User {
 	public void setUserid(int userid) {
 		this.userid = userid;
 	}
+
+
+	public int getUserId() {
+		return userid;
+	}
+
+	/*
+	 * public void setUserId(int userId) { this.userId = userId; }
+	 */
+
+
 	public String getPassword() {
 		return password;
 	}
@@ -68,6 +79,14 @@ public abstract class User {
 	}
 	public void setCity(String city) {
 		this.city = city;
-	}
+	
+
+}
+
+	
+
+
+	
 	
 }
+
