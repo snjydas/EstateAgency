@@ -9,5 +9,5 @@ public interface PropertyDao {
 
 	public List<Property> fetchAllProperties();
 
-//	public List<Property> fetchPropertyByCriteria(PropertyCriteria criteria);
+	public List<Property> fetchPropertyByCriteria(PropertyCriteria criteria);
 }

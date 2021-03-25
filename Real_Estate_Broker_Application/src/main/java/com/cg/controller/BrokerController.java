@@ -1,8 +1,5 @@
 package com.cg.controller;
 
-
-
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,43 +20,40 @@ import com.cg.service.IBrokerService;
 public class BrokerController {
 	@Autowired
 	IBrokerService bService;
-	
+
 	@PostMapping("/add")
 	public Broker addBroker(@RequestBody Broker bro) {
-		
+
 		return bService.addBroker(bro);
 	}
+
 	@PutMapping("/update")
-	public Broker editBroker(@RequestBody Broker bro) throws BrokerNotFoundException{
-		try {
-			viewBroker(bro.getUserid());
-		}
-		catch(Exception e) {
-			throw new BrokerNotFoundException("Given Broker is inappropriate!");
-		}
+	public Broker editBroker(@RequestBody Broker bro) throws BrokerNotFoundException {
 		return bService.editBroker(bro);
 	}
+
 	@DeleteMapping("/remove/{broId}")
-	public Broker removeBroker(@PathVariable int broId) throws BrokerNotFoundException{
-		try {
-			viewBroker(broId);
-		}
-		catch(Exception e) {
-			throw new BrokerNotFoundException("Broker with given Broker ID not found, Please recheck input!");
-		}
+	public Broker removeBroker(@PathVariable int broId) throws BrokerNotFoundException {
 		return bService.removeBroker(broId);
 	}
+
 	@GetMapping("/all")
-	public List<Broker> listAllBrokers(){
+	public List<Broker> listAllBrokers() {
 		return bService.listAllBrokers();
 	}
-	@GetMapping("/get/{broId}")
-	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException{
+
+	@GetMapping("/id/{broId}")
+	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException {
 		try {
 			bService.viewBroker(broId);
+<<<<<<< HEAD
 		}
 		catch(Exception e) {
 			throw e;
+=======
+		} catch (Exception e) {
+			throw new BrokerNotFoundException("Broker with given ID is not found, Please Recheck the input!");
+>>>>>>> 2b937e512ff20a091603bfa11ba62eb1c1cd42f9
 		}
 		return bService.viewBroker(broId);
 	}
