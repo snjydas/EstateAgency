@@ -62,8 +62,8 @@ public class PropertyController {
 		return propertyService.listAllProperties();
 	}
 
-	@GetMapping("criteria/{criteria}")
-	public List<Property> listPropertyByCriteria(@PathVariable PropertyCriteria criteria) {
+	@PostMapping("/criteria")
+	public List<Property> listPropertyByCriteria(@RequestBody PropertyCriteria criteria) {
 		return propertyService.ListPropertyByCriteria(criteria);
 	}
 
