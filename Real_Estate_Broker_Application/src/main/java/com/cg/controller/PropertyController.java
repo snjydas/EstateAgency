@@ -41,7 +41,7 @@ public class PropertyController {
 		try {
 			p = propertyService.removeProperty(propId);
 		} catch (Exception e) {
-			throw new PropertyNotFoundException("The entered propID is not found! Enter a valid propID to delete.");
+			throw new PropertyNotFoundException("The entered propId is not found! Enter a valid propId to delete.");
 		}
 		return p;
 	}
@@ -52,7 +52,7 @@ public class PropertyController {
 		try {
 			p = propertyService.viewProperty(propId);
 		} catch (Exception e) {
-			throw new PropertyNotFoundException("The entered propID is not found! Enter a valid propIDb to find.");
+			throw new PropertyNotFoundException("The entered propId is not found! Enter a valid propId to find.");
 		}
 		return p;
 	}

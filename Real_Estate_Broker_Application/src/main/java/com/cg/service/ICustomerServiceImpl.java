@@ -4,6 +4,8 @@ import com.cg.repository.ICustomerRepo;
 import com.cg.repository.IPropertyRepo;
 import com.cg.entity.Customer;
 import com.cg.entity.Property;
+import com.cg.exception.CustomerNotFoundException;
+import com.cg.exception.PropertyNotFoundException;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -41,14 +43,14 @@ public class ICustomerServiceImpl implements ICustomerService {
 	}
 
 	@Override
-	public Customer removeCustomer(int custId) {
+	public Customer removeCustomer(int custId) throws CustomerNotFoundException{
 		Customer c=cDao.findById(custId).get();
 		cDao.deleteById(custId);
 		return c;
 	}
 
 	@Override
-	public Customer viewCustomer(int custId) {
+	public Customer viewCustomer(int custId) throws CustomerNotFoundException{
 		return cDao.findById(custId).get();
 	}
 

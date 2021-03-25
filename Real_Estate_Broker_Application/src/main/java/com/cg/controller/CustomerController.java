@@ -39,7 +39,7 @@ public class CustomerController {
 		try {
 			return cService.removeCustomer(custId);
 		} catch (CustomerNotFoundException e) {
-			throw new CustomerNotFoundException();
+			throw new CustomerNotFoundException("The entered custId is not found! Enter a valid custId to delete.");
 		}
 	}
 
@@ -48,7 +48,7 @@ public class CustomerController {
 		try {
 			return cService.viewCustomer(custId);
 		} catch (CustomerNotFoundException e) {
-			throw new CustomerNotFoundException();
+			throw new CustomerNotFoundException("The entered custId is not found! Enter a valid custId to find.");
 		}
 	}
 
