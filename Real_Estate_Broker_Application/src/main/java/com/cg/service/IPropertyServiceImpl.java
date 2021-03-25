@@ -47,7 +47,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	@Override
 	public List<Property> ListPropertyByCriteria(PropertyCriteria criteria) {
 
-		return pDao.findPropertyByCriteria(criteria);
+		return pDao.fetchPropertyByCriteria(criteria);
 	}
 
 }

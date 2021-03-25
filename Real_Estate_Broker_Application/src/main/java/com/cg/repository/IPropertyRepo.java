@@ -12,8 +12,8 @@ import com.cg.pojo.PropertyCriteria;
 @Repository
 public interface IPropertyRepo extends PropertyDao, JpaRepository<Property, Integer> {
 
-	public List<Property> fetchAllProperties();
+	//public List<Property> fetchAllProperties();
 
-	public List<Property> findPropertyByCriteria(PropertyCriteria criteria);
+	//public List<Property> findPropertyByCriteria(PropertyCriteria criteria);
 
 }
