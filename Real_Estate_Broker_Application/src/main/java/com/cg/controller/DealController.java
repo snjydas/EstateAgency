@@ -21,6 +21,7 @@ public class DealController {
 	@PostMapping(value = "/add")
 	public Deal addDeal(@RequestBody Deal d) {
 		d.setDealDate(LocalDate.now());
+		d.getProperty().setStatus(false);
 		return dealService.addDeal(d);
 	}
 

@@ -3,44 +3,53 @@ package com.cg.entity;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.MapsId;
 import javax.persistence.OneToMany;
 
-public class Customer extends User {
-	// @GeneratedValue(strategy=GenerationType.AUTO)
-	// private int custId;
-	private String custName;
-	@OneToMany(targetEntity = Property.class, cascade = CascadeType.ALL)
-	private List<Property> properties;
+@Entity
+public class Customer extends User{
 
-	public Customer() {
+		private String custName;
+		@OneToMany
+		@JoinColumn(name="cust_id")
+		private List<Property> properties;
+		
+		public Customer()
+		{
+			
+		}
+		
+		public Customer(String custName, List<Property> properties)
+		{
+			this.custName=custName;
+			this.properties=properties;
+		}
 
-	}
+		public String getCustName() {
+			return custName;
+		}
 
-	public Customer(/* int custId, */ String custName, List<Property> properties) {
-		// this.custId=custId;
-		this.custName = custName;
-		this.properties = properties;
-	}
-	/*
-	 * public int getCustId() { return custId; }
-	 * 
-	 * public void setCustId(int custId) { this.custId = custId; }
-	 */
+		public void setCustName(String custName) {
+			this.custName = custName;
+		}
 
-	public String getCustName() {
-		return custName;
-	}
+		public List<Property> getProperties() {
+			return properties;
+		}
 
-	public void setCustName(String custName) {
-		this.custName = custName;
-	}
+		public void setProperties(List<Property> properties) {
+			this.properties = properties;
+		}
+		
+		
+		
 
-	public List<Property> getProperties() {
-		return properties;
-	}
+	
 
-	public void setProperties(List<Property> properties) {
-		this.properties = properties;
-	}
 
 }

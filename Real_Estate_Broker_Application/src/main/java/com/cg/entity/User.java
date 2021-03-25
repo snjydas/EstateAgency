@@ -8,48 +8,25 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
-
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class User {
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int userid;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int userId;
 	private String password;
 	private String role;
 	@Column(unique = true)
 	private String mobile;
 	@Column(unique = true)
 	private String email;
-	private String city;
-	public User(String password, String role, String mobile, String email, String city) {
-		super();
-		this.password = password;
-		this.role = role;
-		this.mobile = mobile;
-		this.email = email;
-		this.city = city;
-	}
-	public User() {
-		super();
-	}
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
-
-
 	public int getUserId() {
-		return userid;
+		return userId;
 	}
-
-	/*
-	 * public void setUserId(int userId) { this.userId = userId; }
-	 */
-
-
+	/*public void setUserId(int userId) {
+		this.userId = userId;
+	}*/
 	public String getPassword() {
 		return password;
 	}
@@ -79,14 +56,21 @@ public abstract class User {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	private String city;
+	public User(int userId, String password, String role, String mobile, String email, String city) {
+		super();
+		this.userId = userId;
+		this.password = password;
+		this.role = role;
+		this.mobile = mobile;
+		this.email = email;
+		this.city = city;
+	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
-
+	
 }
-
-	
-
-
-	
-	
-}
-

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -19,7 +20,9 @@ public class Property {
 	private String address;
 	private String street;
 	private boolean status; // Available(true)/ Sold(false)
-	@ManyToOne
+	@ManyToOne(targetEntity = Broker.class)
+	@JoinColumn(name="Broker",referencedColumnName = "user_id")
+	
 	private Broker broker;
 
 	public Property(int propId, String configuration, String offerType, double offerCost, double areaSqft, String city,
@@ -35,6 +38,10 @@ public class Property {
 		this.street = street;
 		this.status = status;
 		this.broker = broker;
+	}
+	
+	public Property() {
+		
 	}
 
 	@Override
