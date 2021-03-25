@@ -17,7 +17,7 @@ import com.cg.exception.CustomerNotFoundException;
 import com.cg.service.ICustomerService;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("real-estate-broker-application/customer")
 public class CustomerController {
 
 	@Autowired
@@ -44,14 +44,12 @@ public class CustomerController {
 	}
 
 	@GetMapping("/id/{custId}")
-	public Customer viewCustomer(@PathVariable int custId) {
+	public Customer viewCustomer(@PathVariable int custId) throws CustomerNotFoundException {
 		try {
 			return cService.viewCustomer(custId);
 		} catch (CustomerNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new CustomerNotFoundException();
 		}
-		return null;
 	}
 
 	@GetMapping("/all")

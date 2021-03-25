@@ -19,7 +19,6 @@ public class IDealServiceImpl implements IDealService {
 
 	@Override
 	public Deal addDeal(Deal d) {
-		LocalDate today = LocalDate.now();
 		return dealDao.saveAndFlush(d);
 
 	}

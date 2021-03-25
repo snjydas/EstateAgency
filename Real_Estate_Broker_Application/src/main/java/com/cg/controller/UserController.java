@@ -14,7 +14,7 @@ import com.cg.service.IUserService;
 
 @RestController
 
-@RequestMapping(value = "/user")
+@RequestMapping(value = "real-estate-broker-application/user")
 public class UserController {
 	@Autowired
 	private IUserService loginService;

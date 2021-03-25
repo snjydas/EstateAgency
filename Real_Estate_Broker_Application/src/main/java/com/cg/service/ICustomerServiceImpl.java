@@ -1,9 +1,12 @@
 package com.cg.service;
 
 import com.cg.repository.ICustomerRepo;
+import com.cg.repository.IPropertyRepo;
 import com.cg.entity.Customer;
+import com.cg.entity.Property;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,21 +16,33 @@ public class ICustomerServiceImpl implements ICustomerService {
 	@Autowired
 	ICustomerRepo cDao;
 
+	
+	@Autowired
+	IPropertyRepo pDao;
+	
 	@Override
 	public Customer addCustomer(Customer customer) {
+		customer.setRole("Customer");
 		cDao.saveAndFlush(customer);
 		return customer;
 	}
 
 	@Override
 	public Customer editCustomer(Customer customer) {
-		cDao.saveAndFlush(customer);
+		customer.setRole("Customer");
+		List<Integer> l=customer.getProperties().stream().map(p->p.getPropId()).collect(Collectors.toList());
+		List<Property> p=new ArrayList<Property>();
+		for(int i:l) {
+			p.add(pDao.findById(i).get());
+		}
+		customer.setProperties(p);
+		cDao.save(customer);
 		return customer;
 	}
 
 	@Override
 	public Customer removeCustomer(int custId) {
-		Customer c = cDao.findById(custId).get();
+		Customer c=cDao.findById(custId).get();
 		cDao.deleteById(custId);
 		return c;
 	}
@@ -41,5 +56,7 @@ public class ICustomerServiceImpl implements ICustomerService {
 	public List<Customer> listAllCustomers() {
 		return cDao.findAll();
 	}
+	
+	
 
 }
