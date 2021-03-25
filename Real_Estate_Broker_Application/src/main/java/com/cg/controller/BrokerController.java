@@ -19,7 +19,7 @@ import com.cg.exception.BrokerNotFoundException;
 import com.cg.service.IBrokerService;
 
 @RestController
-@RequestMapping("real-estate-broker-application/broker")
+@RequestMapping("/broker")
 public class BrokerController {
 	@Autowired
 	IBrokerService bService;
@@ -59,7 +59,7 @@ public class BrokerController {
 			bService.viewBroker(broId);
 		}
 		catch(Exception e) {
-			throw new BrokerNotFoundException("Broker with given ID is not found, Please Recheck the input!");
+			throw e;
 		}
 		return bService.viewBroker(broId);
 	}
