@@ -17,7 +17,7 @@ import com.cg.exception.CustomerNotFoundException;
 import com.cg.service.ICustomerService;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("real-estate-broker-application/customer")
 public class CustomerController {
 
 	@Autowired
