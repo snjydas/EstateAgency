@@ -29,12 +29,20 @@ public class BrokerController {
 
 	@PutMapping("/update")
 	public Broker editBroker(@RequestBody Broker bro) throws BrokerNotFoundException {
-		return bService.editBroker(bro);
+		try {
+			return bService.editBroker(bro);
+		} catch (BrokerNotFoundException e) {
+			throw new BrokerNotFoundException("The entered custId is not found! Enter a valid custId to edit.");
+		}
 	}
 
 	@DeleteMapping("/remove/{broId}")
 	public Broker removeBroker(@PathVariable int broId) throws BrokerNotFoundException {
-		return bService.removeBroker(broId);
+		try {
+			return bService.removeBroker(broId);
+		} catch (BrokerNotFoundException e) {
+			throw new BrokerNotFoundException("The entered broId is not found! Enter a valid broId to delete.");
+		}
 	}
 
 	@GetMapping("/all")
@@ -46,11 +54,8 @@ public class BrokerController {
 	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException {
 		try {
 			bService.viewBroker(broId);
-
-		}
-		 catch (Exception e) {
-			throw new BrokerNotFoundException("Broker with given ID is not found, Please Recheck the input!");
-
+		} catch (Exception e) {
+			throw new BrokerNotFoundException("The entered broId is not found! Enter a valid broId to view.");
 		}
 		return bService.viewBroker(broId);
 	}

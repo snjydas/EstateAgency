@@ -14,7 +14,7 @@ import javax.persistence.InheritanceType;
 public abstract class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int userid;
+	private int user_id;
 	private String password;
 	private String role;
 	@Column(unique = true)
@@ -34,10 +34,10 @@ public abstract class User {
 		super();
 	}
 	public int getUserid() {
-		return userid;
+		return user_id;
 	}
 	public void setUserid(int userid) {
-		this.userid = userid;
+		this.user_id = userid;
 	}
 	public String getPassword() {
 		return password;
