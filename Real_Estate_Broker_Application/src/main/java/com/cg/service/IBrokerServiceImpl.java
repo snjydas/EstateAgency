@@ -5,17 +5,16 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.cg.entity.Broker;
 import com.cg.exception.BrokerNotFoundException;
 import com.cg.repository.IBrokerRepo;
 
+
 @Service
-public class IBrokerServiceImpl implements IBrokerService {
+public class IBrokerServiceImpl implements IBrokerService{
 
 	@Autowired
 	IBrokerRepo bDao;
-
 	@Override
 	public Broker addBroker(Broker bro) {
 		bro.setRole("Broker");
@@ -25,28 +24,16 @@ public class IBrokerServiceImpl implements IBrokerService {
 
 	@Override
 	public Broker editBroker(Broker bro) throws BrokerNotFoundException {
-<<<<<<< HEAD
 		bro.setRole("Broker");
 		bDao.saveAndFlush(bro);
-=======
-		try {
-			bDao.findById(bro.getUserid());
-			bDao.saveAndFlush(bro);
-		} catch (Exception e) {
-			throw new BrokerNotFoundException("Given Broker is inappropriate!");
-		}
->>>>>>> 2b937e512ff20a091603bfa11ba62eb1c1cd42f9
 		return bro;
 	}
 
 	@Override
 	public Broker removeBroker(int broId) throws BrokerNotFoundException {
-		Optional<Broker> op = bDao.findById(broId);
-		if (op.isPresent()) {
-			bDao.deleteById(broId);
-			return op.get();
-		} else
-			throw new BrokerNotFoundException("Broker with given ID not found,Please Recheck the input!");
+		Broker b = bDao.findById(broId).get();
+		bDao.deleteById(broId);
+		return b;
 	}
 
 	@Override
@@ -63,5 +50,6 @@ public class IBrokerServiceImpl implements IBrokerService {
 	public List<Broker> listAllBrokers() {
 		return bDao.findAll();
 	}
+	
 
 }
