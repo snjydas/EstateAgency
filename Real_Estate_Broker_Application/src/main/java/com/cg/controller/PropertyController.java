@@ -18,7 +18,7 @@ import com.cg.pojo.PropertyCriteria;
 import com.cg.service.IPropertyService;
 
 @RestController
-@RequestMapping("real-estate-broker-application/property")
+@RequestMapping("/real-estate-broker-application/property")
 public class PropertyController {
 
 	@Autowired

@@ -35,7 +35,7 @@ public class ICustomerServiceImpl implements ICustomerService {
 		}
 		customer.setProperties(p);
 		cDao.save(customer);
-		return customer;
+		return cDao.findById(customer.getUserId()).get();
 	}
 
 	@Override

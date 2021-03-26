@@ -24,7 +24,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	public Broker editBroker(Broker bro) throws BrokerNotFoundException {
 		bro.setRole("Broker");
 		bDao.saveAndFlush(bro);
-		return bro;
+		return bDao.findById(bro.getUserId()).get();
 	}
 
 	@Override

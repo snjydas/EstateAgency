@@ -24,7 +24,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	@Override
 	public Property editProperty(Property property) {
 		pDao.saveAndFlush(property);
-		return property;
+		return pDao.findById(property.getPropId()).get();
 	}
 
 	@Override
