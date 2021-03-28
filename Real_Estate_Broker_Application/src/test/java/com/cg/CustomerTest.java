@@ -36,13 +36,13 @@ public class CustomerTest extends AbstractTest{
 //			Customer cust = super.mapFromJson(content, Customer.class);
 //			assertEquals("cname1",cust.getCustName());
 			
-			String uri = "/real-estate-broker-application/customer/id/2";
+			String uri = "/real-estate-broker-application/customer/id/31";
 			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)).andReturn();
 			int status = mvcResult.getResponse().getStatus();
 			assertEquals(200, status);
 			String content = mvcResult.getResponse().getContentAsString();
 			Customer c = super.mapFromJson(content, Customer.class);
-			assertEquals("cname1", c.getCustName());
+			assertEquals("ccity4", c.getCity());
 		}
 		
 		@Test
@@ -53,7 +53,18 @@ public class CustomerTest extends AbstractTest{
 			assertEquals(200,status);
 			String content = mvcResult.getResponse().getContentAsString();
 			Customer customerList[] = super.mapFromJson(content, Customer[].class);
-			assertEquals("cname1",customerList[0].getCustName());
+			assertEquals("ccity4",customerList[0].getCustName());
+		}
+		
+		@Test
+		public void deleteCustomer() throws Exception{
+			String str = "/real-estate-broker-application/customer/remove/31";
+			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.delete(str)).andReturn();
+			int status = mvcResult.getResponse().getStatus();
+			assertEquals(200,status);
+			String content = mvcResult.getResponse().getContentAsString();
+			Customer cust = super.mapFromJson(content, Customer.class);
+			assertEquals("ccity4",cust.getCity());
 		}
 		
 		@Test
@@ -81,7 +92,7 @@ public class CustomerTest extends AbstractTest{
 		public void updateCustomer() throws Exception {
 			
 			String uri = "/real-estate-broker-application/customer/update";
-			String uri2 = "/real-estate-broker-application/customer/id/6";
+			String uri2 = "/real-estate-broker-application/customer/id/28";
 			
 			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri2)).andReturn();
 			String content = mvcResult.getResponse().getContentAsString();
@@ -96,15 +107,6 @@ public class CustomerTest extends AbstractTest{
 			assertEquals("city36", c1.getCity());
 		}
 		
-		@Test
-		public void deleteCustomer() throws Exception{
-			String str = "/real-estate-broker-application/customer/remove/7";
-			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.delete(str)).andReturn();
-			int status = mvcResult.getResponse().getStatus();
-			assertEquals(200,status);
-			String content = mvcResult.getResponse().getContentAsString();
-			Customer cust = super.mapFromJson(content, Customer.class);
-			assertEquals("city3",cust.getCity());
-		}
+		
 
 }
