@@ -1,7 +1,7 @@
 package com.cg.entity;
 
 import java.util.List;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 public class Customer extends User {
 
 	private String custName;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "custId")
 	private List<Property> properties;
 

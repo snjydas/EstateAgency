@@ -81,7 +81,7 @@ public class CustomerTest extends AbstractTest{
 		public void updateCustomer() throws Exception {
 			
 			String uri = "/real-estate-broker-application/customer/update";
-			String uri2 = "/real-estate-broker-application/customer/id/15";
+			String uri2 = "/real-estate-broker-application/customer/id/6";
 			
 			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri2)).andReturn();
 			String content = mvcResult.getResponse().getContentAsString();
@@ -98,7 +98,7 @@ public class CustomerTest extends AbstractTest{
 		
 		@Test
 		public void deleteCustomer() throws Exception{
-			String str = "/real-estate-broker-application/customer/remove/5";
+			String str = "/real-estate-broker-application/customer/remove/7";
 			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.delete(str)).andReturn();
 			int status = mvcResult.getResponse().getStatus();
 			assertEquals(200,status);

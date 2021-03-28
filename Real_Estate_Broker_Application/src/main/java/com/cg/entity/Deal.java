@@ -2,7 +2,9 @@ package com.cg.entity;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,7 +19,7 @@ public class Deal {
 	private LocalDate dealDate;
 	private double dealCost;
 	@OneToOne
-	@JoinColumn(name="customer_id", referencedColumnName = "user_id")
+	@JoinColumn(name = "customer_id" , referencedColumnName = "user_id" )
 	private Customer customer;
 	@OneToOne
 	@JoinColumn(name="property_id", referencedColumnName = "propId")

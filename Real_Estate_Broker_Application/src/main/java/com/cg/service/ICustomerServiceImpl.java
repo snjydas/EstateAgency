@@ -1,8 +1,10 @@
 package com.cg.service;
 
 import com.cg.repository.ICustomerRepo;
+import com.cg.repository.IDealRepo;
 import com.cg.repository.IPropertyRepo;
 import com.cg.entity.Customer;
+import com.cg.entity.Deal;
 import com.cg.entity.Property;
 import com.cg.exception.CustomerNotFoundException;
 import java.util.*;
@@ -17,6 +19,9 @@ public class ICustomerServiceImpl implements ICustomerService {
 
 	@Autowired
 	IPropertyRepo pDao;
+	
+	@Autowired
+	IDealRepo dDao;
 
 	@Override
 	public Customer addCustomer(Customer customer) {
@@ -40,7 +45,14 @@ public class ICustomerServiceImpl implements ICustomerService {
 
 	@Override
 	public Customer removeCustomer(int custId) throws CustomerNotFoundException {
+		
 		Customer c = cDao.findById(custId).get();
+		List<Deal> l= dDao.findAll();
+		for(Deal i:l) {
+			if(i.getCustomer().getUserId()==custId)
+				dDao.delete(i);
+		}
+			
 		cDao.deleteById(custId);
 		return c;
 	}
