@@ -2,6 +2,8 @@ package com.cg;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.time.LocalDate;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +42,6 @@ public class DealTest extends AbstractTest{
 	public void createDeal() throws Exception{
 		String uri = "/real-estate-broker-application/deal/add";
 		Deal d= new Deal();
-	    
 	    Customer c =new Customer();
 	    c.setUserId(32);
 	    Property p = new Property();
