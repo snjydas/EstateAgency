@@ -55,7 +55,7 @@ public class DealTest extends AbstractTest{
 	    assertEquals(200, status);
 	    String content = mvcResult2.getResponse().getContentAsString();
 		Deal d1= super.mapFromJson(content, Deal.class);
-		assertEquals(5, d1.getCustomer().getUserId());
+		assertEquals(5, d1.getProperty().getPropId());
 	}
 		
 }
