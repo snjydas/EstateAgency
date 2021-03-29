@@ -29,7 +29,14 @@ public class CustomerController {
 	}
 
 	@PutMapping("/update")
-	public Customer editCustomer(@RequestBody Customer c) {
+	public Customer editCustomer(@RequestBody Customer c) throws CustomerNotFoundException{
+		try {
+			viewCustomer(c.getUserId());
+		}
+		catch(Exception e) {
+			throw new CustomerNotFoundException("Given Customer is inapproproate");
+		}
+		
 		return cService.editCustomer(c);
 	}
 
