@@ -77,7 +77,6 @@ public class IBrokerServiceImpl implements IBrokerService {
 		for(Deal i:l) {
 			if(i.getProperty().getBroker().getUserId()==broId) {
 				dDao.delete(i);
-
 			}
 		}
 		

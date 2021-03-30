@@ -106,6 +106,6 @@ public class BrokerTest extends AbstractTest{
 		assertEquals(200,status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Broker bro = super.mapFromJson(content, Broker.class);
-		assertEquals("city3",bro.getCity());
+		assertEquals("Vizayanagaram",bro.getCity());
 	}
 }
