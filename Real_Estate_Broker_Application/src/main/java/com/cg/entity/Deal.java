@@ -11,6 +11,13 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+/***************************************************************************
+ * 
+ * @author 			P. ARSHIYA SHAHINA
+ * Description 		It is an entity class that provides all the fields of DealS
+ * Version			1.0
+ * Created Date		30-MAR-2021
+ ***************************************************************************/
 
 /***************************************************************************
  * 
