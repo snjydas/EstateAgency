@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.cg.entity.Customer;
 import com.cg.exception.CustomerNotFoundException;
+import com.cg.exception.PasswordNotMatchException;
 
 public interface ICustomerService {
 
@@ -16,4 +17,11 @@ public interface ICustomerService {
 	public Customer viewCustomer(int custid) throws CustomerNotFoundException;
 
 	public List<Customer> listAllCustomers();
+
+	Boolean signIn(Customer Customer) throws CustomerNotFoundException;
+
+	Boolean signOut(Customer customer) throws CustomerNotFoundException;
+
+	
+	Customer changePassword(int Custid, Customer customer) throws CustomerNotFoundException, PasswordNotMatchException;
 }
