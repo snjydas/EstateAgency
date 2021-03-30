@@ -21,9 +21,8 @@ public class UserController {
 
 	@PostMapping(value = "/login")
 	public ResponseEntity<String> validateLogin(@RequestBody User user) {
-
-		if (user != null) {
-			User user1 = loginService.login(user);
+		User user1 = loginService.login(user);
+		if (user1 != null) {
 			return new ResponseEntity<String>("Login Success", HttpStatus.OK);
 		} else {
 

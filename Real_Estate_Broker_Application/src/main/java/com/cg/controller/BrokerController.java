@@ -17,6 +17,7 @@ import com.cg.entity.Broker;
 import com.cg.exception.BrokerNotFoundException;
 import com.cg.exception.PasswordNotMatchException;
 import com.cg.service.IBrokerService;
+
 /**
  * 
  * @author 			T. CHAITANYA
@@ -25,6 +26,7 @@ import com.cg.service.IBrokerService;
  * Version 			1.0
  * Created Date		30-MAR-2021
  */
+
 @RestController
 @RequestMapping("real-estate-broker-application/broker")
 public class BrokerController {
