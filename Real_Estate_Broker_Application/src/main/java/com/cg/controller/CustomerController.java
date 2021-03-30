@@ -3,6 +3,8 @@ package com.cg.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.entity.Customer;
 import com.cg.exception.CustomerNotFoundException;
+import com.cg.exception.PasswordNotMatchException;
 import com.cg.service.ICustomerService;
 
 @RestController
@@ -62,6 +65,20 @@ public class CustomerController {
 	@GetMapping("/all")
 	public List<Customer> listAllCustomers() {
 		return cService.listAllCustomers();
+	}
+	
+	@PostMapping("/login")
+	public ResponseEntity<Boolean> loginCustomer(@RequestBody Customer customer) throws CustomerNotFoundException{
+		return new ResponseEntity<Boolean>(cService.signIn(customer),HttpStatus.OK);
+
+	}
+	@PostMapping("/logout")
+	public ResponseEntity<Boolean> logoutCustomer(@RequestBody Customer customer) throws CustomerNotFoundException{
+		return new ResponseEntity<Boolean>(cService.signOut(customer),HttpStatus.OK);
+	}
+	@PutMapping("/updatepassword")
+	public ResponseEntity<Customer> updatePassword(@RequestBody Customer customer) throws CustomerNotFoundException, PasswordNotMatchException{
+		return new ResponseEntity<Customer>(cService.changePassword(customer.getUserId(), customer),HttpStatus.OK);
 	}
 
 }
