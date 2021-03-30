@@ -8,6 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+/***************************************************************************
+ * 
+ * @author 			
+ * Description 		It is an entity class that provides all the fields of User
+ * Version			1.0
+ * Created Date		30-MAR-2021
+ ***************************************************************************/
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)

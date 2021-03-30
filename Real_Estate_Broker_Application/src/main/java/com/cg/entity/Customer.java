@@ -6,6 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
+/***************************************************************************
+ * 
+ * @author 			
+ * Description 		It is an entity class that provides all the fields of User
+ * Version			1.0
+ * Created Date		30-MAR-2021
+ ***************************************************************************/
+
 @Entity
 public class Customer extends User {
 
