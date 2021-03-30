@@ -36,7 +36,7 @@ public class BrokerTest extends AbstractTest{
 		assertEquals(200,status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Broker bro = super.mapFromJson(content, Broker.class);
-		assertEquals("bname1",bro.getBroName());
+		assertEquals("Jagan",bro.getBroName());
 	}
 	
 	
@@ -48,7 +48,7 @@ public class BrokerTest extends AbstractTest{
 		assertEquals(200,status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Broker brokerList[] = super.mapFromJson(content, Broker[].class);
-		assertEquals("bname1",brokerList[0].getBroName());
+		assertEquals("Baskar",brokerList[1].getBroName());
 	}
 	
 	
@@ -57,12 +57,12 @@ public class BrokerTest extends AbstractTest{
 		String uri = "/real-estate-broker-application/broker/add";
 		List<Property> p = new ArrayList<Property>();
 		Broker bro = new Broker();
-		bro.setPassword("password2");
+		bro.setPassword("Ramu*&67");
 		bro.setRole("Broker");
-		bro.setMobile("mobile4");
-		bro.setEmail("email4");
-		bro.setCity("city3");
-		bro.setBroName("name3");
+		bro.setMobile("9876784567");
+		bro.setEmail("ramu7765@gmail.com");
+		bro.setCity("Delhi");
+		bro.setBroName("Ram Suresh");
 		bro.setProperties(p);
 		String inputJson = super.mapToJson(bro);
 		System.out.println("==========================="+inputJson+"======================================");
@@ -82,37 +82,26 @@ public class BrokerTest extends AbstractTest{
 	public void updateBroker() throws Exception{
 		
 		String uri = "/real-estate-broker-application/broker/update";
-		String uri2 = "/real-estate-broker-application/broker/id/9";
+		String uri2 = "/real-estate-broker-application/broker/id/3";
 
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri2)).andReturn();
 		String content = mvcResult.getResponse().getContentAsString();
 		Broker b = super.mapFromJson(content, Broker.class);
-		b.setCity("city3");
+		b.setCity("Chennai");
 		String inputJson = super.mapToJson(b);
 		MvcResult mvcResult1 = mvc.perform(MockMvcRequestBuilders.put(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson)).andReturn();
 		int status = mvcResult1.getResponse().getStatus();
 		assertEquals(200, status);
 		String content1 = mvcResult1.getResponse().getContentAsString();
 		Broker b1 = super.mapFromJson(content1, Broker.class);
-		assertEquals("city3", b1.getCity());
+		assertEquals("Chennai", b1.getCity());
 	}
 	
-	//****working********
-	
-//	@Test
-//	public void updateBroker() throws BrokerNotFoundException {
-//		List<Property> li = new ArrayList<Property>();
-//		Broker bro = new Broker("pass3","Broker", "0123456789", "email33", "hyd", "Howle",li);
-//		
-//		iSer.addBroker(bro);
-//		bro.setBroName("Bakra");
-//		iSer.editBroker(bro);
-//		assertEquals("Bakra", iSer.viewBroker(5).getBroName());
-//	}
+
 	
 	@Test
 	public void deleteBroker() throws Exception{
-		String uri = "/real-estate-broker-application/broker/remove/16";
+		String uri = "/real-estate-broker-application/broker/remove/20";
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.delete(uri)).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200,status);
