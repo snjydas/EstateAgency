@@ -3,7 +3,17 @@ package com.cg.service;
 import java.util.List;
 import com.cg.entity.Broker;
 import com.cg.exception.BrokerNotFoundException;
+
+/********************************************************************************************************
+ * 
+ * @author 		T. CHAITANYA
+ * Description	It is an interface of service layer that provides various methods for its implementation class
+ * Version		1.0
+ * Created Date	30-MAR-2021 
+ ********************************************************************************************************/
+
 import com.cg.exception.PasswordNotMatchException;
+
 
 public interface IBrokerService {
 
