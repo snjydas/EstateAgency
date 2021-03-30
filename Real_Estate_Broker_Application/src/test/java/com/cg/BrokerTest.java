@@ -76,7 +76,6 @@ public class BrokerTest extends AbstractTest{
 	
 	
 	
-	//********Not working properly*************
 	
 	@Test
 	public void updateBroker() throws Exception{
