@@ -22,29 +22,29 @@ public class PropertyTest extends AbstractTest {
 	
 	@Test
 	public void getProperty() throws Exception{
-		String uri="/real-estate-broker-application/property/id/1";
+		String uri="/real-estate-broker-application/property/id/11";
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Property p = super.mapFromJson(content, Property.class);
-		assertEquals("padd1", p.getAddress());
+		assertEquals("3-99/A", p.getAddress());
 	}
 	
 	@Test
 	public void createProperty() throws Exception{
 		String uri="/real-estate-broker-application/property/add";
 		Property p= new Property();
-		p.setAddress("padd2");
+		p.setAddress("3-589/A");
 		p.setAreaSqft(600000);
 		Broker b= new Broker();
-		b.setUserId(9);
+		b.setUserId(2);
 		p.setBroker(b);
-		p.setCity("city5");
+		p.setCity("Hyderabad");
 		p.setConfiguration("Flat");
 		p.setOfferCost(900000);
-		p.setOfferType("Rent");
-		p.setStreet("street2");
+		p.setOfferType("Sell");
+		p.setStreet("RTC road");
 		p.setStatus(true);
 		
 		String inputJson=super.mapToJson(p);
@@ -53,7 +53,7 @@ public class PropertyTest extends AbstractTest {
 		assertEquals(200, status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Property p1=super.mapFromJson(content, Property.class);
-		assertEquals("padd2",p1.getAddress());
+		assertEquals("3-589/A",p1.getAddress());
 		
 	}
 	
@@ -65,18 +65,18 @@ public class PropertyTest extends AbstractTest {
 		assertEquals(200, status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Property p[] = super.mapFromJson(content, Property[].class);
-		assertEquals("padd1", p[0].getAddress());
+		assertEquals("3-79/D", p[0].getAddress());
 	}
 	
 	@Test
 	public void deleteProperty() throws Exception{
-		String uri="/real-estate-broker-application/property/remove/33";
+		String uri="/real-estate-broker-application/property/remove/14";
 		MvcResult mvcResult=mvc.perform(MockMvcRequestBuilders.delete(uri)).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Property p=super.mapFromJson(content, Property.class);
-		assertEquals("city5", p.getCity());
+		assertEquals("Khammam", p.getCity());
 	}
 	
 	@Test
@@ -84,16 +84,16 @@ public class PropertyTest extends AbstractTest {
 		String uri1="/real-estate-broker-application/property/update";
 		
 		
-		String uri="/real-estate-broker-application/property/id/22";
+		String uri="/real-estate-broker-application/property/id/11";
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)).andReturn();
 		String content = mvcResult.getResponse().getContentAsString();
 		Property p = super.mapFromJson(content, Property.class);
-		p.setAddress("padd45");
+		p.setAddress("3-79/D");
 		String inputJson = super.mapToJson(p);
 		MvcResult mvcResult1=mvc.perform(MockMvcRequestBuilders.put(uri1).contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson)).andReturn();
 		String content1 = mvcResult1.getResponse().getContentAsString();
 		Property p1=super.mapFromJson(content1, Property.class);
-		assertEquals("padd45", p1.getAddress());
+		assertEquals("3-79/D", p1.getAddress());
 		 
 	}
 	
@@ -102,14 +102,14 @@ public class PropertyTest extends AbstractTest {
 		String uri = "/real-estate-broker-application/property/criteria";
 		
 		PropertyCriteria pc= new PropertyCriteria();
-		pc.setCity("city4");
+		pc.setCity("Hyderabad");
 		String inputJson = super.mapToJson(pc);
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson)).andReturn();
 		String content = mvcResult.getResponse().getContentAsString();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);
 		Property p[] = super.mapFromJson(content, Property[].class);
-		assertEquals(60000, p[0].getOfferCost());
+		assertEquals(15000, p[0].getOfferCost());
 	}
 
 }

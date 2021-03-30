@@ -29,7 +29,7 @@ public class DealTest extends AbstractTest{
 		assertEquals(200,status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Deal dealList[] = super.mapFromJson(content, Deal[].class);
-		assertEquals(900000,dealList[0].getDealCost());
+		assertEquals(10000,dealList[0].getDealCost());
 	}
 	
 	@Test
@@ -37,9 +37,9 @@ public class DealTest extends AbstractTest{
 		String uri = "/real-estate-broker-application/deal/add";
 		Deal d= new Deal();
 	    Customer c =new Customer();
-	    c.setUserId(32);
+	    c.setUserId(8);
 	    Property p = new Property();
-	    p.setPropId(5);
+	    p.setPropId(13);
 	    d.setCustomer(c);
 	    d.setProperty(p);
 	    d.setDealCost(900000);
@@ -49,7 +49,7 @@ public class DealTest extends AbstractTest{
 	    assertEquals(200, status);
 	    String content = mvcResult2.getResponse().getContentAsString();
 		Deal d1= super.mapFromJson(content, Deal.class);
-		assertEquals(5, d1.getProperty().getPropId());
+		assertEquals(13, d1.getProperty().getPropId());
 	}
 		
 }
