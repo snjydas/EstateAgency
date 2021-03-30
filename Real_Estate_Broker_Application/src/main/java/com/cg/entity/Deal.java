@@ -1,20 +1,14 @@
 package com.cg.entity;
 
 import java.time.LocalDate;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 
@@ -24,22 +18,23 @@ public class Deal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int dealId;
-	
+
 	@JsonDeserialize(using = LocalDateDeserializer.class)
 	@JsonSerialize(using = LocalDateSerializer.class)
-	//@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	// @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDate dealDate;
 	private double dealCost;
 	@OneToOne
-	@JoinColumn(name = "customer_id" , referencedColumnName = "user_id" )
+	@JoinColumn(name = "customer_id", referencedColumnName = "user_id")
 	private Customer customer;
 	@OneToOne
-	@JoinColumn(name="property_id", referencedColumnName = "propId")
+	@JoinColumn(name = "property_id", referencedColumnName = "propId")
 	private Property property;
 
 	public Deal() {
-		
+
 	}
+
 	public Deal(LocalDate dealDate, double dealCost, Customer customer, Property property) {
 		super();
 
@@ -90,4 +85,3 @@ public class Deal {
 	}
 
 }
-

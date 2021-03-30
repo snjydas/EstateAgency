@@ -28,13 +28,6 @@ public class CustomerTest extends AbstractTest{
 	
 	 @Test
 		public void getCustomer() throws Exception{
-//			String str = "real-estate-broker-application/customer/id/2";
-//			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(str)).andReturn();
-//			int status = mvcResult.getResponse().getStatus();
-//			assertEquals(200,status);
-//			String content = mvcResult.getResponse().getContentAsString();
-//			Customer cust = super.mapFromJson(content, Customer.class);
-//			assertEquals("cname1",cust.getCustName());
 			
 			String uri = "/real-estate-broker-application/customer/id/31";
 			MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)).andReturn();
