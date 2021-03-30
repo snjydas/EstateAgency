@@ -3,7 +3,7 @@ package com.cg.service;
 import java.util.List;
 import com.cg.entity.Broker;
 import com.cg.exception.BrokerNotFoundException;
-<<<<<<< HEAD
+
 /********************************************************************************************************
  * 
  * @author 		T. CHAITANYA
@@ -11,10 +11,10 @@ import com.cg.exception.BrokerNotFoundException;
  * Version		1.0
  * Created Date	30-MAR-2021 
  ********************************************************************************************************/
-=======
+
 import com.cg.exception.PasswordNotMatchException;
 
->>>>>>> 013bd4bcfb91d47f4fae0d14684ff420242c1b0a
+
 public interface IBrokerService {
 
 	public Broker addBroker(Broker bro);
