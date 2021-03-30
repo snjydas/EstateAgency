@@ -13,6 +13,7 @@ import com.cg.exception.BrokerNotFoundException;
  ********************************************************************************************************/
 
 import com.cg.exception.PasswordNotMatchException;
+import com.cg.exception.PropertyNotFoundException;
 
 
 public interface IBrokerService {

@@ -65,7 +65,6 @@ public class BrokerTest extends AbstractTest{
 		bro.setBroName("Ram Suresh");
 		bro.setProperties(p);
 		String inputJson = super.mapToJson(bro);
-		System.out.println("==========================="+inputJson+"======================================");
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson)).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);
@@ -75,8 +74,6 @@ public class BrokerTest extends AbstractTest{
 	}
 	
 	
-	
-	//********Not working properly*************
 	
 	@Test
 	public void updateBroker() throws Exception{
@@ -107,6 +104,6 @@ public class BrokerTest extends AbstractTest{
 		assertEquals(200,status);
 		String content = mvcResult.getResponse().getContentAsString();
 		Broker bro = super.mapFromJson(content, Broker.class);
-		assertEquals("city3",bro.getCity());
+		assertEquals("Vizayanagaram",bro.getCity());
 	}
 }

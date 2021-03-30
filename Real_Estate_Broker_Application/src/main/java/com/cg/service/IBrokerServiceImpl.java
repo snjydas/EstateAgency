@@ -2,13 +2,19 @@ package com.cg.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.cg.entity.Broker;
+import com.cg.entity.Deal;
+import com.cg.entity.Property;
 import com.cg.exception.BrokerNotFoundException;
 import com.cg.exception.PasswordNotMatchException;
+import com.cg.exception.PropertyNotFoundException;
 import com.cg.repository.IBrokerRepo;
+import com.cg.repository.IDealRepo;
+import com.cg.repository.IPropertyRepo;
 /************************************************************************************
  *          @author			T. CHAITANYA
  *          Description  	It is a service class that provides methods for performing CRUD operations on Broker  
@@ -21,6 +27,11 @@ public class IBrokerServiceImpl implements IBrokerService {
 
 	@Autowired
 	IBrokerRepo bDao;
+	
+	@Autowired
+	IDealRepo dDao;
+	
+
 	/*****************************************************
 	 * Method			addBroker
 	 * Description		To add new Broker to database
@@ -58,9 +69,20 @@ public class IBrokerServiceImpl implements IBrokerService {
 	 * @throws BrokerNotFoundException	It is raised due to invalid Broker ID
 	 * Created By 						T. CHAITANYA
 	 * Created Date						30-MAR-2021
+	 * @throws PropertyNotFoundException 
 	 *****************************************************/
 	@Override
 	public Broker removeBroker(int broId) throws BrokerNotFoundException {
+		List<Deal> l= dDao.findAll();
+		for(Deal i:l) {
+			if(i.getProperty().getBroker().getUserId()==broId) {
+				dDao.delete(i);
+
+			}
+		}
+		
+		
+		
 		Broker b = bDao.findById(broId).get();
 		bDao.deleteById(broId);
 		return b;
