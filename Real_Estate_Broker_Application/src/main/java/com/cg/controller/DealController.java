@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.cg.entity.Deal;
+import com.cg.exception.DealNotAvailableException;
 import com.cg.service.IDealService;
 
 @RestController
@@ -19,7 +20,7 @@ public class DealController {
 	IDealService dealService;
 
 	@PostMapping(value = "/add")
-	public Deal addDeal(@RequestBody Deal d) {
+	public Deal addDeal(@RequestBody Deal d) throws DealNotAvailableException {
 		d.setDealDate(LocalDate.now());
 		d.getProperty().setStatus(false);
 		return dealService.addDeal(d);

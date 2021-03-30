@@ -1,6 +1,6 @@
 package com.cg.exception;
 /**************************************************************************
- * @author                 P.saiteja reddy
+ * @author                 P.Saiteja Reddy
  * Description             It is a exception class that handles the exception occurs at 
  *                         service level
  * version                 1.0
