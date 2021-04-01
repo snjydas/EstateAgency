@@ -19,13 +19,6 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
  * Created Date		30-MAR-2021
  ***************************************************************************/
 
-/***************************************************************************
- * 
- * @author 			
- * Description 		It is an entity class that provides all the fields of User
- * Version			1.0
- * Created Date		30-MAR-2021
- ***************************************************************************/
 
 @Entity
 
