@@ -13,7 +13,12 @@ import java.util.*;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+/***************************************************************************************************************************
+ *         @author			Roosa Mazoomdar
+ *         @Description  	It is a service class that provides methods for performing CRUD and other operations on Customer  
+ *         @version        	1.0
+ *         @since    		02-APR-2020
+ ***************************************************************************************************************************/
 @Service
 public class ICustomerServiceImpl implements ICustomerService {
 	@Autowired
@@ -25,12 +30,30 @@ public class ICustomerServiceImpl implements ICustomerService {
 	@Autowired
 	IDealRepo dDao;
 
+	/*******************************************************
+	 * Method			 addCustomer
+	 * Description		 To add new Customer to database
+	 * @Param customer   New Customer object
+	 * @returns Customer created Customer field in database
+	 * Created By 		 Roosa Mazoomdar
+	 * Created Date		 30-MAR-2021
+	 *******************************************************/
+	
 	@Override
 	public Customer addCustomer(Customer customer) {
 		customer.setRole("Customer");
 		cDao.saveAndFlush(customer);
 		return customer;
 	}
+	
+	/*******************************************************
+	 * Method			 editCustomer
+	 * Description		 To update Customer in the database
+	 * @Param customer   updated Customer object
+	 * @returns Customer updated customer 
+	 * Created By 		 Roosa Mazoomdar
+	 * Created Date		 30-MAR-2021
+	 *******************************************************/
 
 	@Override
 	public Customer editCustomer(Customer customer) {
@@ -45,6 +68,16 @@ public class ICustomerServiceImpl implements ICustomerService {
 		return cDao.findById(customer.getUserId()).get();
 	}
 
+	/*******************************************************************************
+	 * Method			 					removeCustomer
+	 * Description		 					To delete Customer in the database
+	 * @Param custId 	 					Customer Id which should delete
+	 * @returns Customer 					deleted customer 
+	 * @throws CustomerNotFoundException	It is raised due to invalid Customer ID
+	 * Created By 		 					Roosa Mazoomdar, Rakshith Vuppala
+	 * Created Date							30-MAR-2021
+	 *******************************************************************************/
+	
 	@Override
 	public Customer removeCustomer(int custId) throws CustomerNotFoundException {
 		
@@ -59,10 +92,29 @@ public class ICustomerServiceImpl implements ICustomerService {
 		return c;
 	}
 
+
+	/*****************************************************************************************
+	 * Method			 					viewCustomer
+	 * Description		 					To get Customer in the database with particular Id
+	 * @Param custId 	 					Customer Id of the required Customer
+	 * @returns Customer 					Customer with given Id 
+	 * @throws CustomerNotFoundException	It is raised due to invalid Customer ID
+	 * Created By 		 					Roosa Mazoomdar
+	 * Created Date							30-MAR-2021
+	 ******************************************************************************************/
+	
 	@Override
 	public Customer viewCustomer(int custId) throws CustomerNotFoundException {
 		return cDao.findById(custId).get();
 	}
+	
+	/*****************************************************************************************
+	 * Method			 					listAllCustomers
+	 * Description		 					To get Customer all the database
+	 * @returns List 					    All Customers as a List 
+	 * Created By 		 					Roosa Mazoomdar
+	 * Created Date							30-MAR-2021
+	 ******************************************************************************************/
 
 	@Override
 	public List<Customer> listAllCustomers() {

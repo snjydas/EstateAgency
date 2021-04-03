@@ -18,14 +18,13 @@ import com.cg.exception.BrokerNotFoundException;
 import com.cg.exception.PasswordNotMatchException;
 import com.cg.service.IBrokerService;
 
-/**
- * 
+/***********************************************************************************************
  * @author 			T. CHAITANYA
  * Description		It is a rest controller class that controls the data flow into model object
  					and updates the view whenever data changes
- * Version 			1.0
- * Created Date		30-MAR-2021
- */
+ * @version 		1.0
+ * @since		    30-MAR-2021
+ ***********************************************************************************************/
 
 @RestController
 @RequestMapping("real-estate-broker-application/broker")
@@ -105,7 +104,7 @@ public class BrokerController {
 	public List<Broker> listAllBrokers() {
 		return bService.listAllBrokers();
 	}
-	/********************************************************************************************
+	/***********************************************************************************************************************
 	 * Method                          	viewBroker
      * Description                     	It is used to get particular Broker from Broker entity
      * @param broId                		Broker's reference ID.
@@ -116,7 +115,7 @@ public class BrokerController {
      *Created By                       	T. CHAITANYA
      *Created Date                     	30-MAR-2021                            
 	 
-	 **********************************************************************************************/
+	 ************************************************************************************************************************/
 	@GetMapping("/id/{broId}")
 	public Broker viewBroker(@PathVariable int broId) throws BrokerNotFoundException {
 		try {

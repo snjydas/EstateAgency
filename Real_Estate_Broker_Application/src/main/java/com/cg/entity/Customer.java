@@ -8,10 +8,10 @@ import javax.persistence.OneToMany;
 
 /***************************************************************************
  * 
- * @author 			
+ * @author 			Roosa Mazoomdar
  * Description 		It is an entity class that provides all the fields of User
- * Version			1.0
- * Created Date		30-MAR-2021
+ * @version			1.0
+ * @since			30-MAR-2021
  ***************************************************************************/
 
 @Entity
@@ -30,19 +30,45 @@ public class Customer extends User {
 		this.custName = custName;
 		this.properties = properties;
 	}
-
+	/*******************************************
+	 * Method			Getter Method
+	 * Description 		To get name of Customer
+	 * @returns String	Customer name 
+	 * Created By		Roosa Mazoomdar
+	 * Created Date		30-MAR-2021
+	 *******************************************/
 	public String getCustName() {
 		return custName;
 	}
-
+	/*******************************************
+	 * Method			Setter Method
+	 * Description 		To set name of Customer
+	 * @param custName  Customer Name
+	 * @returns void
+	 * Created By		Roosa Mazoomdar
+	 * Created Date		30-MAR-2021
+	 *******************************************/
 	public void setCustName(String custName) {
 		this.custName = custName;
 	}
-
+	/*******************************************
+	 * Method			Getter Method
+	 * Description 		To get all Customers
+	 * @returns List	list of all Properties
+	 * Created By		Roosa Mazoomdar
+	 * Created Date		30-MAR-2021
+	 *******************************************/
 	public List<Property> getProperties() {
 		return properties;
 	}
-
+	/*******************************************
+	 * Method			 Setter Method
+	 * Description 		 To set name of Customer
+	 * @param properties List of all properties
+	 * @returns void
+	 * Created By		 Roosa Mazoomdar
+	 * Created Date		 30-MAR-2021
+	 *******************************************/
 	public void setProperties(List<Property> properties) {
 		this.properties = properties;
 	}

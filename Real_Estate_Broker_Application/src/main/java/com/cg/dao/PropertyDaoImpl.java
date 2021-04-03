@@ -13,15 +13,39 @@ import org.springframework.transaction.annotation.Transactional;
 @Repository
 @Transactional
 public class PropertyDaoImpl implements PropertyDao {
-
+	/***********************************************************************************************
+	 * @author 			Rakshith Vuppala
+	 * Description		It is a dao layer which is used to get all properties and all properties with
+	 * 					given criteria
+	 * @version			1.0
+	 * @since    		30-MAR-2021
+	 ***********************************************************************************************/
 	@PersistenceContext
 	EntityManager em;
-
+	
+	/********************************************************************************************
+	 * Method                          fetchAllProperties
+     * Description                     It is used to get all Property from Property entity
+	 * @returns List  	               All Properties
+     * Created By                      Rakshith Vuppala
+     * Created Date                    30-MAR-2021                            
+	 
+	 **********************************************************************************************/
+	
 	@Override
 	public List<Property> fetchAllProperties() {
 		TypedQuery<Property> q = em.createQuery("select p from Property p", Property.class);
 		return q.getResultList();
 	}
+	
+	/*****************************************************************************************************************
+	 * Method                          fetchPropertyByCriteria
+     * Description                     It is used to get all Property from Broker entity which meets the user criteria
+	 * @returns List  	               All Properties with given criteria
+     * Created By                      Rakshith Vuppala
+     * Created Date                    30-MAR-2021                            
+	 
+	 *****************************************************************************************************************/
 
 	@Override
 	public List<Property> fetchPropertyByCriteria(PropertyCriteria criteria) {

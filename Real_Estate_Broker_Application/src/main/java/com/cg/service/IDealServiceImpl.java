@@ -28,7 +28,7 @@ public class IDealServiceImpl implements IDealService {
 		Customer c = cDao.findById(d.getCustomer().getUserId()).get();
 
 		try {
-			if (p1.isStatus() == true) {
+			if (p1.getStatus() == true) {
 				p1.setStatus(false);
 				pDao.saveAndFlush(p1);
 				List<Property> p = c.getProperties();
