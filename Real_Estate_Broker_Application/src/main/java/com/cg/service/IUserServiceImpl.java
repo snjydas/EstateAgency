@@ -3,6 +3,7 @@ package com.cg.service;
 
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +13,29 @@ import com.cg.exception.PasswordNotMatchException;
 import com.cg.exception.UserNotFoundException;
 import com.cg.repository.IUserRepository;
 
+/**********************************************************************************
+ * @author                 Sidda Reddy Partha Saradhi
+ * Description             It is a user service implementation class that defines the methods
+ *                         mentioned in its interface.
+ * Version                 1.0
+ * created date            23-03-2021
+ *
+ ****************************************************************************************/
+
 @Service
 public class IUserServiceImpl implements IUserService {
 
 	@Autowired
 	private IUserRepository uDao;
+	
+	/************************************************************************************
+	 * Method                     signIn
+	 * Description                It is used to sign In into application
+	 * @param user                user's reference variable
+	 * @UserNotFoundException     It is raised due to invalid user details
+	 * created by                 Sidda Reddy Partha Saradhi
+	 * created date               23-03-2021
+	 ***********************************************************************************/
 
 	@Override
 	public Boolean signIn(User user) throws UserNotFoundException {
@@ -35,6 +54,16 @@ public class IUserServiceImpl implements IUserService {
 		}
 		return status;
 	}
+	
+	/*******************************************************************
+	 * Method                                     signOut
+	 * Description                                It is used to signout from application
+	 * @param user                                user's reference variable
+	 * @UserNotFoundException                     It raised due to invalid user details
+	 * created by                                 Sidda Reddy Partha Saradhi
+	 * Created date                               23-03-2021
+	 ***********************************************************************/
+
 
 	@Override
 	public Boolean  signOut(User user) throws UserNotFoundException {
@@ -52,11 +81,11 @@ public class IUserServiceImpl implements IUserService {
 	/******************************************************************************
 	 * Method                        changePassword
 	 * Description                   It is used to change the password
-	 * @param broker                 Broker's refernce variable
+	 * @param user                   User's refernce variable
 	 * @throws PasswordNotMatchException 
-	 * @BrokerNotFoundException        It is raised due to invalid user details
-	 * created by                    Sidda Reddy Partha Saradhi
-	 * created date                  24-03-2021
+	 * @UserNotFoundException        It is raised due to invalid user details
+	 * created by                     Sidda Reddy Partha Saradhi
+	 * created date                  23-03-2021
 	 ********************************************************************************/
 
 	
