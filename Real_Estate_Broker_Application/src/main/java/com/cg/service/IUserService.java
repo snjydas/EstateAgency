@@ -5,6 +5,12 @@ import org.springframework.stereotype.Service;
 import com.cg.entity.User;
 import com.cg.exception.PasswordNotMatchException;
 import com.cg.exception.UserNotFoundException;
+/*************************************************************************************************************
+ * @author 		Sidda Reddy Partha Saradhi
+ * Description	It is an interface of service layer that provides various methods for its implementation class
+ * @version		1.0
+ * @since		23-MAR-2021 
+ **************************************************************************************************************/
 
 @Service
 public interface IUserService {
@@ -14,15 +20,6 @@ public interface IUserService {
 
 	Boolean signOut(User user) throws UserNotFoundException;
 
-	/******************************************************************************
-	 * Method                        changePassword
-	 * Description                   It is used to change the password
-	 * @param broker                 Broker's refernce variable
-	 * @throws PasswordNotMatchException 
-	 * @BrokerNotFoundException        It is raised due to invalid user details
-	 * created by                    Sidda Reddy Partha Saradhi
-	 * created date                  24-03-2021
-	 ********************************************************************************/
 	User changePassword(int userid, User user) throws UserNotFoundException, PasswordNotMatchException;
 
 }

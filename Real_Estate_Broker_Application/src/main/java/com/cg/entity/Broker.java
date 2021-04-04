@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * @author 			T. CHAITANYA
  * Description 		It is an entity class that provides all the fields of Broker
  * Version			1.0
- * Created Date		30-MAR-2021
+ * Created Date		22-MAR-2021
  ***************************************************************************/
 @Entity
 public class Broker extends User {
@@ -25,7 +25,7 @@ public class Broker extends User {
 	 * Description 		To get name of broker
 	 * @returns String	Broker name 
 	 * Created By		T. CHAITANYA
-	 * Created Date		30-MAR-2021
+	 * Created Date		22-MAR-2021
 	 *******************************************/
 	public String getBroName() {
 		return broName;
@@ -35,7 +35,7 @@ public class Broker extends User {
 	 * Description 		To set name of broker
 	 * @returns void 
 	 * Created By		T. CHAITANYA
-	 * Created Date		30-MAR-2021
+	 * Created Date		22-MAR-2021
 	 *******************************************/
 	public void setBroName(String broName) {
 		this.broName = broName;
@@ -45,7 +45,7 @@ public class Broker extends User {
 	 * Description 		To get Properties of broker
 	 * @returns List	Properties 
 	 * Created By		T. CHAITANYA
-	 * Created Date		30-MAR-2021
+	 * Created Date		22-MAR-2021
 	 *******************************************/
 	public List<Property> getProperties() {
 		return properties;
@@ -55,7 +55,7 @@ public class Broker extends User {
 	 * Description 		To set List of properties field in Broker
 	 * @returns void 
 	 * Created By		T. CHAITANYA
-	 * Created Date		30-MAR-2021
+	 * Created Date		22-MAR-2021
 	 ************************************************************/
 	public void setProperties(List<Property> properties) {
 		this.properties = properties;

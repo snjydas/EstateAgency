@@ -13,10 +13,10 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 /***************************************************************************************************************************
- *         @author			Roosa Mazoomdar
+ *         @author			ROOSA MAZOOMDAR
  *         @Description  	It is a service class that provides methods for performing CRUD and other operations on Customer  
  *         @version        	1.0
- *         @since    		02-APR-2020
+ *         @since    		23-MAR-2021
  ***************************************************************************************************************************/
 @Service
 public class ICustomerServiceImpl implements ICustomerService {
@@ -34,8 +34,8 @@ public class ICustomerServiceImpl implements ICustomerService {
 	 * Description		 To add new Customer to database
 	 * @Param customer   New Customer object
 	 * @returns Customer created Customer field in database
-	 * Created By 		 Roosa Mazoomdar
-	 * Created Date		 30-MAR-2021
+	 * Created By 		 ROOSA MAZOOMDAR
+	 * Created Date		 23-MAR-2021
 	 *******************************************************/
 	
 	@Override
@@ -50,8 +50,8 @@ public class ICustomerServiceImpl implements ICustomerService {
 	 * Description		 To update Customer in the database
 	 * @Param customer   updated Customer object
 	 * @returns Customer updated customer 
-	 * Created By 		 Roosa Mazoomdar
-	 * Created Date		 30-MAR-2021
+	 * Created By 		 ROOSA MAZOOMDAR
+	 * Created Date		 23-MAR-2021
 	 *******************************************************/
 
 	@Override
@@ -73,8 +73,8 @@ public class ICustomerServiceImpl implements ICustomerService {
 	 * @Param custId 	 					Customer Id which should delete
 	 * @returns Customer 					deleted customer 
 	 * @throws CustomerNotFoundException	It is raised due to invalid Customer ID
-	 * Created By 		 					Roosa Mazoomdar, Rakshith Vuppala
-	 * Created Date							30-MAR-2021
+	 * Created By 		 					ROOSA MAZOOMDAR, RAKSHITH VUPPALA
+	 * Created Date							23-MAR-2021
 	 *******************************************************************************/
 	
 	@Override
@@ -98,8 +98,8 @@ public class ICustomerServiceImpl implements ICustomerService {
 	 * @Param custId 	 					Customer Id of the required Customer
 	 * @returns Customer 					Customer with given Id 
 	 * @throws CustomerNotFoundException	It is raised due to invalid Customer ID
-	 * Created By 		 					Roosa Mazoomdar
-	 * Created Date							30-MAR-2021
+	 * Created By 		 					ROOSA MAZOOMDAR
+	 * Created Date							23-MAR-2021
 	 ******************************************************************************************/
 	
 	@Override
@@ -111,8 +111,8 @@ public class ICustomerServiceImpl implements ICustomerService {
 	 * Method			 					listAllCustomers
 	 * Description		 					To get Customer all the database
 	 * @returns List 					    All Customers as a List 
-	 * Created By 		 					Roosa Mazoomdar
-	 * Created Date							30-MAR-2021
+	 * Created By 		 					ROOSA MAZOOMDAR
+	 * Created Date							23-MAR-2021
 	 ******************************************************************************************/
 
 	@Override

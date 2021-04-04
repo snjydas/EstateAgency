@@ -23,7 +23,7 @@ import com.cg.service.IPropertyService;
  * Description		It is a rest controller class that controls the data flow into model object
  					and updates the view whenever data changes
  * @version 		1.0
- * @since			30-MAR-2021
+ * @since			26-MAR-2021
  ***********************************************************************************************/
 @RestController
 @RequestMapping("/real-estate-broker-application/property")
@@ -40,7 +40,7 @@ public class PropertyController {
 	 * @PostMapping:                   Used to handle POST type of request method
 	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
      * Created By                      SANJAY DAS
-     * Created Date                    30-MAR-2021                            
+     * Created Date                    26-MAR-2021                            
 	 
 	 **********************************************************************************************/
 	
@@ -57,7 +57,7 @@ public class PropertyController {
 	 * @PutMapping                   	Used to handle PUT type of request method
 	 * @RequestBody                   	It maps the HttpRequest body to a transfer or domain object
      * Created By                       SANJAY DAS
-     * Created Date                     30-MAR-2021                            
+     * Created Date                     26-MAR-2021                            
 	 
 	 **********************************************************************************************/
 
@@ -76,7 +76,7 @@ public class PropertyController {
 	 * @PathVariable                   		It  is used for data passed in the URI and transfer its values to parameter variables
 	 * @throws PropertyNotFoundException	It is raised due to invalid Broker ID
      *Created By                       		SANJAY DAS
-     *Created Date                     		30-MAR-2021                            
+     *Created Date                     		26-MAR-2021                            
 	 
 	 **************************************************************************************************************************/
 
@@ -100,7 +100,7 @@ public class PropertyController {
 	 * @PathVariable                   		It  is used for data passed in the URI and transfer its values to parameter variables
 	 * @throws PropertyNotFoundException	It is raised due to invalid Broker ID
      *Created By                       		SANJAY DAS
-     *Created Date                     		30-MAR-2021                            
+     *Created Date                     		26-MAR-2021                            
 	 
 	 ****************************************************************************************************************************/
 	
@@ -121,7 +121,7 @@ public class PropertyController {
 	 * @returns List                 	All Property records
 	 * @GetMapping                 		Used to handle GET type of request method
      *Created By                       	SANJAY DAS
-     *Created Date                     	30-MAR-2021                            
+     *Created Date                     	26-MAR-2021                            
 	 
 	 **********************************************************************************************/
 	
@@ -138,7 +138,7 @@ public class PropertyController {
 	 * @PostMapping:                   Used to handle POST type of request method
 	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
      * Created By                      SANJAY DAS
-     * Created Date                    30-MAR-2021                            
+     * Created Date                    26-MAR-2021                            
 	 
 	 **********************************************************************************************/
 	

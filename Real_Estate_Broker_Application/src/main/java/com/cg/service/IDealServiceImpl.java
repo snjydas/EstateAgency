@@ -16,7 +16,7 @@ import com.cg.repository.IPropertyRepo;
  *         @author			PATHAN ARSHIYA SHAHINA
  *         @Description  	It is a service class that provides methods for performing CRUD operations on Broker  
  *         @version        	1.0
- *         @since    		02-APR-2020
+ *         @since    		23-MAR-2021
  ****************************************************************************************************************/
 public class IDealServiceImpl implements IDealService {
 
@@ -34,7 +34,7 @@ public class IDealServiceImpl implements IDealService {
 	 * @returns Broker					created Deal field in database
 	 * @throws DealNotFoundException	It is raised due to invalid deal
 	 * Created By 						PATHAN ARSHIYA SHAHINA
-	 * Created Date						30-MAR-2021
+	 * Created Date						23-MAR-2021
 	 *****************************************************/
 	
 	@Override
@@ -66,7 +66,7 @@ public class IDealServiceImpl implements IDealService {
 	 * Description		To get all deals from database
 	 * @returns List	All deals in database
 	 * Created By 		PATHAN ARSHIYA SHAHINA
-	 * Created Date		30-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *****************************************************/
 	
 	@Override

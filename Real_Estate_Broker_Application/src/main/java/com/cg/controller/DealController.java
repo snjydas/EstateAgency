@@ -17,7 +17,7 @@ import com.cg.service.IDealService;
  * Description		It is a rest controller class that controls the data flow into model object
  					and updates the view whenever data changes
  * @version 		1.0
- * @since		    30-MAR-2021
+ * @since		    26-MAR-2021
  ***********************************************************************************************/
 
 @RestController
@@ -34,7 +34,7 @@ public class DealController {
 	 * @PostMapping:                   Used to handle POST type of request method
 	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
      * Created By                      PATHAN ARSHIYA SHAHINA
-     * Created Date                    30-MAR-2021                            
+     * Created Date                    26-MAR-2021                            
 	 
 	 **********************************************************************************************/
 	
@@ -51,7 +51,7 @@ public class DealController {
 	 * @returns List                 	All Deal records
 	 * @GetMapping                 		Used to handle GET type of request method
      *Created By                       	PATHAN ARSHIYA SHAHINA
-     *Created Date                     	30-MAR-2021                            
+     *Created Date                     	26-MAR-2021                            
 	 
 	 **********************************************************************************************/
 	

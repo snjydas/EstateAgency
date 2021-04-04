@@ -14,7 +14,7 @@ import com.cg.repository.IDealRepo;
  *         @author			T. CHAITANYA
  *         @Description  	It is a service class that provides methods for performing CRUD operations on Broker  
  *         @version        	1.0
- *         @since    		02-APR-2020
+ *         @since    		23-APR-2021
  ****************************************************************************************************************/
 
 @Service
@@ -33,7 +33,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	 * @Param bro 		New Broker object
 	 * @returns Broker	created Broker field in database
 	 * Created By 		T. CHAITANYA
-	 * Created Date		30-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *****************************************************/
 	@Override
 	public Broker addBroker(Broker bro) {
@@ -48,7 +48,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	 * @returns Broker					Updated Broker field in database
 	 * @throws BrokerNotFoundException	It is raised due to invalid Broker ID
 	 * Created By 						T. CHAITANYA
-	 * Created Date						30-MAR-2021
+	 * Created Date						23-MAR-2021
 	 *************************************************************************/
 	@Override
 	public Broker editBroker(Broker bro) throws BrokerNotFoundException {
@@ -63,7 +63,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	 * @returns Broker					deleted Broker field
 	 * @throws BrokerNotFoundException	It is raised due to invalid Broker ID
 	 * Created By 						T. CHAITANYA
-	 * Created Date						30-MAR-2021
+	 * Created Date						23-MAR-2021
 	 * @throws PropertyNotFoundException 
 	 *****************************************************/
 	@Override
@@ -88,7 +88,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	 * @returns Broker					Broker record from database with broId
 	 * @throws BrokerNotFoundException	It is raised due to invalid Broker ID
 	 * Created By 						T. CHAITANYA
-	 * Created Date						30-MAR-2021
+	 * Created Date						23-MAR-2021
 	 *****************************************************************************************/
 	@Override
 	public Broker viewBroker(int broId) throws BrokerNotFoundException {
@@ -99,7 +99,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	 * Description		To get the List of all Brokers from database
 	 * @returns List	All Brokers from database
 	 * Created By 		T. CHAITANYA
-	 * Created Date		30-MAR-2021
+	 * Created Date		23-MAR-2021
 	 ****************************************************************/
 	@Override
 	public List<Broker> listAllBrokers() {
