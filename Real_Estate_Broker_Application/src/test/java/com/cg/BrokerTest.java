@@ -65,7 +65,6 @@ public class BrokerTest extends AbstractTest{
 		bro.setBroName("Ram Suresh");
 		bro.setProperties(p);
 		String inputJson = super.mapToJson(bro);
-		System.out.println("==========================="+inputJson+"======================================");
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson)).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);

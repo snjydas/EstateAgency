@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.entity.Property;
-import com.cg.exception.BrokerNotFoundException;
 import com.cg.exception.PropertyNotFoundException;
 import com.cg.pojo.PropertyCriteria;
 import com.cg.service.IPropertyService;
