@@ -12,7 +12,12 @@ import com.cg.repository.ICustomerRepo;
 import com.cg.repository.IDealRepo;
 import com.cg.repository.IPropertyRepo;
 
-@Service
+@Service/****************************************************************************************************************
+ *         @author			PATHAN ARSHIYA SHAHINA
+ *         @Description  	It is a service class that provides methods for performing CRUD operations on Broker  
+ *         @version        	1.0
+ *         @since    		02-APR-2020
+ ****************************************************************************************************************/
 public class IDealServiceImpl implements IDealService {
 
 	@Autowired
@@ -22,10 +27,20 @@ public class IDealServiceImpl implements IDealService {
 	@Autowired
 	IPropertyRepo pDao;
 
+	/*****************************************************
+	 * Method							addDeal
+	 * Description						To add new Deal to database
+	 * @Param deal 						New Deal object
+	 * @returns Broker					created Deal field in database
+	 * @throws DealNotFoundException	It is raised due to invalid deal
+	 * Created By 						PATHAN ARSHIYA SHAHINA
+	 * Created Date						30-MAR-2021
+	 *****************************************************/
+	
 	@Override
-	public Deal addDeal(Deal d) throws DealNotAvailableException {
-		Property p1 = pDao.findById(d.getProperty().getPropId()).get();
-		Customer c = cDao.findById(d.getCustomer().getUserId()).get();
+	public Deal addDeal(Deal deal) throws DealNotAvailableException {
+		Property p1 = pDao.findById(deal.getProperty().getPropId()).get();
+		Customer c = cDao.findById(deal.getCustomer().getUserId()).get();
 
 		try {
 			if (p1.getStatus() == true) {
@@ -35,7 +50,7 @@ public class IDealServiceImpl implements IDealService {
 				p.add(p1);
 				c.setProperties(p);
 				cDao.saveAndFlush(c);
-				return dealDao.saveAndFlush(d);
+				return dealDao.saveAndFlush(deal);
 			} else {
 				throw new DealNotAvailableException();
 			}
@@ -46,6 +61,14 @@ public class IDealServiceImpl implements IDealService {
 
 	}
 
+	/*****************************************************
+	 * Method			listAllDeals
+	 * Description		To get all deals from database
+	 * @returns List	All deals in database
+	 * Created By 		PATHAN ARSHIYA SHAHINA
+	 * Created Date		30-MAR-2021
+	 *****************************************************/
+	
 	@Override
 	public List<Deal> listAllDeals() {
 		return dealDao.findAll();

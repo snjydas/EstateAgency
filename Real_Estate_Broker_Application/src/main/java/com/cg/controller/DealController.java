@@ -12,6 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.entity.Deal;
 import com.cg.exception.DealNotAvailableException;
 import com.cg.service.IDealService;
+/***********************************************************************************************
+ * @author 			PATHAN ARSHIYA SHAHINA
+ * Description		It is a rest controller class that controls the data flow into model object
+ 					and updates the view whenever data changes
+ * @version 		1.0
+ * @since		    30-MAR-2021
+ ***********************************************************************************************/
 
 @RestController
 @RequestMapping("real-estate-broker-application/deal")
@@ -19,13 +26,35 @@ public class DealController {
 	@Autowired
 	IDealService dealService;
 
+	/********************************************************************************************
+	 * Method                          addDeal
+     * Description                     It is used to add Deal to Deal entity
+     * @param deal:                    Deal's reference variable.
+	 * @returns Deal                   Newly created Deal details
+	 * @PostMapping:                   Used to handle POST type of request method
+	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
+     * Created By                      PATHAN ARSHIYA SHAHINA
+     * Created Date                    30-MAR-2021                            
+	 
+	 **********************************************************************************************/
+	
 	@PostMapping(value = "/add")
-	public Deal addDeal(@RequestBody Deal d) throws DealNotAvailableException {
-		d.setDealDate(LocalDate.now());
-		d.getProperty().setStatus(false);
-		return dealService.addDeal(d);
+	public Deal addDeal(@RequestBody Deal deal) throws DealNotAvailableException {
+		deal.setDealDate(LocalDate.now());
+		deal.getProperty().setStatus(false);
+		return dealService.addDeal(deal);
 	}
 
+	/********************************************************************************************
+	 * Method                          	printAllDeal
+     * Description                     	To get all Deal records from Deal entity
+	 * @returns List                 	All Deal records
+	 * @GetMapping                 		Used to handle GET type of request method
+     *Created By                       	PATHAN ARSHIYA SHAHINA
+     *Created Date                     	30-MAR-2021                            
+	 
+	 **********************************************************************************************/
+	
 	@GetMapping
 	public List<Deal> printAllDeal() {
 		return dealService.listAllDeals();
