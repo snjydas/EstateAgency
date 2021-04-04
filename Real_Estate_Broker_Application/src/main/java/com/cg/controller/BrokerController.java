@@ -3,8 +3,6 @@ package com.cg.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.cg.entity.Broker;
 import com.cg.exception.BrokerNotFoundException;
-import com.cg.exception.PasswordNotMatchException;
 import com.cg.service.IBrokerService;
 
 /***********************************************************************************************
@@ -125,18 +122,5 @@ public class BrokerController {
 			throw e;
 		}
 		return bService.viewBroker(broId);
-	}
-	
-	@PostMapping("/Broker/login")
-	public ResponseEntity<Boolean> loginBroker(@RequestBody Broker broker) throws BrokerNotFoundException{
-		return new ResponseEntity<Boolean>(bService.signIn(broker),HttpStatus.OK);
-	}
-	@PostMapping("/Broker/logout")
-	public ResponseEntity<Boolean> logoutBroker(@RequestBody Broker broker) throws BrokerNotFoundException{
-		return new ResponseEntity<Boolean>(bService.signOut(broker),HttpStatus.OK);
-	}
-	@PutMapping("/Broker/updatepassword")
-	public ResponseEntity<Broker> updatePassword(@RequestBody Broker broker) throws BrokerNotFoundException, PasswordNotMatchException{
-		return new ResponseEntity<Broker>(bService.changePassword(broker.getUserId(), broker),HttpStatus.OK);
 	}
 }

@@ -12,8 +12,6 @@ import com.cg.exception.BrokerNotFoundException;
  * Created Date	30-MAR-2021 
  ********************************************************************************************************/
 
-import com.cg.exception.PasswordNotMatchException;
-import com.cg.exception.PropertyNotFoundException;
 
 
 public interface IBrokerService {
@@ -27,10 +25,4 @@ public interface IBrokerService {
 	public Broker viewBroker(int broId) throws BrokerNotFoundException;
 
 	public List<Broker> listAllBrokers();
-
-	Boolean signIn(Broker broker) throws BrokerNotFoundException;
-
-	Boolean signOut(Broker Broker) throws BrokerNotFoundException;
-
-	Broker changePassword(int broid, Broker Broker) throws BrokerNotFoundException, PasswordNotMatchException;
 }

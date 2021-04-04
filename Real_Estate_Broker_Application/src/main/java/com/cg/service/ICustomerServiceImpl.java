@@ -7,7 +7,6 @@ import com.cg.entity.Customer;
 import com.cg.entity.Deal;
 import com.cg.entity.Property;
 import com.cg.exception.CustomerNotFoundException;
-import com.cg.exception.PasswordNotMatchException;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -121,65 +120,6 @@ public class ICustomerServiceImpl implements ICustomerService {
 		return cDao.findAll();
 	}
 	
-	@Override
-	public Boolean signIn(Customer Customer) throws CustomerNotFoundException {
-		Boolean status= false;
-//		Optional<User> resultUser= userRepository.findById(user.getUserId());
-		Optional<Customer> resultCustomer=cDao.findById(Customer.getUserId());
-		if (resultCustomer.isPresent()) {
-			if((resultCustomer.get().getPassword().equals(Customer.getPassword()))) 
-			{
-				status=true;
-
-		} 
-			else 
-			
-			throw new CustomerNotFoundException("Customer Not Found");
-		}
-		return status;
-	}
 	
-	@Override
-	public Boolean  signOut(Customer customer) throws CustomerNotFoundException {
-		// TODO Auto-generated method stub
-		Boolean status=false;
-//		Optional<User> resultUser= userRepository.findById(user.getUserId());
-		Optional<Customer> resultCustomer=cDao.findById(customer.getUserId());
-
-		if (resultCustomer.isEmpty()) {
-			throw new CustomerNotFoundException("Customer Not Found");
-		}
-		else if(resultCustomer.get().getPassword().equals(customer.getPassword())) {
-			 status = true;
-		}
-		return status;
-	}
-	/******************************************************************************
-	 * Method                        changePassword
-	 * Description                   It is used to change the password
-	 * @param user                   User's refernce variable
-	 * @throws PasswordNotMatchException 
-	 * @UserNotFoundException        It is raised due to invalid user details
-	 * created by                    p.saiteja reddy
-	 * created date                  24-03-2021
-	 ********************************************************************************/
-
-	@Override
-
-	public Customer changePassword(int custid, Customer customer) throws CustomerNotFoundException, PasswordNotMatchException {
-		// TODO Auto-generated method stub
-//		Optional<User> resultUser=userRepository.findById(id);
-		Optional<Customer> resultCustomer=cDao.findById(customer.getUserId());
-		if(resultCustomer.isPresent()) {
-			resultCustomer.get().setPassword(customer.getPassword());
-			return cDao.save(resultCustomer.get());
-			
-		}
-		else
-		{
-			throw new CustomerNotFoundException("Customer Not Found");
-		}	
-
-}
 
 }

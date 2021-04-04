@@ -3,13 +3,15 @@ package com.cg.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.entity.User;
+import com.cg.exception.PasswordNotMatchException;
+import com.cg.exception.UserNotFoundException;
 import com.cg.service.IUserService;
 
 @RestController
@@ -17,33 +19,20 @@ import com.cg.service.IUserService;
 @RequestMapping(value = "real-estate-broker-application/user")
 public class UserController {
 	@Autowired
-	private IUserService loginService;
+	private IUserService uService;
 
 	@PostMapping(value = "/login")
-	public ResponseEntity<String> validateLogin(@RequestBody User user) {
-		User user1 = loginService.login(user);
-		if (user1 != null) {
-			return new ResponseEntity<String>("Login Success", HttpStatus.OK);
-		} else {
-
-			return new ResponseEntity<String>("Login Failed, Please Try Again", HttpStatus.NOT_FOUND);
-		}
+	public ResponseEntity<Boolean> loginUser(@RequestBody User user) throws UserNotFoundException {
+		return new ResponseEntity<Boolean>(uService.signIn(user),HttpStatus.OK);
+	}
+	
+	@PostMapping("/logout")
+	public ResponseEntity<Boolean> logoutUser(@RequestBody User user) throws UserNotFoundException{
+		return new ResponseEntity<Boolean>(uService.signOut(user),HttpStatus.OK);
+	}
+	@PutMapping("/updatepassword")
+	public ResponseEntity<User> updatePassword(@RequestBody User user) throws UserNotFoundException, PasswordNotMatchException{
+		return new ResponseEntity<User>(uService.changePassword(user.getUserId(), user),HttpStatus.OK);
 	}
 
-	@Autowired
-	private IUserService logoutService;
-
-	@DeleteMapping(value = "/logout")
-	public ResponseEntity<String> validateLogout(@RequestBody User user) {
-		User user1 = logoutService.login(user);
-
-		if (user1 != null) {
-
-			return new ResponseEntity<String>("Logout Success", HttpStatus.OK);
-		} else {
-
-			return new ResponseEntity<String>("Logout Failed, Please Try Again", HttpStatus.NOT_FOUND);
-		}
-
-	}
 }
