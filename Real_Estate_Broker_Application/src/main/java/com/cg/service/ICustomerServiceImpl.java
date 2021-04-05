@@ -73,7 +73,7 @@ public class ICustomerServiceImpl implements ICustomerService {
 	 * @Param custId 	 					Customer Id which should delete
 	 * @returns Customer 					deleted customer 
 	 * @throws CustomerNotFoundException	It is raised due to invalid Customer ID
-	 * Created By 		 					ROOSA MAZOOMDAR, RAKSHITH VUPPALA
+	 * Created By 		 					ROOSA MAZOOMDAR
 	 * Created Date							23-MAR-2021
 	 *******************************************************************************/
 	
