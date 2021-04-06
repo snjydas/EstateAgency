@@ -16,7 +16,13 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.cg.entity.Broker;
 import com.cg.entity.Property;
 import com.cg.service.IBrokerService;
-
+/******************************************************************************
+ * 
+ * @author 			T. CHAITANYA
+ * Description 		It is a testing class that tests all the methods of Broker
+ * Version			1.0
+ * Created Date		22-MAR-2021
+ ******************************************************************************/
 @SpringBootTest
 public class BrokerTest extends AbstractTest{
 	@Autowired
@@ -27,7 +33,12 @@ public class BrokerTest extends AbstractTest{
 	public void setUp() {
 		super.setUp();
 	}
-	
+	/*****************************************************************************
+	 * Method			Test Method for get Broker
+	 * Description 		To check the working of get Broker method in Broker Module 
+	 * Created By		T. CHAITANYA
+	 * Created Date		22-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void getBroker() throws Exception{
 		String uri = "/real-estate-broker-application/broker/id/1";
@@ -39,7 +50,12 @@ public class BrokerTest extends AbstractTest{
 		assertEquals("Jagan",bro.getBroName());
 	}
 	
-	
+	/*********************************************************************************
+	 * Method			Test Method for get All Broker
+	 * Description 		To check the working of get All Broker method in Broker Module
+	 * Created By		T. CHAITANYA
+	 * Created Date		22-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void getAllBroker() throws Exception{
 		String uri = "/real-estate-broker-application/broker/all";
@@ -51,7 +67,12 @@ public class BrokerTest extends AbstractTest{
 		assertEquals("Baskar",brokerList[1].getBroName());
 	}
 	
-	
+	/********************************************************************************
+	 * Method			Test Method for create Broker
+	 * Description 		To check the working of create Broker method in Broker Module 
+	 * Created By		T. CHAITANYA
+	 * Created Date		22-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void createBroker() throws Exception{
 		String uri = "/real-estate-broker-application/broker/add";
@@ -73,9 +94,12 @@ public class BrokerTest extends AbstractTest{
 		assertEquals("Broker", broker.getRole());
 	}
 	
-	
-	
-	
+	/********************************************************************************
+	 * Method			Test Method for update Broker
+	 * Description 		To check the working of update Broker method in Broker Module
+	 * Created By		T. CHAITANYA
+	 * Created Date		22-MAR-2021
+	 ********************************************************************************/
 	@Test
 	public void updateBroker() throws Exception{
 		
@@ -95,8 +119,12 @@ public class BrokerTest extends AbstractTest{
 		assertEquals("Chennai", b1.getCity());
 	}
 	
-
-	
+	/********************************************************************************
+	 * Method			Test Method for delete Broker
+	 * Description 		To check the working of delete Broker method in Broker Module
+	 * Created By		T. CHAITANYA
+	 * Created Date		22-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void deleteBroker() throws Exception{
 		String uri = "/real-estate-broker-application/broker/remove/20";
