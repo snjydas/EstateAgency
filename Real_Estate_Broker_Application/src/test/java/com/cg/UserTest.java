@@ -12,7 +12,13 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.cg.entity.User;
 import com.cg.repository.IUserRepository;
-
+/******************************************************************************
+ * 
+ * @author 			Sidda Reddy Partha Saradhi
+ * Description 		It is a testing class that tests all the methods of User
+ * Version			1.0
+ * Created Date		30-MAR-2021
+ ******************************************************************************/
 @SpringBootTest
 public class UserTest extends AbstractTest {
 
@@ -24,7 +30,12 @@ public class UserTest extends AbstractTest {
 	public void setUp() {
 		super.setUp();
 	}
-	
+	/*****************************************************************************
+	 * Method			Test Method for user login
+	 * Description 		To check the working of user login method in Login Module 
+	 * Created By		Sidda Reddy Partha Saradhi
+	 * Created Date		30-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void userLogin() throws Exception{
 		String uri = "/real-estate-broker-application/user/login";
@@ -38,7 +49,12 @@ public class UserTest extends AbstractTest {
 		String content = mvcResult.getResponse().getContentAsString();
 		assertEquals("true",content);
 	}
-	
+	/*****************************************************************************
+	 * Method			Test Method for user logout
+	 * Description 		To check the working of user logout method in Login Module 
+	 * Created By		Sidda Reddy Partha Saradhi
+	 * Created Date		30-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void userLogout() throws Exception{
 		String uri = "/real-estate-broker-application/user/logout";
@@ -53,7 +69,12 @@ public class UserTest extends AbstractTest {
 		assertEquals("true",content);
 	}
 	
-	
+	/*****************************************************************************
+	 * Method			Test Method for update password 
+	 * Description 		To check the working of update password method in Login Module 
+	 * Created By		Sidda Reddy Partha Saradhi
+	 * Created Date		30-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void updatePassword() throws Exception{
 		String uri = "/real-estate-broker-application/user/updatepassword";

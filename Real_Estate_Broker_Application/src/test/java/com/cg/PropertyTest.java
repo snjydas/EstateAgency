@@ -12,7 +12,7 @@ import com.cg.entity.Property;
 import com.cg.pojo.PropertyCriteria;
 /***************************************************************************
  * 
- * @author 			SANJAY DAS
+ * @author 			RAKSHITH VUPPALA
  * Description 		It is a testing class that tests all the methods of Property
  * @version			1.0
  * @since   		30-MAR-2021
@@ -29,7 +29,7 @@ public class PropertyTest extends AbstractTest {
 	/*****************************************************************************
 	 * Method			Test Method for get Property
 	 * Description 		To check the working of get Property method in Property Module 
-	 * Created By		SANJAY DAS
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		30-MAR-2021
 	 ******************************************************************************/
 	@Test
@@ -45,7 +45,7 @@ public class PropertyTest extends AbstractTest {
 	/********************************************************************************
 	 * Method			Test Method for create Property
 	 * Description 		To check the working of create Property method in Property Module 
-	 * Created By		SANJAY DAS
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
@@ -76,7 +76,7 @@ public class PropertyTest extends AbstractTest {
 	/*********************************************************************************
 	 * Method			Test Method for get All Properties
 	 * Description 		To check the working of get All Properties method in Property Module
-	 * Created By		SANJAY DAS
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
@@ -92,7 +92,7 @@ public class PropertyTest extends AbstractTest {
 	/********************************************************************************
 	 * Method			Test Method for delete Property
 	 * Description 		To check the working of delete Property method in Property Module
-	 * Created By		SANJAY DAS
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
@@ -108,7 +108,7 @@ public class PropertyTest extends AbstractTest {
 	/********************************************************************************
 	 * Method			Test Method for update Property
 	 * Description 		To check the working of update Property method in Property Module
-	 * Created By		SANJAY DAS
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		30-MAR-2021
 	 ********************************************************************************/
 	@Test
@@ -131,7 +131,7 @@ public class PropertyTest extends AbstractTest {
 	/*****************************************************************************
 	 * Method			Test Method for get Property By criteria
 	 * Description 		To check the working of get Property By criteria method in Property Module 
-	 * Created By		SANJAY DAS
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		30-MAR-2021
 	 ******************************************************************************/
 	@Test 
