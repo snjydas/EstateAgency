@@ -10,7 +10,14 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.cg.entity.Broker;
 import com.cg.entity.Property;
 import com.cg.pojo.PropertyCriteria;
-
+/***************************************************************************
+ * 
+ * @author 			SANJAY DAS
+ * Description 		It is a testing class that tests all the methods of Property
+ * @version			1.0
+ * @since   		30-MAR-2021
+ * 
+ ***************************************************************************/
 @SpringBootTest
 public class PropertyTest extends AbstractTest {
 	
@@ -19,7 +26,12 @@ public class PropertyTest extends AbstractTest {
 	public void setUp() {
 		super.setUp();
 	}
-	
+	/*****************************************************************************
+	 * Method			Test Method for get Property
+	 * Description 		To check the working of get Property method in Property Module 
+	 * Created By		SANJAY DAS
+	 * Created Date		30-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void getProperty() throws Exception{
 		String uri="/real-estate-broker-application/property/id/11";
@@ -30,7 +42,12 @@ public class PropertyTest extends AbstractTest {
 		Property p = super.mapFromJson(content, Property.class);
 		assertEquals("3-99/A", p.getAddress());
 	}
-	
+	/********************************************************************************
+	 * Method			Test Method for create Property
+	 * Description 		To check the working of create Property method in Property Module 
+	 * Created By		SANJAY DAS
+	 * Created Date		30-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void createProperty() throws Exception{
 		String uri="/real-estate-broker-application/property/add";
@@ -56,7 +73,12 @@ public class PropertyTest extends AbstractTest {
 		assertEquals("3-589/A",p1.getAddress());
 		
 	}
-	
+	/*********************************************************************************
+	 * Method			Test Method for get All Properties
+	 * Description 		To check the working of get All Properties method in Property Module
+	 * Created By		SANJAY DAS
+	 * Created Date		30-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void getAllProperties() throws Exception{
 		String uri="/real-estate-broker-application/property/all";
@@ -67,7 +89,12 @@ public class PropertyTest extends AbstractTest {
 		Property p[] = super.mapFromJson(content, Property[].class);
 		assertEquals("3-79/D", p[0].getAddress());
 	}
-	
+	/********************************************************************************
+	 * Method			Test Method for delete Property
+	 * Description 		To check the working of delete Property method in Property Module
+	 * Created By		SANJAY DAS
+	 * Created Date		30-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void deleteProperty() throws Exception{
 		String uri="/real-estate-broker-application/property/remove/14";
@@ -78,7 +105,12 @@ public class PropertyTest extends AbstractTest {
 		Property p=super.mapFromJson(content, Property.class);
 		assertEquals("Khammam", p.getCity());
 	}
-	
+	/********************************************************************************
+	 * Method			Test Method for update Property
+	 * Description 		To check the working of update Property method in Property Module
+	 * Created By		SANJAY DAS
+	 * Created Date		30-MAR-2021
+	 ********************************************************************************/
 	@Test
 	public void editProperty() throws Exception{
 		String uri1="/real-estate-broker-application/property/update";
@@ -96,7 +128,12 @@ public class PropertyTest extends AbstractTest {
 		assertEquals("3-79/D", p1.getAddress());
 		 
 	}
-	
+	/*****************************************************************************
+	 * Method			Test Method for get Property By criteria
+	 * Description 		To check the working of get Property By criteria method in Property Module 
+	 * Created By		SANJAY DAS
+	 * Created Date		30-MAR-2021
+	 ******************************************************************************/
 	@Test 
 	public void getPropertyByPropertyCriteria() throws Exception{
 		String uri = "/real-estate-broker-application/property/criteria";

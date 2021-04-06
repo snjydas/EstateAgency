@@ -21,7 +21,7 @@ import com.cg.service.IBrokerService;
  * @author 			T. CHAITANYA
  * Description 		It is a testing class that tests all the methods of Broker
  * Version			1.0
- * Created Date		22-MAR-2021
+ * Created Date		30-MAR-2021
  ******************************************************************************/
 @SpringBootTest
 public class BrokerTest extends AbstractTest{
@@ -37,7 +37,7 @@ public class BrokerTest extends AbstractTest{
 	 * Method			Test Method for get Broker
 	 * Description 		To check the working of get Broker method in Broker Module 
 	 * Created By		T. CHAITANYA
-	 * Created Date		22-MAR-2021
+	 * Created Date		30-MAR-2021
 	 ******************************************************************************/
 	@Test
 	public void getBroker() throws Exception{
@@ -54,7 +54,7 @@ public class BrokerTest extends AbstractTest{
 	 * Method			Test Method for get All Broker
 	 * Description 		To check the working of get All Broker method in Broker Module
 	 * Created By		T. CHAITANYA
-	 * Created Date		22-MAR-2021
+	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
 	public void getAllBroker() throws Exception{
@@ -71,7 +71,7 @@ public class BrokerTest extends AbstractTest{
 	 * Method			Test Method for create Broker
 	 * Description 		To check the working of create Broker method in Broker Module 
 	 * Created By		T. CHAITANYA
-	 * Created Date		22-MAR-2021
+	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
 	public void createBroker() throws Exception{
@@ -98,7 +98,7 @@ public class BrokerTest extends AbstractTest{
 	 * Method			Test Method for update Broker
 	 * Description 		To check the working of update Broker method in Broker Module
 	 * Created By		T. CHAITANYA
-	 * Created Date		22-MAR-2021
+	 * Created Date		30-MAR-2021
 	 ********************************************************************************/
 	@Test
 	public void updateBroker() throws Exception{
@@ -123,7 +123,7 @@ public class BrokerTest extends AbstractTest{
 	 * Method			Test Method for delete Broker
 	 * Description 		To check the working of delete Broker method in Broker Module
 	 * Created By		T. CHAITANYA
-	 * Created Date		22-MAR-2021
+	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
 	public void deleteBroker() throws Exception{

@@ -10,7 +10,13 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.cg.entity.Customer;
 import com.cg.entity.Deal;
 import com.cg.entity.Property;
-
+/******************************************************************************
+ * 
+ * @author 			PATHAN ARSHIYA SHAHINA
+ * Description 		It is a testing class that tests all the methods of Deal
+ * Version			1.0
+ * Created Date		30-MAR-2021
+ ******************************************************************************/
 @SpringBootTest
 public class DealTest extends AbstractTest{
 	
@@ -20,7 +26,12 @@ public class DealTest extends AbstractTest{
 		super.setUp();
 	}
 	
-	
+	/*****************************************************************************
+	 * Method			Test Method for get All Deals
+	 * Description 		To check the working of get All Deals method in Deal Module 
+	 * Created By		PATHAN ARSHIYA SHAHINA
+	 * Created Date		30-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void getAllDeals() throws Exception{
 		String uri = "/real-estate-broker-application/deal";
@@ -31,7 +42,12 @@ public class DealTest extends AbstractTest{
 		Deal dealList[] = super.mapFromJson(content, Deal[].class);
 		assertEquals(10000,dealList[0].getDealCost());
 	}
-	
+	/*****************************************************************************
+	 * Method			Test Method for create Deal
+	 * Description 		To check the working of create Deal method in Deal Module 
+	 * Created By		T. CHAITANYA
+	 * Created Date		22-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void createDeal() throws Exception{
 		String uri = "/real-estate-broker-application/deal/add";
