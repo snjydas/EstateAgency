@@ -10,6 +10,7 @@ import com.cg.exception.BrokerNotFoundException;
 import com.cg.exception.PropertyNotFoundException;
 import com.cg.repository.IBrokerRepo;
 import com.cg.repository.IDealRepo;
+
 /****************************************************************************************************************
  *         @author			T. CHAITANYA
  *         @Description  	It is a service class that provides methods for performing CRUD operations on Broker  
@@ -41,6 +42,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 		bDao.saveAndFlush(bro);
 		return bro;
 	}
+	
 	/*************************************************************************
 	 * Method							editBroker
 	 * Description						To update existing Broker in database
@@ -56,6 +58,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 		bDao.saveAndFlush(bro);
 		return bDao.findById(bro.getUserId()).get();
 	}
+	
 	/*****************************************************
 	 * Method							removeBroker
 	 * Description						To delete Broker from database
@@ -81,6 +84,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 		bDao.deleteById(broId);
 		return b;
 	}
+	
 	/*****************************************************************************************
 	 * Method							viewBroker
 	 * Description						To view Broker in database based on supplied Broker ID
@@ -94,6 +98,7 @@ public class IBrokerServiceImpl implements IBrokerService {
 	public Broker viewBroker(int broId) throws BrokerNotFoundException {
 		return bDao.findById(broId).get();
 	}
+	
 	/***************************************************************
 	 * Method			listAllBrokers
 	 * Description		To get the List of all Brokers from database

@@ -1,7 +1,7 @@
 package com.cg.exception;
 
 /*************************************************************************************
- * @author                 Sanjay Das
+ * @author                 SANJAY DAS
  * Description             It is a exception class that handles the exception occuring at 
  *                         service level when a customer is not found.
  * @version                1.0

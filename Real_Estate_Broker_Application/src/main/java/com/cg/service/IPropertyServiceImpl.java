@@ -1,10 +1,8 @@
 package com.cg.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.cg.entity.Deal;
 import com.cg.entity.Property;
 import com.cg.exception.PropertyNotFoundException;
@@ -19,6 +17,7 @@ import com.cg.repository.IPropertyRepo;
  *         @version        	1.0
  *         @since    		25-MAR-2021
  ******************************************************************************************************************/
+
 @Service
 public class IPropertyServiceImpl implements IPropertyService {
 	@Autowired
