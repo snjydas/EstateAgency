@@ -45,7 +45,7 @@ public class User {
 	 * Description 		To get Id of the user
 	 * @returns int     User Id
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public int getUserId() {
 		return userId;
@@ -56,7 +56,7 @@ public class User {
 	 * @returns void
 	 * @param int 		userid
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public void setUserId(int userid) {
 		this.userId = userid;
@@ -66,7 +66,7 @@ public class User {
 	 * Description 		To get Password of the user
 	 * @returns String  User Password
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public String getPassword() {
 		return password;
@@ -76,7 +76,7 @@ public class User {
 	 * Description 		To set Password of the user
 	 * @returns void
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public void setPassword(String password) {
 		this.password = password;
@@ -86,7 +86,7 @@ public class User {
 	 * Description 		To get Role of the user
 	 * @returns String	User Role
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public String getRole() {
 		return role;
@@ -97,7 +97,7 @@ public class User {
 	 * @returns Void    
 	 * @param String	role
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public void setRole(String role) {
 		this.role = role;
@@ -107,7 +107,7 @@ public class User {
 	 * Description 		To get Mobile number of the user
 	 * @returns String  User mobile number
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public String getMobile() {
 		return mobile;
@@ -118,7 +118,7 @@ public class User {
 	 * @returns void
 	 * @param String	mobile
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
@@ -128,7 +128,7 @@ public class User {
 	 * Description 		To get Email of the user
 	 * @returns String  User Email
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public String getEmail() {
 		return email;
@@ -139,7 +139,7 @@ public class User {
 	 * @returns String  User Email
 	 * @param String	email
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public void setEmail(String email) {
 		this.email = email;
@@ -149,7 +149,7 @@ public class User {
 	 * Description 		To get City of the user
 	 * @returns String  User city
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public String getCity() {
 		return city;
@@ -160,7 +160,7 @@ public class User {
 	 * @returns void
 	 * @param String 	city
 	 * Created By		Sidda Reddy Partha Saradhi
-	 * Created Date		28-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	public void setCity(String city) {
 		this.city = city;

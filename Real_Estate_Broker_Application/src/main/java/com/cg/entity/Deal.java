@@ -16,7 +16,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
  * @author 			PATHAN ARSHIYA SHAHINA
  * Description 		It is an entity class that provides all the fields of Deals
  * @version			1.0
- * @since			22-MAR-2021
+ * @since			23-MAR-2021
  ***************************************************************************/
 
 
@@ -57,7 +57,7 @@ public class Deal {
 	 * Description 		To get Id of deal
 	 * @returns int     Deal Id 
 	 * Created By		PATHAN ARSHIYA SHAHINA
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	
 	public int getDealId() {
@@ -70,7 +70,7 @@ public class Deal {
 	 * @param dealId	Deal Id
 	 * @returns void 
 	 * Created By		PATHAN ARSHIYA SHAHINA
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	
 	public void setDealId(int dealId) {
@@ -82,7 +82,7 @@ public class Deal {
 	 * Description 			To get date of deal
 	 * @returns LocalDate   Deal date 
 	 * Created By			PATHAN ARSHIYA SHAHINA
-	 * Created Date			22-MAR-2021
+	 * Created Date			23-MAR-2021
 	 **********************************************/
 
 	public LocalDate getDealDate() {
@@ -95,7 +95,7 @@ public class Deal {
 	 * @param dealDate	Deal date
 	 * @returns void 
 	 * Created By		PATHAN ARSHIYA SHAHINA
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setDealDate(LocalDate dealDate) {
@@ -107,7 +107,7 @@ public class Deal {
 	 * Description 		To get cost of deal
 	 * @returns double  Deal cost 
 	 * Created By		PATHAN ARSHIYA SHAHINA
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	
 	public double getDealCost() {
@@ -120,7 +120,7 @@ public class Deal {
 	 * @param dealCost	Deal cost
 	 * @returns void 
 	 * Created By		PATHAN ARSHIYA SHAHINA
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setDealCost(double dealCost) {
@@ -132,7 +132,7 @@ public class Deal {
 	 * Description 			To get Customer of deal
 	 * @returns Customer    Deal Customer 
 	 * Created By			PATHAN ARSHIYA SHAHINA
-	 * Created Date			22-MAR-2021
+	 * Created Date			23-MAR-2021
 	 ***********************************************/
 	
 	public Customer getCustomer() {
@@ -145,7 +145,7 @@ public class Deal {
 	 * @param customer	Deal Customer
 	 * @returns void 
 	 * Created By		PATHAN ARSHIYA SHAHINA
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setCustomer(Customer customer) {
@@ -157,7 +157,7 @@ public class Deal {
 	 * Description 			To get property of deal
 	 * @returns Property    Deal property 
 	 * Created By			PATHAN ARSHIYA SHAHINA
-	 * Created Date			22-MAR-2021
+	 * Created Date			23-MAR-2021
 	 ***********************************************/
 
 	public Property getProperty() {
@@ -170,7 +170,7 @@ public class Deal {
 	 * @param property	Deal property
 	 * @returns void 
 	 * Created By		PATHAN ARSHIYA SHAHINA
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setProperty(Property property) {

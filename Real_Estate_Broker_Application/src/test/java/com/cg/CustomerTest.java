@@ -8,7 +8,13 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.cg.entity.Customer;
-
+/******************************************************************************
+ * 
+ * @author 			ROOSA MOZOOMDAR
+ * Description 		It is a testing class that tests all the methods of Customer
+ * Version			1.0
+ * Created Date		30-MAR-2021
+ ******************************************************************************/
 @SpringBootTest
 public class CustomerTest extends AbstractTest {
 
@@ -17,7 +23,12 @@ public class CustomerTest extends AbstractTest {
 	public void setUp() {
 		super.setUp();
 	}
-
+	/*****************************************************************************
+	 * Method			Test Method for get Customer
+	 * Description 		To check the working of get Customer method in Customer Module 
+	 * Created By		ROOSA MOZOOMDAR
+	 * Created Date		30-MAR-2021
+	 ******************************************************************************/
 	@Test
 	public void getCustomer() throws Exception {
 
@@ -29,7 +40,12 @@ public class CustomerTest extends AbstractTest {
 		Customer c = super.mapFromJson(content, Customer.class);
 		assertEquals("Hyderabad", c.getCity());
 	}
-
+	/*********************************************************************************
+	 * Method			Test Method for get All Customer
+	 * Description 		To check the working of get All Customer method in Customer Module
+	 * Created By		ROOSA MOZOOMDAR
+	 * Created Date		30-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void getAllCustomer() throws Exception {
 		String str = "/real-estate-broker-application/customer/all";
@@ -40,7 +56,12 @@ public class CustomerTest extends AbstractTest {
 		Customer customerList[] = super.mapFromJson(content, Customer[].class);
 		assertEquals("Rakshith", customerList[1].getCustName());
 	}
-
+	/********************************************************************************
+	 * Method			Test Method for delete Customer
+	 * Description 		To check the working of delete Customer method in Customer Module
+	 * Created By		ROOSA MOZOOMDAR
+	 * Created Date		30-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void deleteCustomer() throws Exception {
 		String str = "/real-estate-broker-application/customer/remove/22";
@@ -51,7 +72,12 @@ public class CustomerTest extends AbstractTest {
 		Customer cust = super.mapFromJson(content, Customer.class);
 		assertEquals("Vizayanagaram", cust.getCity());
 	}
-
+	/********************************************************************************
+	 * Method			Test Method for create Customer
+	 * Description 		To check the working of create Customer method in Customer Module 
+	 * Created By		ROOSA MOZOOMDAR
+	 * Created Date		30-MAR-2021
+	 *********************************************************************************/
 	@Test
 	public void createCustomer() throws Exception {
 		String str = "/real-estate-broker-application/customer/add";
@@ -71,7 +97,12 @@ public class CustomerTest extends AbstractTest {
 		Customer customer = super.mapFromJson(content, Customer.class);
 		assertEquals("9847589333", customer.getMobile());
 	}
-
+	/********************************************************************************
+	 * Method			Test Method for update Customer
+	 * Description 		To check the working of update Customer method in Customer Module
+	 * Created By		ROOSA MOZOOMDAR
+	 * Created Date		30-MAR-2021
+	 ********************************************************************************/
 	@Test
 	public void updateCustomer() throws Exception {
 

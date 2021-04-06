@@ -17,7 +17,7 @@ import com.cg.repository.IPropertyRepo;
  *         @author			SANJAY DAS
  *         @Description  	It is a service class that provides methods for performing CRUD operations on Property  
  *         @version        	1.0
- *         @since    		23-MAR-2021
+ *         @since    		25-MAR-2021
  ******************************************************************************************************************/
 @Service
 public class IPropertyServiceImpl implements IPropertyService {
@@ -36,7 +36,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	 * @Param property 		New Property object
 	 * @returns Property	created Property field in database
 	 * Created By 			SANJAY DAS
-	 * Created Date			23-MAR-2021
+	 * Created Date			25-MAR-2021
 	 ***********************************************************/
 	
 	@Override
@@ -51,7 +51,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	 * @Param property 		Updating Property object
 	 * @returns Property	Updated Property field in database
 	 * Created By 			SANJAY DAS
-	 * Created Date			23-MAR-2021
+	 * Created Date			25-MAR-2021
 	 ***********************************************************/
 
 	@Override
@@ -66,7 +66,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	 * @Param property 		Deleting Property propId
 	 * @returns Property	Deleted Property field in database
 	 * Created By 			SANJAY DAS
-	 * Created Date			23-MAR-2021
+	 * Created Date			25-MAR-2021
 	 ***********************************************************/
 
 	@Override
@@ -90,7 +90,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	 * @Param propId 		Property Id to be viewed
 	 * @returns Property	Property record from database with propId
 	 * Created By 			SANJAY DAS
-	 * Created Date			23-MAR-2021
+	 * Created Date			25-MAR-2021
 	 *********************************************************************************/
 	
 	@Override
@@ -103,7 +103,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	 * Description			To view all Properties in database
 	 * @returns List		All Properties from the database
 	 * Created By 			SANJAY DAS
-	 * Created Date			23-MAR-2021
+	 * Created Date			25-MAR-2021
 	 ***********************************************************/
 	
 	@Override
@@ -117,7 +117,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	 * @Param criteria 		Property criteria
 	 * @returns List		All properties which are matched with the criteria
 	 * Created By 			SANJAY DAS
-	 * Created Date			23-MAR-2021
+	 * Created Date			25-MAR-2021
 	 *********************************************************************************/
 
 	@Override
