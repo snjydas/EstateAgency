@@ -7,7 +7,7 @@ import com.cg.entity.Deal;
  * @author		PATHAN ARSHIYA SHAHINA
  * Description	It is an interface extending JPA Repository for using already defined methods
  * @version		1.0
- * @since		22-MAR-2021
+ * @since		24-MAR-2021
  ********************************************************************************************/
 @Repository
 public interface IDealRepo extends JpaRepository<Deal, Integer> {

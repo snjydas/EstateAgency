@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
  * @author 			SANJAY DAS
  * Description 		It is an entity class that provides all the fields of Property
  * @version			1.0
- * @since   		22-MAR-2021
+ * @since   		23-MAR-2021
  * 
  ***************************************************************************/
 
@@ -66,7 +66,7 @@ public class Property {
 	 * Description 		To get Id of Property
 	 * @returns int 	Property Id 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	
 	public int getPropId() {
@@ -79,7 +79,7 @@ public class Property {
 	 * @param propId	Property Id
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setPropId(int propId) {
@@ -91,7 +91,7 @@ public class Property {
 	 * Description 		To get configuration of Property
 	 * @returns String 	Property configuration
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 ***************************************************/
 	
 	public String getConfiguration() {
@@ -104,7 +104,7 @@ public class Property {
 	 * @param configuration	 Property configuration
 	 * @returns void 
 	 * Created By			 SANJAY DAS
-	 * Created Date			 22-MAR-2021
+	 * Created Date			 23-MAR-2021
 	 **********************************************************/
 
 	public void setConfiguration(String configuration) {
@@ -116,7 +116,7 @@ public class Property {
 	 * Description 		To get offer type of Property
 	 * @returns String 	Property offer type
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 ************************************************/
 	
 	public String getOfferType() {
@@ -129,7 +129,7 @@ public class Property {
 	 * @param offerType	Property offer type
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setOfferType(String offerType) {
@@ -141,7 +141,7 @@ public class Property {
 	 * Description 		To get offer cost of Property
 	 * @returns double 	Property offer cost
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	
 	public double getOfferCost() {
@@ -154,7 +154,7 @@ public class Property {
 	 * @param offerCost	Property offer cost
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setOfferCost(double offerCost) {
@@ -166,7 +166,7 @@ public class Property {
 	 * Description 		To get area of Property
 	 * @returns double 	Property area in square feet
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 ***********************************************/
 
 	public double getAreaSqft() {
@@ -179,7 +179,7 @@ public class Property {
 	 * @param propId	Property area in square feet
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *************************************************/
 
 	public void setAreaSqft(double areaSqft) {
@@ -191,7 +191,7 @@ public class Property {
 	 * Description 		To get city of Property
 	 * @returns String 	Property city 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public String getCity() {
@@ -204,7 +204,7 @@ public class Property {
 	 * @param propId	Property city
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setCity(String city) {
@@ -216,7 +216,7 @@ public class Property {
 	 * Description 		To get address of Property
 	 * @returns String 	Property address
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public String getAddress() {
@@ -229,7 +229,7 @@ public class Property {
 	 * @param propId	Property address
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setAddress(String address) {
@@ -241,7 +241,7 @@ public class Property {
 	 * Description 		To get street of Property
 	 * @returns String 	Property Street 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public String getStreet() {
@@ -254,7 +254,7 @@ public class Property {
 	 * @param street	Property street
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setStreet(String street) {
@@ -266,7 +266,7 @@ public class Property {
 	 * Description 		To get status of Property
 	 * @returns boolean Property Status 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	
 	public boolean getStatus() {
@@ -279,7 +279,7 @@ public class Property {
 	 * @param status	Property status
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setStatus(boolean status) {
@@ -291,7 +291,7 @@ public class Property {
 	 * Description 		To get Broker of Property
 	 * @returns Broker  Property broker
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 	
 	public Broker getBroker() {
@@ -304,7 +304,7 @@ public class Property {
 	 * @param broker	Broker of the property
 	 * @returns void 
 	 * Created By		SANJAY DAS
-	 * Created Date		22-MAR-2021
+	 * Created Date		23-MAR-2021
 	 *******************************************/
 
 	public void setBroker(Broker broker) {
