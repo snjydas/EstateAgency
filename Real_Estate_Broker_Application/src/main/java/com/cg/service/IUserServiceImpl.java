@@ -50,7 +50,7 @@ public class IUserServiceImpl implements IUserService {
 		} 
 			else 
 			
-			throw new UserNotFoundException("Broker Not Found");
+			throw new UserNotFoundException("User Not Found");
 		}
 		return status;
 	}
