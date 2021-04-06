@@ -1,8 +1,8 @@
 # Real-Estate-Broker-Application
 Application for online Real Estate buying/selling.
 
-![](https://img.shields.io/github/repo-size/snjydas/Covid-Guard) ![](https://img.shields.io/github/license/snjydas/Covid-Guard?color=red)<br>
-![](https://img.shields.io/github/issues/snjydas/Covid-Guard?color=green) ![](https://img.shields.io/github/issues-pr/snjydas/Covid-Guard?color=green) ![](https://img.shields.io/github/downloads/snjydas/Covid-Guard/total) ![](https://img.shields.io/github/last-commit/snjydas/Covid-Guard) ![](https://img.shields.io/github/contributors/snjydas/Covid-Guard)
+![](https://img.shields.io/github/repo-size/snjydas/Real-Estate-Broker-Application) ![](https://img.shields.io/github/license/snjydas/Real-Estate-Broker-Application?color=red)<br>
+![](https://img.shields.io/github/issues/snjydas/Real-Estate-Broker-Application?color=green) ![](https://img.shields.io/github/issues-pr/snjydas/Real-Estate-Broker-Application?color=green) ![](https://img.shields.io/github/downloads/snjydas/Real-Estate-Broker-Application/total) ![](https://img.shields.io/github/last-commit/snjydas/Real-Estate-Broker-Application) ![](https://img.shields.io/github/contributors/snjydas/Real-Estate-Broker-Application)
 
 ## Content
 - [Overview](#overview)
