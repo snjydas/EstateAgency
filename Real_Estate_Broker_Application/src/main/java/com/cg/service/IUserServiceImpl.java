@@ -78,6 +78,7 @@ public class IUserServiceImpl implements IUserService {
 		}
 		return status;
 	}
+	
 	/******************************************************************************
 	 * Method                        changePassword
 	 * Description                   It is used to change the password

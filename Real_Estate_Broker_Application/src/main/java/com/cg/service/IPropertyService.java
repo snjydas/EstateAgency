@@ -5,6 +5,7 @@ import java.util.List;
 import com.cg.entity.Property;
 import com.cg.exception.PropertyNotFoundException;
 import com.cg.pojo.PropertyCriteria;
+
 /*************************************************************************************************************
  * @author 		SANJAY DAS
  * Description	It is an interface of service layer of property module that provides various methods for its implementation class

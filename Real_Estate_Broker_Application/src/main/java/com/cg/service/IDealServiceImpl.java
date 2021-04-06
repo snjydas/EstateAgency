@@ -12,12 +12,14 @@ import com.cg.repository.ICustomerRepo;
 import com.cg.repository.IDealRepo;
 import com.cg.repository.IPropertyRepo;
 
-@Service/****************************************************************************************************************
+/****************************************************************************************************************
  *         @author			PATHAN ARSHIYA SHAHINA
  *         @Description  	It is a service class that provides methods for performing CRUD operations on Broker  
  *         @version        	1.0
  *         @since    		25-MAR-2021
  ****************************************************************************************************************/
+
+@Service
 public class IDealServiceImpl implements IDealService {
 
 	@Autowired

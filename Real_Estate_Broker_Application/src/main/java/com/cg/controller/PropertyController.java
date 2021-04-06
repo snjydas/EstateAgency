@@ -61,7 +61,13 @@ public class PropertyController {
 	 **********************************************************************************************/
 
 	@PutMapping(value = "/update")
-	public Property updatePropertyData(@RequestBody Property property) {
+	public Property updatePropertyData(@RequestBody Property property) throws PropertyNotFoundException {
+		try {
+			propertyService.viewProperty(property.getPropId());
+		}
+		catch(Exception e) {
+			throw new PropertyNotFoundException("The property does not exists");
+		}
 		return propertyService.editProperty(property);
 
 	}

@@ -1,8 +1,8 @@
 package com.cg.exception;
 
 /*************************************************************************************
- * @author                 Sanjay Das
- * Description             It is a exception class that handles the exception occuring at 
+ * @author                 SANJAY DAS
+ * Description             It is a exception class that handles the exception occurring at 
  *                         service level when a deal is not available.
  * @version                1.0
  * @since           	   24-03-2021
