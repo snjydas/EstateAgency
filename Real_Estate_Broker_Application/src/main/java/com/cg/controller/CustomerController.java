@@ -19,7 +19,7 @@ import com.cg.service.ICustomerService;
 
 /***********************************************************************************************
  * 
- * @author 			Roosa Mazoomdar
+ * @author 			ROOSA MOZOOMDAR
  * Description		It is a rest controller class that controls the data flow into model object
  					and updates the view whenever data changes
  * Version 			1.0
@@ -38,7 +38,7 @@ public class CustomerController {
 	 * @returns Customer               Newly created Customer details
 	 * @PostMapping:                   Used to handle POST type of request method
 	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
-     * Created By                      Roosa Mazoomdar
+     * Created By                      ROOSA MOZOOMDAR
      * Created Date                    26-MAR-2021                            
 	 **********************************************************************************************/
 	@PostMapping("/add")
@@ -52,7 +52,7 @@ public class CustomerController {
 	 * @returns Customer               Updated Customer details
 	 * @PutMapping:                    Used to handle PUT type of request method
 	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
-     * Created By                      Roosa Mazoomdar
+     * Created By                      ROOSA MOZOOMDAR
      * Created Date                    26-MAR-2021                            
 	 **********************************************************************************************/
 
@@ -76,7 +76,7 @@ public class CustomerController {
 	 * @DeleteMapping                 	 Used to handle DELETE type of request method
 	 * @PathVariable                   	 It  is used for data passed in the URI and transfer its values to parameter variables
 	 * @throws CustomerNotFoundException It is raised due to invalid Customer ID
-     * Created By                        Roosa Mazoomdar
+     * Created By                        ROOSA MOZOOMDAR
      * Created Date                      26-MAR-2021                            
 	 **************************************************************************************************************************/
 
@@ -97,7 +97,7 @@ public class CustomerController {
 	 * @returns Customer               Customer Customer details with required Id
 	 * @GetMapping                 	   Used to handle GET type of request method
 	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
-     * Created By                      Roosa Mazoomdar
+     * Created By                      ROOSA MOZOOMDAR
      * Created Date                    26-MAR-2021                            
 	 *********************************************************************************************************/
 
@@ -115,7 +115,7 @@ public class CustomerController {
      * Description                     It is used to get all Customers from Customer entity
 	 * @returns Customer               Customer Customer details with required Id
 	 * @GetMapping                 	   Used to handle GET type of request method
-     * Created By                      Roosa Mazoomdar
+     * Created By                      ROOSA MOZOOMDAR
      * Created Date                    26-MAR-2021                            
 	 *********************************************************************************************************/
 	

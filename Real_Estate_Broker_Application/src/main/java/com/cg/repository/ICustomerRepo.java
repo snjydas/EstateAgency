@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cg.entity.Customer;
 /********************************************************************************************
- * @author		ROOSA MAZOOMDAR
+ * @author		ROOSA MOZOOMDAR
  * Description	It is an interface extending JPA Repository for using already defined methods
  * @version		1.0
  * @since		22-MAR-2021
