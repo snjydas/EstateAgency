@@ -18,7 +18,7 @@ import com.cg.repository.IUserRepository;
  * Description             It is a user service implementation class that defines the methods
  *                         mentioned in its interface.
  * Version                 1.0
- * created date            23-03-2021
+ * created date            25-MAR-2021
  *
  ****************************************************************************************/
 
@@ -34,7 +34,7 @@ public class IUserServiceImpl implements IUserService {
 	 * @param user                user's reference variable
 	 * @UserNotFoundException     It is raised due to invalid user details
 	 * created by                 Sidda Reddy Partha Saradhi
-	 * created date               23-03-2021
+	 * created date               25-MAR-2021
 	 ***********************************************************************************/
 
 	@Override
@@ -61,7 +61,7 @@ public class IUserServiceImpl implements IUserService {
 	 * @param user                                user's reference variable
 	 * @UserNotFoundException                     It raised due to invalid user details
 	 * created by                                 Sidda Reddy Partha Saradhi
-	 * Created date                               23-03-2021
+	 * Created date                               25-MAR-2021
 	 ***********************************************************************/
 
 
@@ -85,7 +85,7 @@ public class IUserServiceImpl implements IUserService {
 	 * @throws PasswordNotMatchException 
 	 * @UserNotFoundException        It is raised due to invalid user details
 	 * created by                     Sidda Reddy Partha Saradhi
-	 * created date                  23-03-2021
+	 * created date                  25-MAR-2021
 	 ********************************************************************************/
 
 	

@@ -36,6 +36,8 @@ public class UserController {
 	 * @param user                    user reference variable
 	 * @return                        return true if user details is correct or else false
 	 * @throws UserNotFoundException  it is raises due to invalid user details
+	 * Created By                      Sidda Reddy Partha Saradhi
+     * Created Date                    26-MAR-2021   
 	 */
 
 	@PostMapping(value = "/login")
@@ -48,6 +50,8 @@ public class UserController {
 	 * @param user                   user reference variable
 	 * @return
 	 * @throws UserNotFoundException
+	 * Created By                      Sidda Reddy Partha Saradhi
+     * Created Date                    26-MAR-2021  
 	 */
 	
 	@PostMapping("/logout")
@@ -61,6 +65,8 @@ public class UserController {
 	 * @param user                 user reference variable
 	 * @return
 	 * @throws UserNotFoundException
+	 * Created By                      Sidda Reddy Partha Saradhi
+     * Created Date                    26-MAR-2021  
 	 */
 	
 	@PutMapping("/updatepassword")

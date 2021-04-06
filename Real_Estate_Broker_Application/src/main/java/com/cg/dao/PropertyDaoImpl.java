@@ -18,7 +18,7 @@ public class PropertyDaoImpl implements PropertyDao {
 	 * Description		It is a dao layer which is used to get all properties and all properties with
 	 * 					given criteria
 	 * @version			1.0
-	 * @since    		23-MAR-2021
+	 * @since    		24-MAR-2021
 	 ***********************************************************************************************/
 	@PersistenceContext
 	EntityManager em;
@@ -28,7 +28,7 @@ public class PropertyDaoImpl implements PropertyDao {
      * Description                     It is used to get all Property from Property entity
 	 * @returns List  	               All Properties
      * Created By                      RAKSHITH VUPPALA
-     * Created Date                    23-MAR-2021                            
+     * Created Date                    24-MAR-2021                            
 	 
 	 **********************************************************************************************/
 	
@@ -43,7 +43,7 @@ public class PropertyDaoImpl implements PropertyDao {
      * Description                     It is used to get all Property from Broker entity which meets the user criteria
 	 * @returns List  	               All Properties with given criteria
      * Created By                      RAKSHITH VUPPALA
-     * Created Date                    23-MAR-2021                            
+     * Created Date                    24-MAR-2021                            
 	 
 	 *****************************************************************************************************************/
 
