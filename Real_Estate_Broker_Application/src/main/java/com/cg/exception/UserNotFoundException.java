@@ -1,8 +1,8 @@
 package com.cg.exception;
 
 /*************************************************************************************
- * @author                 SANJAY DAS
- * Description             It is a exception class that handles the exception occuring at 
+ * @author                 Sidda Reddy Partha Saradhi
+ * Description             It is a exception class that handles the exception occurring at 
  *                         service level when a user is not found.
  * @version                1.0
  * @since           	   24-03-2021

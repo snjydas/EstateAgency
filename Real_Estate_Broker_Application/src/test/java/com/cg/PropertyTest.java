@@ -12,7 +12,7 @@ import com.cg.entity.Property;
 import com.cg.pojo.PropertyCriteria;
 /***************************************************************************
  * 
- * @author 			RAKSHITH VUPPALA
+ * @author 			SANJAY DAS
  * Description 		It is a testing class that tests all the methods of Property
  * @version			1.0
  * @since   		30-MAR-2021
@@ -29,7 +29,7 @@ public class PropertyTest extends AbstractTest {
 	/*****************************************************************************
 	 * Method			Test Method for get Property
 	 * Description 		To check the working of get Property method in Property Module 
-	 * Created By		RAKSHITH VUPPALA
+	 * Created By		SANJAY DAS
 	 * Created Date		30-MAR-2021
 	 ******************************************************************************/
 	@Test
@@ -45,7 +45,7 @@ public class PropertyTest extends AbstractTest {
 	/********************************************************************************
 	 * Method			Test Method for create Property
 	 * Description 		To check the working of create Property method in Property Module 
-	 * Created By		RAKSHITH VUPPALA
+	 * Created By		SANJAY DAS
 	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
