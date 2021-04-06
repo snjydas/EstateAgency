@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.cg.entity.Deal;
 import com.cg.exception.DealNotAvailableException;
+import com.cg.repository.IDealRepo;
 import com.cg.service.IDealService;
 /***********************************************************************************************
  * @author 			PATHAN ARSHIYA SHAHINA
@@ -25,6 +26,8 @@ import com.cg.service.IDealService;
 public class DealController {
 	@Autowired
 	IDealService dealService;
+	@Autowired
+	IDealRepo dDao;
 
 	/********************************************************************************************
 	 * Method                          addDeal
@@ -40,6 +43,12 @@ public class DealController {
 	
 	@PostMapping(value = "/add")
 	public Deal addDeal(@RequestBody Deal deal) throws DealNotAvailableException {
+		try {
+			dDao.findById(deal.getDealId());
+		}
+		catch(Exception e) {
+			throw new DealNotAvailableException("Deal trying to edit does not exists");
+		}
 		deal.setDealDate(LocalDate.now());
 		deal.getProperty().setStatus(false);
 		return dealService.addDeal(deal);

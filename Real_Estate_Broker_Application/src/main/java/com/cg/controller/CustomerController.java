@@ -84,10 +84,11 @@ public class CustomerController {
 	public Customer removeCustomer(@PathVariable int custId) throws CustomerNotFoundException {
 
 		try {
-			return cService.removeCustomer(custId);
-		} catch (CustomerNotFoundException e) {
+			viewCustomer(custId);
+		} catch (Exception e) {
 			throw new CustomerNotFoundException("The entered custId is not found! Enter a valid custId to delete.");
 		}
+		return cService.removeCustomer(custId);
 	}
 	
 	/********************************************************************************************************
@@ -104,10 +105,11 @@ public class CustomerController {
 	@GetMapping("/id/{custId}")
 	public Customer viewCustomer(@PathVariable int custId) throws CustomerNotFoundException {
 		try {
-			return cService.viewCustomer(custId);
-		} catch (CustomerNotFoundException e) {
+			cService.viewCustomer(custId);
+		} catch (Exception e) {
 			throw new CustomerNotFoundException("The entered custId is not found! Enter a valid custId to find.");
 		}
+		return cService.viewCustomer(custId);
 	}
 	
 	/********************************************************************************************************
