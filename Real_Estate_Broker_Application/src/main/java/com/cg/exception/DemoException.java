@@ -1,5 +1,14 @@
 package com.cg.exception;
 
+/*************************************************************************************
+ * @author                 Sanjay Das
+ * Description             It is a global exception handler class that handles all the exceptions occuring at 
+ *                         service level.
+ * @version                1.0
+ * @since           	   24-03-2021
+ *
+ ***************************************************************************************/
+
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;

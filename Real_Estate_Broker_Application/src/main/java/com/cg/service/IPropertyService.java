@@ -7,7 +7,7 @@ import com.cg.exception.PropertyNotFoundException;
 import com.cg.pojo.PropertyCriteria;
 /*************************************************************************************************************
  * @author 		SANJAY DAS
- * Description	It is an interface of service layer that provides various methods for its implementation class
+ * Description	It is an interface of service layer of property module that provides various methods for its implementation class
  * @version		1.0
  * @since		23-MAR-2021 
  **************************************************************************************************************/

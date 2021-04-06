@@ -1,4 +1,5 @@
 package com.cg.exception;
+
 /*************************************************************************************
  * @author                 Sidda Reddy Partha Saradhi
  * Description             It is a exception class that handles the exception occurs at 
