@@ -119,7 +119,7 @@ public class BrokerController {
 			bService.viewBroker(broId);
 		}
 		catch(Exception e) {
-			throw e;
+			throw new BrokerNotFoundException("Broker with given ID not exists!");
 		}
 		return bService.viewBroker(broId);
 	}
