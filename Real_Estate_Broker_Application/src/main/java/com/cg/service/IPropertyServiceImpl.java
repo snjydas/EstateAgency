@@ -115,7 +115,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	 * Description			To view Property in database based on supplied criteria
 	 * @Param criteria 		Property criteria
 	 * @returns List		All properties which are matched with the criteria
-	 * Created By 			SANJAY DAS
+	 * Created By 			RAKSHITH VUPPALA
 	 * Created Date			25-MAR-2021
 	 *********************************************************************************/
 

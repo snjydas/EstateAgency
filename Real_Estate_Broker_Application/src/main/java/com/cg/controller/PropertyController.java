@@ -142,7 +142,7 @@ public class PropertyController {
 	 * @returns List 	               All Property details which satisfies the criteria
 	 * @PostMapping:                   Used to handle POST type of request method
 	 * @RequestBody:                   It maps the HttpRequest body to a transfer or domain object
-     * Created By                      SANJAY DAS
+     * Created By                      RAKSHITH VUPPALA
      * Created Date                    26-MAR-2021                            
 	 
 	 **********************************************************************************************/
