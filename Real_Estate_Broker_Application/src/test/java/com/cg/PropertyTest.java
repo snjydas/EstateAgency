@@ -76,7 +76,7 @@ public class PropertyTest extends AbstractTest {
 	/*********************************************************************************
 	 * Method			Test Method for get All Properties
 	 * Description 		To check the working of get All Properties method in Property Module
-	 * Created By		RAKSHITH VUPPALA
+	 * Created By		SANJAY DAS
 	 * Created Date		30-MAR-2021
 	 *********************************************************************************/
 	@Test
