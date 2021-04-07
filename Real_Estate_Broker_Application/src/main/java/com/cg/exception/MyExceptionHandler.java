@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public class CustomExceptionHandler {
+public class MyExceptionHandler {
 	@ResponseBody
 	@ResponseStatus(value = HttpStatus.NOT_FOUND)
 	@ExceptionHandler({ Exception.class })

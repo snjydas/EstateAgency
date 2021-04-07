@@ -12,7 +12,6 @@ import com.cg.pojo.PropertyCriteria;
  ********************************************************************************************************/
 public interface PropertyDao {
 
-	public List<Property> fetchAllProperties();
 
 	public List<Property> fetchPropertyByCriteria(PropertyCriteria criteria);
 }

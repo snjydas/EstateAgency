@@ -23,20 +23,7 @@ public class PropertyDaoImpl implements PropertyDao {
 	@PersistenceContext
 	EntityManager em;
 	
-	/********************************************************************************************
-	 * Method                          fetchAllProperties
-     * Description                     It is used to get all Property from Property entity
-	 * @returns List  	               All Properties
-     * Created By                      RAKSHITH VUPPALA
-     * Created Date                    24-MAR-2021                            
-	 
-	 **********************************************************************************************/
 	
-	@Override
-	public List<Property> fetchAllProperties() {
-		TypedQuery<Property> q = em.createQuery("select p from Property p", Property.class);
-		return q.getResultList();
-	}
 	
 	/*****************************************************************************************************************
 	 * Method                          fetchPropertyByCriteria

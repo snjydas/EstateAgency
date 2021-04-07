@@ -43,12 +43,12 @@ public class DealController {
 	
 	@PostMapping(value = "/add")
 	public Deal addDeal(@RequestBody Deal deal) throws DealNotAvailableException {
-		try {
-			dDao.findById(deal.getDealId());
-		}
-		catch(Exception e) {
-			throw new DealNotAvailableException("Deal trying to edit does not exists");
-		}
+//		try {
+//			dDao.findById(deal.getDealId());
+//		}
+//		catch(Exception e) {
+//			throw new DealNotAvailableException("Deal trying to edit does not exists");
+//		}
 		deal.setDealDate(LocalDate.now());
 		deal.getProperty().setStatus(false);
 		return dealService.addDeal(deal);

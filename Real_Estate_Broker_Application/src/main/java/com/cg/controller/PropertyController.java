@@ -148,8 +148,11 @@ public class PropertyController {
 	 **********************************************************************************************/
 	
 	@PostMapping("/criteria")
-	public List<Property> listPropertyByCriteria(@RequestBody PropertyCriteria criteria) {
-		return propertyService.ListPropertyByCriteria(criteria);
+	public List<Property> listPropertyByCriteria(@RequestBody PropertyCriteria criteria) throws PropertyNotFoundException {
+		List<Property> p= propertyService.ListPropertyByCriteria(criteria);
+		if(p.isEmpty())
+			throw new PropertyNotFoundException("No Property found with given criteria");
+		return p;
 	}
 
 }

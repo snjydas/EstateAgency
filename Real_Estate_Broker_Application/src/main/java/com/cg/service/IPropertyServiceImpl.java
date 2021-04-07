@@ -107,7 +107,7 @@ public class IPropertyServiceImpl implements IPropertyService {
 	
 	@Override
 	public List<Property> listAllProperties() {
-		return pDao.fetchAllProperties();
+		return pDao.findAll();
 	}
 	
 	/*********************************************************************************
