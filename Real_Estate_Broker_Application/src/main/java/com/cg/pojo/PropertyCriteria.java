@@ -29,7 +29,7 @@ public class PropertyCriteria {
 	 * Method			Getter Method
 	 * Description 		To get Configuration of the property criteria
 	 * @returns String  PropertyCriteria Configuration
-	 * Created By		Rakshith Vuppala
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		23-MAR-2021
 	 ***************************************************************/
 	public String getConfig() {
@@ -50,7 +50,7 @@ public class PropertyCriteria {
 	 * Method			Getter Method
 	 * Description 		To get Offer of the property criteria
 	 * @returns String  PropertyCriteria Offer
-	 * Created By		Rakshith Vuppala
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		23-MAR-2021
 	 *******************************************************/
 	public String getOffer() {
@@ -71,7 +71,7 @@ public class PropertyCriteria {
 	 * Method			Getter Method
 	 * Description 		To get city of the property criteria
 	 * @returns String  PropertyCriteria city
-	 * Created By		Rakshith Vuppala
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		23-MAR-2021
 	 *******************************************************/
 	public String getCity() {
@@ -92,7 +92,7 @@ public class PropertyCriteria {
 	 * Method			Getter Method
 	 * Description 		To get minimum cost of the property criteria
 	 * @returns double  PropertyCriteria minCost
-	 * Created By		Rakshith Vuppala
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		23-MAR-2021
 	 *************************************************************/
 	public double getMinCost() {
@@ -113,7 +113,7 @@ public class PropertyCriteria {
 	 * Method			Getter Method
 	 * Description 		To get maxCost of the property criteria
 	 * @returns double  PropertyCriteria maxCost
-	 * Created By		Rakshith Vuppala
+	 * Created By		RAKSHITH VUPPALA
 	 * Created Date		23-MAR-2021
 	 ************************************************************/
 	public double getMaxCost() {
