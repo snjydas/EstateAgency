@@ -41,8 +41,8 @@ public class UserController {
 	 */
 
 	@PostMapping(value = "/login")
-	public ResponseEntity<Boolean> loginUser(@RequestBody User user) throws UserNotFoundException {
-		return new ResponseEntity<Boolean>(uService.signIn(user),HttpStatus.OK);
+	public ResponseEntity<String> loginUser(@RequestBody User user) throws UserNotFoundException {
+		return new ResponseEntity<String>(uService.signIn(user),HttpStatus.OK);
 	}
 	/*******************************************************************************
 	 * Method                        logoutUser
@@ -55,8 +55,8 @@ public class UserController {
 	 */
 	
 	@PostMapping("/logout")
-	public ResponseEntity<Boolean> logoutUser(@RequestBody User user) throws UserNotFoundException{
-		return new ResponseEntity<Boolean>(uService.signOut(user),HttpStatus.OK);
+	public ResponseEntity<String> logoutUser(@RequestBody User user) throws UserNotFoundException{
+		return new ResponseEntity<String>(uService.signOut(user),HttpStatus.OK);
 	}
 	
 	/*******************************************************************************

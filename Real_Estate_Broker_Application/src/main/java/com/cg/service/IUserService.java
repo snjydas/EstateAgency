@@ -17,9 +17,9 @@ import com.cg.exception.UserNotFoundException;
 public interface IUserService {
 
 
-	Boolean signIn(User user) throws UserNotFoundException;
+	String signIn(User user) throws UserNotFoundException;
 
-	Boolean signOut(User user) throws UserNotFoundException;
+	String signOut(User user) throws UserNotFoundException;
 
 	User changePassword(int userid, User user) throws UserNotFoundException, PasswordNotMatchException;
 

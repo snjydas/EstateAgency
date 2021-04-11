@@ -38,7 +38,7 @@ public class IUserServiceImpl implements IUserService {
 	 ***********************************************************************************/
 
 	@Override
-	public Boolean signIn(User user) throws UserNotFoundException {
+	public String signIn(User user) throws UserNotFoundException {
 		Boolean status= false;
 //		Optional<User> resultUser= userRepository.findById(user.getUserId());
 		Optional<User> resultBroker=uDao.findById(user.getUserId());
@@ -52,7 +52,10 @@ public class IUserServiceImpl implements IUserService {
 			
 			throw new UserNotFoundException("User Not Found");
 		}
-		return status;
+		if(status)
+			return "You have logged in succesfully";
+		else
+			return "You have entered wrong user name or password";
 	}
 	
 	/*******************************************************************
@@ -66,17 +69,20 @@ public class IUserServiceImpl implements IUserService {
 
 
 	@Override
-	public Boolean  signOut(User user) throws UserNotFoundException {
+	public String  signOut(User user) throws UserNotFoundException {
 		Boolean status=false;
 		Optional<User> resultBroker=uDao.findById(user.getUserId());
 
 		if (resultBroker.isEmpty()) {
-			throw new UserNotFoundException("Broker Not Found");
+			throw new UserNotFoundException("User Not Found");
 		}
 		else if(resultBroker.get().getPassword().equals(user.getPassword())) {
 			 status = true;
 		}
-		return status;
+		if(status)
+			return "You have logged out succesfully";
+		else
+			return "You couldn't log out";
 	}
 	
 	/******************************************************************************
@@ -102,7 +108,7 @@ public class IUserServiceImpl implements IUserService {
 		}
 		else
 		{
-			throw new UserNotFoundException("Broker Not Found");
+			throw new UserNotFoundException("User Not Found");
 		}	
 
 }
