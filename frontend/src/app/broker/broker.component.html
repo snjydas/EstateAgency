@@ -1,11 +1,18 @@
+<style>
+  .center {
+  text-align: center;
+}
+</style>
 <div class="container">
-    <h4>Broker Page</h4>
+  <div class="center"><h4>Broker Page</h4></div>
   </div>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
         <ul class="nav navbar-nav">
             <li>
-              <a [routerLink]="['./update']">Update Brokers</a>
+              <a [routerLink]="['./update',1]"><button class="btn btn-warning">Update Profile</button></a> |
+              <a [routerLink]="['']"><button class="btn btn-info">My Properties</button></a> |
+              <a [routerLink]="['']"><button class="btn btn-success">Add Property</button></a>
             </li>
         </ul>
     </div>

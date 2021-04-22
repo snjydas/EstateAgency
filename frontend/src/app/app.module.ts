@@ -11,6 +11,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { SignupComponent } from './signup/signup.component';
 import { PropertySearchComponent } from './customer/property-search/property-search.component';
 import { UpdateComponent } from './broker/update/update.component';
+import { AllBrokersComponent } from './broker/all-brokers/all-brokers.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UpdateComponent } from './broker/update/update.component';
     CustomerComponent,
     SignupComponent,
     PropertySearchComponent,
-    UpdateComponent
+    UpdateComponent,
+    AllBrokersComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path:'broker', component:BrokerComponent,
     children:[
-      { path:'update', component:UpdateComponent}
+      { path:'update/:userId', component:UpdateComponent}
     ]
   }
 ];

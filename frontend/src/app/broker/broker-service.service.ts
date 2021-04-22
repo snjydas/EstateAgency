@@ -7,7 +7,7 @@ import {catchError} from 'rxjs/operators'
   providedIn: 'root'
 })
 export class BrokerServiceService {
-  private url="http://localhost:8085/real-estate-broker-application/broke"
+  private url="http://localhost:8080/real-estate-broker-application/broker"
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json'
@@ -16,28 +16,28 @@ export class BrokerServiceService {
   constructor( private httpClient:HttpClient) { }
 
   addBroker(broker:any):Observable<any[]>{
-    return this.httpClient.post<any[]>(this.url+"/add",JSON.stringify(broker),this.httpOptions).pipe(catchError(this.handleError))
+    return this.httpClient.post<any[]>(this.url+"/add",JSON.stringify(broker),this.httpOptions).pipe(catchError(this.handleError));
   }
 
   updateBroker(broker:any):Observable<any[]>{
-    return this.httpClient.put<any[]>(this.url+"/update",JSON.stringify(broker),this.httpOptions).pipe(catchError(this.handleError))
+    return this.httpClient.put<any[]>(this.url+"/update",JSON.stringify(broker),this.httpOptions).pipe(catchError(this.handleError));
   }
 
   getAllBrokers():Observable<any[]>{
-    return this.httpClient.get<any[]>(this.url+"/all")
+    return this.httpClient.get<any[]>(this.url+"/all").pipe(catchError(this.handleError));
   }
 
   getBrokerById(id:number):Observable<any>{
-    return this.httpClient.get<any>(this.url+"/id/"+id)
+    return this.httpClient.get<any>(this.url+"/id/"+id).pipe(catchError(this.handleError));
   }
 
   deleteBroker(id:number):Observable<any>{
-    return this.httpClient.delete<any>(this.url+"/remove"+"/"+id)
+    return this.httpClient.delete<any>(this.url+"/remove/"+id).pipe(catchError(this.handleError));
   }
 
   handleError(eResponse:HttpErrorResponse){
     if(eResponse.error instanceof ErrorEvent){
-      console.log("Clinet Side Error ="+eResponse.error.message);
+      console.log("Client Side Error ="+eResponse.error.message);
     }
     else{
       console.log("Server Side Error ="+eResponse.error.message)
