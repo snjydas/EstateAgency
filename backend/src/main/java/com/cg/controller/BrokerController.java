@@ -23,7 +23,7 @@ import com.cg.service.IBrokerService;
  * @version 		1.0
  * @since		    26-MAR-2021
  ***********************************************************************************************/
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @RequestMapping("real-estate-broker-application/broker")
 public class BrokerController {
