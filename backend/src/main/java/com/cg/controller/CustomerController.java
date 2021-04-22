@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.entity.Customer;
+import com.cg.entity.Property;
 import com.cg.exception.CustomerNotFoundException;
 import com.cg.service.ICustomerService;
 
@@ -126,6 +127,11 @@ public class CustomerController {
 	@GetMapping("/all")
 	public List<Customer> listAllCustomers() {
 		return cService.listAllCustomers();
+	}
+	
+	@GetMapping("/properties/{custId}")
+	public List<Property> listAllProperties(@PathVariable int custId){
+		return cService.getAllProperties(custId);
 	}
 
 }

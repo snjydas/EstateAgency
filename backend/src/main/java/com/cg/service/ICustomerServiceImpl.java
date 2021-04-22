@@ -121,6 +121,11 @@ public class ICustomerServiceImpl implements ICustomerService {
 	public List<Customer> listAllCustomers() {
 		return cDao.findAll();
 	}
+
+	@Override
+	public List<Property> getAllProperties(int custId){ 
+		return cDao.findById(custId).get().getProperties();
+	}
 	
 	
 
