@@ -3,6 +3,7 @@ package com.cg.service;
 import java.util.List;
 
 import com.cg.entity.Customer;
+import com.cg.entity.Property;
 import com.cg.exception.CustomerNotFoundException;
 
 /*************************************************************************************************************
@@ -23,6 +24,8 @@ public interface ICustomerService {
 	public Customer viewCustomer(int custid) throws CustomerNotFoundException;
 
 	public List<Customer> listAllCustomers();
+	
+	public List<Property> getAllProperties(int custId);
 
 	
 }
