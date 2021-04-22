@@ -1,10 +1,15 @@
 package com.cg.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +29,7 @@ import com.cg.service.IUserService;
  * @since		    26-MAR-2021
  ***********************************************************************************************/
 
+@CrossOrigin("http://localhost:4200")
 @RestController
 
 @RequestMapping(value = "real-estate-broker-application/user")
@@ -41,8 +47,8 @@ public class UserController {
 	 */
 
 	@PostMapping(value = "/login")
-	public ResponseEntity<String> loginUser(@RequestBody User user) throws UserNotFoundException {
-		return new ResponseEntity<String>(uService.signIn(user),HttpStatus.OK);
+	public ResponseEntity<Boolean> loginUser(@RequestBody User user) throws UserNotFoundException {
+		return new ResponseEntity<Boolean>(uService.signIn(user),HttpStatus.OK);
 	}
 	/*******************************************************************************
 	 * Method                        logoutUser
@@ -55,8 +61,8 @@ public class UserController {
 	 */
 	
 	@PostMapping("/logout")
-	public ResponseEntity<String> logoutUser(@RequestBody User user) throws UserNotFoundException{
-		return new ResponseEntity<String>(uService.signOut(user),HttpStatus.OK);
+	public ResponseEntity<Boolean> logoutUser(@RequestBody User user) throws UserNotFoundException{
+		return new ResponseEntity<Boolean>(uService.signOut(user),HttpStatus.OK);
 	}
 	
 	/*******************************************************************************
@@ -72,6 +78,16 @@ public class UserController {
 	@PutMapping("/updatepassword")
 	public ResponseEntity<User> updatePassword(@RequestBody User user) throws UserNotFoundException, PasswordNotMatchException{
 		return new ResponseEntity<User>(uService.changePassword(user.getUserId(), user),HttpStatus.OK);
+	}
+	
+	@GetMapping("/all")
+	public List<User> getAllUsers(){
+		return uService.getAllUsers();
+	}
+	
+	@GetMapping("/id/{userId}")
+	public User getUserById(@PathVariable int userId) {
+		return uService.getUserById(userId);
 	}
 
 }
