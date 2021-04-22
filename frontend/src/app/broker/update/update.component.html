@@ -1,1 +1,27 @@
-<p>update works!</p>
+<div class="container">
+    <form (ngSubmit)="updateData()">
+        <div class="form-group">
+            Broker Name
+            <input class="form-control" [(ngModel)]="brok.broName" name="broName">
+        </div>
+        <div class="form-group">
+            Mobile
+            <input class="form-control" [(ngModel)]="brok.mobile" name="mobile">
+        </div>
+        <div class="form-group">
+            e-mail
+            <input class="form-control" [(ngModel)]="brok.email" name="email">
+        </div>
+        <div class="form-group">
+            City
+            <input class="form-control" [(ngModel)]="brok.city" name="city">
+        </div>
+        <div class="form-group">
+            Password
+            <input class="form-control" [(ngModel)]="brok.password" name="password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Update</button>
+        </div>
+    </form> 
+</div>
