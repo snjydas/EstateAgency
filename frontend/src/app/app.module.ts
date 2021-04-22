@@ -10,6 +10,7 @@ import { BrokerComponent } from './broker/broker.component';
 import { CustomerComponent } from './customer/customer.component';
 import { SignupComponent } from './signup/signup.component';
 import { PropertySearchComponent } from './customer/property-search/property-search.component';
+import { UpdateComponent } from './broker/update/update.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PropertySearchComponent } from './customer/property-search/property-sea
     BrokerComponent,
     CustomerComponent,
     SignupComponent,
-    PropertySearchComponent
+    PropertySearchComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
