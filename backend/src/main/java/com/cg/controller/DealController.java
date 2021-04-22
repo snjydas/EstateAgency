@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +21,7 @@ import com.cg.service.IDealService;
  * @version 		1.0
  * @since		    26-MAR-2021
  ***********************************************************************************************/
-
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("real-estate-broker-application/deal")
 public class DealController {

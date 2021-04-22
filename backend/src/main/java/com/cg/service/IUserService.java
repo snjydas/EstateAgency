@@ -1,5 +1,7 @@
 package com.cg.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.cg.entity.User;
@@ -17,10 +19,14 @@ import com.cg.exception.UserNotFoundException;
 public interface IUserService {
 
 
-	String signIn(User user) throws UserNotFoundException;
+	boolean signIn(User user) throws UserNotFoundException;
 
-	String signOut(User user) throws UserNotFoundException;
+	boolean signOut(User user) throws UserNotFoundException;
 
 	User changePassword(int userid, User user) throws UserNotFoundException, PasswordNotMatchException;
-
+	
+	List<User> getAllUsers();
+	
+	User getUserById(int userId);
+ 
 }

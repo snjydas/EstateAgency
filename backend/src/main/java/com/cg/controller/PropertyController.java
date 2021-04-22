@@ -3,6 +3,7 @@ package com.cg.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import com.cg.service.IPropertyService;
  * @version 		1.0
  * @since			26-MAR-2021
  ***********************************************************************************************/
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/real-estate-broker-application/property")
 public class PropertyController {

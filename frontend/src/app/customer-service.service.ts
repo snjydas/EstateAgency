@@ -6,30 +6,33 @@ import { catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class UserServiceService {
-
-  private url="http://localhost:8085/real-estate-broker-application/user"
+export class CustomerServiceService {
+  private url="http://localhost:8085/real-estate-broker-application/customer"
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json'
     })
   }
-  constructor( private httpClient:HttpClient ) { }
+  constructor( private httpClient:HttpClient) { }
 
-  login(user:any):Observable<any>{
-    return this.httpClient.post<any>(this.url+"/login",JSON.stringify(user),this.httpOptions).pipe(catchError(this.handleError))
+  addCustomer(cust:any):Observable<any[]>{
+    return this.httpClient.post<any[]>(this.url+"/add",JSON.stringify(cust),this.httpOptions).pipe(catchError(this.handleError))
   }
 
-  logout(user:any):Observable<any>{
-    return this.httpClient.post<any>(this.url+"/logout",JSON.stringify(user),this.httpOptions).pipe(catchError(this.handleError))
+  updateCustomer(cust:any):Observable<any[]>{
+    return this.httpClient.put<any[]>(this.url+"/update",JSON.stringify(cust),this.httpOptions).pipe(catchError(this.handleError))
   }
 
-  getAllUsers():Observable<any[]>{
+  getAllCustomers():Observable<any[]>{
     return this.httpClient.get<any[]>(this.url+"/all")
   }
 
-  getUserById(id:number):Observable<any>{
+  getCustomerById(id:number):Observable<any>{
     return this.httpClient.get<any>(this.url+"/id/"+id)
+  }
+
+  deleteCustomer(id:number):Observable<any>{
+    return this.httpClient.delete<any>(this.url+"/remove"+"/"+id)
   }
 
   handleError(eResponse:HttpErrorResponse){

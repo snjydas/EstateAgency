@@ -1,6 +1,7 @@
 
 package com.cg.service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -38,7 +39,7 @@ public class IUserServiceImpl implements IUserService {
 	 ***********************************************************************************/
 
 	@Override
-	public String signIn(User user) throws UserNotFoundException {
+	public boolean signIn(User user) throws UserNotFoundException {
 		Boolean status= false;
 //		Optional<User> resultUser= userRepository.findById(user.getUserId());
 		Optional<User> resultBroker=uDao.findById(user.getUserId());
@@ -52,10 +53,7 @@ public class IUserServiceImpl implements IUserService {
 			
 			throw new UserNotFoundException("User Not Found");
 		}
-		if(status)
-			return "You have logged in succesfully";
-		else
-			return "You have entered wrong user name or password";
+		return status;
 	}
 	
 	/*******************************************************************
@@ -69,7 +67,7 @@ public class IUserServiceImpl implements IUserService {
 
 
 	@Override
-	public String  signOut(User user) throws UserNotFoundException {
+	public boolean  signOut(User user) throws UserNotFoundException {
 		Boolean status=false;
 		Optional<User> resultBroker=uDao.findById(user.getUserId());
 
@@ -79,10 +77,7 @@ public class IUserServiceImpl implements IUserService {
 		else if(resultBroker.get().getPassword().equals(user.getPassword())) {
 			 status = true;
 		}
-		if(status)
-			return "You have logged out succesfully";
-		else
-			return "You couldn't log out";
+		return status;
 	}
 	
 	/******************************************************************************
@@ -112,4 +107,16 @@ public class IUserServiceImpl implements IUserService {
 		}	
 
 }
+
+	@Override
+	public List<User> getAllUsers() {
+		
+		return uDao.findAll();
+	}
+
+	@Override
+	public User getUserById(int userId) {
+		return uDao.findById(userId).get();
+	}
+	
 }
