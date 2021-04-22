@@ -41,11 +41,11 @@ public class PropertyDaoImpl implements PropertyDao {
 		String k =criteria.getCity();
 		double l =criteria.getMinCost();
 		double m=criteria.getMaxCost();
-		if(i ==null)
+		if(i ==null || i=="")
 			i="%";
-		if(j==null)
+		if(j==null || j=="")
 			j="%";
-		if(k==null)
+		if(k==null || k=="")
 			k="%";
 		if(m==0)
 			m=Double.MAX_VALUE;

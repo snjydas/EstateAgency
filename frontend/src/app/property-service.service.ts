@@ -13,8 +13,16 @@ export class PropertyServiceService {
       'Content-Type':'application/json'
     })
   }
+
+  private criteria:any;
   constructor( private httpClient:HttpClient) { }
 
+  setCriteria(criteria:any){
+    this.criteria=criteria;
+  }
+  getCriteria():any{
+    return this.criteria;
+  }
   addProperty(property:any):Observable<any[]>{
     return this.httpClient.post<any[]>(this.url+"/add",JSON.stringify(property),this.httpOptions).pipe(catchError(this.handleError))
   }

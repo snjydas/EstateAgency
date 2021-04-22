@@ -13,7 +13,7 @@ export class PropertySearchComponent implements OnInit {
 
   constructor( private fb: FormBuilder, private pService:PropertyServiceService,
     private router:Router) { }
-
+    
   ngOnInit(): void {
     this.propForm=this.fb.group({
       config: ['', Validators.required],
@@ -25,14 +25,16 @@ export class PropertySearchComponent implements OnInit {
   }
 
   searchProp() {
-    this.pService.getPropertyByCriteria(this.propForm.value).subscribe(res=>{
-      this.router.navigate([''])
-    }, err=>{
-      console.log(err);
-    }
-    );
-    
+    this.pService.setCriteria(this.propForm.value)
   }
-
+  // searchProp() {
+  //   this.pService.getPropertyByCriteria(this.propForm.value).subscribe(res=>{
+  //     this.router.navigate([''])
+  //   }, err=>{
+  //     console.log(err);
+  //   }
+  //   );
+    
+  // }
 
 }

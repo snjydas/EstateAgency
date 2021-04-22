@@ -151,6 +151,7 @@ public class PropertyController {
 	
 	@PostMapping("/criteria")
 	public List<Property> listPropertyByCriteria(@RequestBody PropertyCriteria criteria) throws PropertyNotFoundException {
+		System.out.println(criteria.getMinCost());
 		List<Property> p= propertyService.ListPropertyByCriteria(criteria);
 		if(p.isEmpty())
 			throw new PropertyNotFoundException("No Property found with given criteria");
