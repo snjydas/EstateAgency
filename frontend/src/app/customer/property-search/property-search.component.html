@@ -5,38 +5,61 @@
 <div class="container">
     <div>
         <form [formGroup]="propForm" (ngSubmit)="searchProp()">
-            <div class="form-group">
-                <label class="form-check form-check-inline" for="config">Configuration</label>
-                <select name="config"  formControlName='config'>
-                    <option value="Flat">Flat</option>
-                    <option value="Shop">Shop</option>
-                    <option value="Plot">Plot</option>
-                </select>
+            <div class="row">
+                <div class="col-2">
+                    <label class="form-check form-check-inline" for="config">Configuration</label>
+                </div>
+                <div class="col-3">
+                    <select name="config"  formControlName='config'>
+                        <option value="Flat">Flat</option>
+                        <option value="Shop">Shop</option>
+                        <option value="Plot">Plot</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label class="form-check form-check-inline" for="offer">Offer Type</label>
-                <select name="offer"  formControlName='offer'>
-                    <option value="Sell">Sell</option>
-                    <option value="Rent">Rent</option>
-                </select>
+            <div class="row">
+                <div class="col-2">
+                    <label class="form-check form-check-inline" for="offer">Offer Type</label>
+                </div>
+                <div class="col-3">
+                    <select name="offer"  formControlName='offer'>
+                        <option value="Sell">Sell</option>
+                        <option value="Rent">Rent</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label class="form-check form-check-inline" for="city">Offer Type</label>
-                <select name="city"  formControlName='city'>
-                    <option value="Rajahmundry">Rajahmundry</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Vijayawada">Vijayawada</option>
-                    <option value="Khammam">Khammam</option>
-                    <option value="Warangal">Warangal</option>
-                    <option value="Pulivendula">Pulivendula</option>
-                    <option value="Vizag">Vizag</option>
-                </select>
+            <div class="row">
+                <div class="col-2">
+                    <label class="form-check form-check-inline" for="city">City</label>
+                </div>
+                <div class="col-3">
+                    <select name="city"  formControlName='city'>
+                        <option value="Rajahmundry">Rajahmundry</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Vijayawada">Vijayawada</option>
+                        <option value="Khammam">Khammam</option>
+                        <option value="Warangal">Warangal</option>
+                        <option value="Pulivendula">Pulivendula</option>
+                        <option value="Vizag">Vizag</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <input class="form-control" placeholder="Enter minimum cost" formControlName="minCost">
+            <div class="row">
+                <div class="col-2">Minimum Cost</div>
+                <div class="col-3">
+                    <input class="form-control" placeholder="Enter minimum cost" formControlName="minCost">
+                </div>
             </div>
-            <div class="form-group">
-                <input class="form-control" placeholder="Enter maximum cost" formControlName="minCost">
+            <div class="row">
+                <div class="col-2">
+                    Maximum Cost
+                </div>
+                <div class="col-3">
+                    <input class="form-control" placeholder="Enter maximum cost" formControlName="maxCost">
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary" [disabled]="!propForm.valid">Search</button>
             </div>
         </form>
     </div>

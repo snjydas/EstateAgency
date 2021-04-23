@@ -27,6 +27,10 @@ export class CustomerServiceService {
     return this.httpClient.get<any[]>(this.url+"/all")
   }
 
+  getAllProperties(id:number):Observable<any[]>{
+    return this.httpClient.get<any[]>(this.url+"/properties/"+id)
+  }
+
   getCustomerById(id:number):Observable<any>{
     return this.httpClient.get<any>(this.url+"/id/"+id)
   }

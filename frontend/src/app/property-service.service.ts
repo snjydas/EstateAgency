@@ -14,7 +14,7 @@ export class PropertyServiceService {
     })
   }
 
-  private criteria:any;
+  private criteria={config: "", offer: "", city: "", minCost: "", maxCost: ""};
   constructor( private httpClient:HttpClient) { }
 
   setCriteria(criteria:any){
@@ -36,11 +36,11 @@ export class PropertyServiceService {
   }
 
   getPropertyById(id:number):Observable<any>{
-    return this.httpClient.get<any>(this.url+"/"+id)
+    return this.httpClient.get<any>(this.url+"/id/"+id)
   }
 
-  getPropertyByCriteria(criteria:any):Observable<any>{
-    return this.httpClient.post<any[]>(this.url+"/criteria"+JSON.stringify(criteria),this.httpOptions).pipe(catchError(this.handleError))
+  getPropertyByCriteria(criteria:any):Observable<any[]>{
+    return this.httpClient.post<any[]>(this.url+"/criteria",JSON.stringify(criteria),this.httpOptions).pipe(catchError(this.handleError))
   }
 
   deleteProperty(id:number):Observable<any>{

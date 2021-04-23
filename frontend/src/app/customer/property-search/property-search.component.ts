@@ -16,16 +16,17 @@ export class PropertySearchComponent implements OnInit {
     
   ngOnInit(): void {
     this.propForm=this.fb.group({
-      config: ['', Validators.required],
-      offer:['', Validators.required],
-      city:['', Validators.required],
-      minCost:['', Validators.required],
-      maxCost:['', Validators.required]
+      config: [''],
+      offer:[''],
+      city:[''],
+      minCost:[''],
+      maxCost:['']
     })
   }
 
   searchProp() {
     this.pService.setCriteria(this.propForm.value)
+    this.router.navigate(['/customer/criteria'])
   }
   // searchProp() {
   //   this.pService.getPropertyByCriteria(this.propForm.value).subscribe(res=>{

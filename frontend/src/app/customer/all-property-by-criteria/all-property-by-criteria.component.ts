@@ -12,7 +12,8 @@ export class AllPropertyByCriteriaComponent implements OnInit {
   constructor(private pService:PropertyServiceService) { }
 
   ngOnInit(): void {
-    this.pService.getPropertyByCriteria(this.pService.getCriteria).subscribe(data=>{
+    console.log("=========================="+this.pService.getCriteria()+"==========================")
+    this.pService.getPropertyByCriteria(this.pService.getCriteria()).subscribe(data=>{
       this.properties=data
     });
   }
