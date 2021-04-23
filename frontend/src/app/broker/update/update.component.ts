@@ -4,6 +4,8 @@ import { Broker } from '../broker';
 import { BrokerServiceService } from '../broker-service.service';
 @Component({
   selector: 'app-update',
+  templateUrl: './update.component.html',
+  styleUrls: ['./update.component.css']
 
 })
 export class UpdateComponent implements OnInit {
