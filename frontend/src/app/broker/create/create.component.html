@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Broker Registration Form</h1>
+</div>
+<div class="container">
+    <div>
+        <form [formGroup]="broForm" (ngSubmit)="regBroker()">
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter Broker Name" formControlName="broName">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter e-mail" formControlName="email">
+                <!-- <span class="badge badge-warning" *ngIf="name!.touched && name!.invalid">Invalid Name</span> -->
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter password" formControlName="password">
+                <!-- <span class="badge badge-warning" *ngIf="email!.touched && email!.invalid">Invalid Email</span> -->
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter mobile" formControlName="mobile">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter city" formControlName="city">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary" [disabled]="!broForm.valid">Register</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -10,7 +10,7 @@ export class OfferPipe implements PipeTransform {
       return "Buy";
     }
     else{
-      return value;
+      return "Rent";
     }
   }
 

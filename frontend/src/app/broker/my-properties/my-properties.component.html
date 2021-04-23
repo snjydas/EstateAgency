@@ -1,0 +1,30 @@
+<h2>My Properties</h2>
+<div class="container">
+    <table border="1">
+        <tr>
+            <th>Property Id</th>
+            <th>Configuration</th>
+            <th>Offer Type</th>
+            <th>Offer Cost</th>
+            <th>Area in square feet</th>
+            <th>City</th>
+            <th>Address</th>
+            <th>Street</th>
+            <th>Status</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tr *ngFor='let p of properties'>
+            <td>{{p.propId}}</td>
+            <td>{{p.configuration}}</td>
+            <td>{{p.offerType}}</td>
+            <td>{{p.offerCost}}</td>
+            <td>{{p.areaSqft}}</td>
+            <td>{{p.city}}</td>
+            <td>{{p.address}}</td>
+            <td>{{p.street}}</td>
+            <td>{{p.status}}</td>
+            <td><button class="btn btn-success btn-sm" [routerLink]="['/broker/updating',p.propId]">Update</button></td>
+            <td><button class="btn btn-danger btn-sm" (click)='delete(p.propId)'>Delete</button></td>
+        </tr>
+    </table>
+</div>

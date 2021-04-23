@@ -18,6 +18,11 @@ import { AvailablePropPipe } from './available-prop.pipe';
 import { OfferPipe } from './offer.pipe';
 import { DealComponent } from './customer/deal/deal.component';
 import { AllPropertyByCriteriaComponent } from './customer/all-property-by-criteria/all-property-by-criteria.component';
+import { AllBrokersComponent } from './broker/all-brokers/all-brokers.component';
+import { CreateComponent } from './broker/create/create.component';
+import { MyPropertiesComponentB } from './broker/my-properties/my-properties.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { AllPropertyByCriteriaComponent } from './customer/all-property-by-crite
     SignupComponent,
     PropertySearchComponent,
     UpdateComponent,
+    UpdateMypropsComponent,
+    CreateComponent,
+    AllBrokersComponent,
     MyPropertiesComponent,
+    MyPropertiesComponentB,
     AllPropertyByCriteriaComponent,
     UpdateCustomerComponent,
     AvailablePropPipe,
@@ -40,7 +49,8 @@ import { AllPropertyByCriteriaComponent } from './customer/all-property-by-crite
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]

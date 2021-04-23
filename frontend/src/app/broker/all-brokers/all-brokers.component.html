@@ -1,0 +1,42 @@
+<style>
+    th, td{
+        text-align: center;
+    }
+</style>
+<div class="container" align="center">
+    <h1>All Broker Records</h1>
+</div>
+<div align="center">
+    <p style="float: center; width: 50rem;">
+        <input class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here">
+    </p>
+</div>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let b of broks | filter:searchText">
+        <div class="card-header">
+            <div align="left">
+                <b>BrokerID:{{b.userId}}</b>
+            </div>
+            <div align="right">
+                <button class="btn btn-danger btn-sm" (click)='delete(b.userId)'><i class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/broker/update',b.userId]"><i class="bi bi-pen"></i></button>
+            </div>
+        </div>
+        <div class="card-body" style="float: center;">
+            <img class="card-img-top" src="../assets/broker.jpg" alt="img not found">
+            <h4 class="card-title">{{b.broName}}</h4>
+            <p class="card-text"><i class="bi bi-telephone-fill"></i> +91{{b.mobile}}</p>
+            <p><i class="bi bi-envelope-fill"></i> {{b.email}}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <i class="bi bi-geo-alt-fill"></i> {{b.city}}
+        </div>
+    </div>
+  
+</div>
+
+
+  
+
