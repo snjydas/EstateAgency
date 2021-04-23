@@ -28,5 +28,7 @@ public interface IUserService {
 	List<User> getAllUsers();
 	
 	User getUserById(int userId);
+	
+	User getUserByEmail(String email);
  
 }

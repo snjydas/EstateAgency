@@ -32,6 +32,10 @@ export class UserServiceService {
     return this.httpClient.get<any>(this.url+"/id/"+id)
   }
 
+  getUserByEmail(email:string):Observable<any>{
+    return this.httpClient.get<any>(this.url+"/email/"+email)
+  }
+
   handleError(eResponse:HttpErrorResponse){
     if(eResponse.error instanceof ErrorEvent){
       console.log("Clinet Side Error ="+eResponse.error.message);

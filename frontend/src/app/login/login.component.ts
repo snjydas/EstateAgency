@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm=this.fb.group({
-      userId:['',Validators.required],
+      email:['',Validators.required],
       password:['',Validators.required]
     })
   }
@@ -33,8 +33,9 @@ export class LoginComponent implements OnInit {
       if(this.allow){
         this.id=this.loginForm.value.userId
         console.log(this.id)
-        this.uService.getUserById(this.id).subscribe(data=>{
+        this.uService.getUserByEmail(this.loginForm.value.email).subscribe(data=>{
           this.role=data.role
+          this.id=data.userId
           if(this.role=="Broker"){
             this.router.navigate(['/broker'])
           }

@@ -42,7 +42,7 @@ public class IUserServiceImpl implements IUserService {
 	public boolean signIn(User user) throws UserNotFoundException {
 		Boolean status= false;
 //		Optional<User> resultUser= userRepository.findById(user.getUserId());
-		Optional<User> resultBroker=uDao.findById(user.getUserId());
+		Optional<User> resultBroker= Optional.of(uDao.findByEmail(user.getEmail()));
 		if (resultBroker.isPresent()) {
 			if((resultBroker.get().getPassword().equals(user.getPassword()))) 
 			{
@@ -117,6 +117,11 @@ public class IUserServiceImpl implements IUserService {
 	@Override
 	public User getUserById(int userId) {
 		return uDao.findById(userId).get();
+	}
+
+	@Override
+	public User getUserByEmail(String email) {
+		return uDao.findByEmail(email);
 	}
 	
 }
