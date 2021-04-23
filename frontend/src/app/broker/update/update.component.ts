@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Broker } from '../broker';
 import { BrokerServiceService } from '../broker-service.service';
-import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-update',
 
@@ -11,7 +10,7 @@ export class UpdateComponent implements OnInit {
   brokid:number;
   brok:Broker;
 
-  constructor() { }
+  
   constructor(private actRouter:ActivatedRoute, private bService:BrokerServiceService, private router:Router) { }
 
   ngOnInit(): void {
