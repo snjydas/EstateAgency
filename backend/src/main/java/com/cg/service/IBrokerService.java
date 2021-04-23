@@ -2,6 +2,7 @@ package com.cg.service;
 
 import java.util.List;
 import com.cg.entity.Broker;
+import com.cg.entity.Property;
 import com.cg.exception.BrokerNotFoundException;
 
 /********************************************************************************************************
@@ -25,4 +26,6 @@ public interface IBrokerService {
 	public Broker viewBroker(int broId) throws BrokerNotFoundException;
 
 	public List<Broker> listAllBrokers();
+	
+	public List<Property> getAllProperties(int broid);
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.cg.entity.Broker;
+import com.cg.entity.Property;
 import com.cg.exception.BrokerNotFoundException;
 import com.cg.service.IBrokerService;
 
@@ -123,5 +124,9 @@ public class BrokerController {
 			throw new BrokerNotFoundException("Broker with given ID not exists!");
 		}
 		return bService.viewBroker(broId);
+	}
+	@GetMapping("/properties/{broId}")
+	public List<Property> listAllProperties(@PathVariable int broId){
+		return bService.getAllProperties(broId);
 	}
 }

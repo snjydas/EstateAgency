@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.cg.entity.Broker;
 import com.cg.entity.Deal;
+import com.cg.entity.Property;
 import com.cg.exception.BrokerNotFoundException;
 import com.cg.exception.PropertyNotFoundException;
 import com.cg.repository.IBrokerRepo;
@@ -109,6 +110,11 @@ public class IBrokerServiceImpl implements IBrokerService {
 	@Override
 	public List<Broker> listAllBrokers() {
 		return bDao.findAll();
+	}
+
+	@Override
+	public List<Property> getAllProperties(int broid) {
+		return bDao.findById(broid).get().getProperties();
 	}
 
 	
