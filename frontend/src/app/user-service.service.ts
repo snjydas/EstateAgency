@@ -8,6 +8,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class UserServiceService {
 
+  id:number;
   private url="http://localhost:8085/real-estate-broker-application/user"
   httpOptions={
     headers:new HttpHeaders({
@@ -15,6 +16,14 @@ export class UserServiceService {
     })
   }
   constructor( private httpClient:HttpClient ) { }
+
+  setId(id:number){
+    this.id=id;
+  }
+
+  getId():number{
+    return this.id
+  }
 
   login(user:any):Observable<any>{
     return this.httpClient.post<any>(this.url+"/login",JSON.stringify(user),this.httpOptions).pipe(catchError(this.handleError))

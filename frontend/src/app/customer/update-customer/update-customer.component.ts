@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomerServiceService } from 'src/app/customer-service.service';
+import { UserServiceService } from 'src/app/user-service.service';
 
 @Component({
   selector: 'app-update-customer',
@@ -11,10 +12,10 @@ export class UpdateCustomerComponent implements OnInit {
 
   customer:any;
   pass:string;
-  constructor(private cService:CustomerServiceService, private router:Router) { }
+  constructor(private cService:CustomerServiceService, private router:Router, private uService:UserServiceService) { }
 
   ngOnInit(): void {
-    this.cService.getCustomerById(7).subscribe(data=>{
+    this.cService.getCustomerById(this.uService.getId()).subscribe(data=>{
       this.customer=data
     })
   }

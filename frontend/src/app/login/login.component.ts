@@ -9,7 +9,6 @@ import { UserServiceService } from '../user-service.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private id:number;
   private role:string
   loginForm:FormGroup
   private allow:boolean;
@@ -23,19 +22,14 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  getId():number{
-    return this.id
-  }
 
   login(){
     this.uService.login(this.loginForm.value).subscribe(data=>{
       this.allow=data;
       if(this.allow){
-        this.id=this.loginForm.value.userId
-        console.log(this.id)
         this.uService.getUserByEmail(this.loginForm.value.email).subscribe(data=>{
           this.role=data.role
-          this.id=data.userId
+          this.uService.setId(data.userId);
           if(this.role=="Broker"){
             this.router.navigate(['/broker'])
           }
