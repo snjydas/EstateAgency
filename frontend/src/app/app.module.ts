@@ -23,6 +23,7 @@ import { CreateComponent } from './broker/create/create.component';
 import { MyPropertiesComponentB } from './broker/my-properties/my-properties.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
+import { UpdateUserComponent } from './broker/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.c
     UpdateCustomerComponent,
     AvailablePropPipe,
     OfferPipe,
-    DealComponent
+    DealComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
