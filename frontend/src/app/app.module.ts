@@ -20,6 +20,12 @@ import { DealComponent } from './customer/deal/deal.component';
 import { AllPropertyByCriteriaComponent } from './customer/all-property-by-criteria/all-property-by-criteria.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AllBrokersComponent } from './broker/all-brokers/all-brokers.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CreateComponent } from './broker/create/create.component';
+import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
+import { UpdateUserComponent } from './broker/update-user/update-user.component';
+import { MyPropertiesComponentB } from './broker/my-properties/my-properties.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +43,22 @@ import { NavbarComponent } from './navbar/navbar.component';
     OfferPipe,
     DealComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    AllBrokersComponent,
+    CreateComponent,
+    UpdateMypropsComponent,
+    UpdateUserComponent,
+    MyPropertiesComponentB
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
