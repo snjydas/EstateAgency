@@ -1,39 +1,46 @@
 <br><br><br>
 <div class="container">
     <br><br>
-	<form [formGroup]="signupForm" (ngSubmit)='signup()'>
-		<h1>Create Account</h1>
-		<div class="form-group card-body">
+    <form [formGroup]="signupForm" (ngSubmit)='signup()'>
+        <h1>Create Account</h1>
+        <div class="form-group card-body">
             <table class="table table-borderless ">
                 <tr>
                     <td style="line-height: 50px;">Name</td>
-                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter Name" formControlName="name">
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter name"
+                            formControlName="name">
                         <span *ngIf="name?.touched && !name?.valid" class="badge badge-warning">Invalid Name</span>
                     </td>
                 </tr>
                 <tr>
-                    <td style="line-height: 50px;">e-mail</td>
-                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter e-mail" formControlName="email">
+                    <td style="line-height: 50px;">E-mail</td>
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter e-mail"
+                            formControlName="email">
                         <span *ngIf="email?.touched && !email?.valid" class="badge badge-warning">Invalid email</span>
                     </td>
                 </tr>
                 <tr>
                     <td style="line-height: 50px;">Password</td>
-                    <td align="left"><input type="password" class="form-control" style="width: 30rem;" placeholder="Enter password" formControlName="password">
-                        <span *ngIf="password?.touched && !password?.valid" class="badge badge-warning">Invalid Password</span>
+                    <td align="left"><input type="password" class="form-control" style="width: 30rem;"
+                            placeholder="Enter password" formControlName="password">
+                        <span *ngIf="password?.touched && !password?.valid" class="badge badge-warning">Invalid
+                            Password</span>
                     </td>
                 </tr>
                 <tr>
                     <td style="line-height: 50px;">Mobile</td>
-                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter mobile" formControlName="mobile">
-                        <span *ngIf="mobile?.touched && !mobile?.valid" class="badge badge-warning">Invalid Mobile number</span>
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter mobile"
+                            formControlName="mobile">
+                        <span *ngIf="mobile?.touched && !mobile?.valid" class="badge badge-warning">Invalid Mobile
+                            number</span>
                     </td>
                 </tr>
                 <tr>
                     <td style="line-height: 50px;">City</td>
                     <td align="left">
-                        <select class="form-select" name="city" style="width: 30rem; height: 2.5rem;" formControlName='city'>
-                            <option value="" selected disabled>Please select a City                   </option>
+                        <select class="form-select" name="city" style="width: 30rem; height: 2.5rem;"
+                            formControlName='city'>
+                            <option value="" selected disabled>Please select a city </option>
                             <option value="Rajahmundry">Rajahmundry</option>
                             <option value="Hyderabad">Hyderabad</option>
                             <option value="Vijayawada">Vijayawada</option>
@@ -41,29 +48,32 @@
                             <option value="Warangal">Warangal</option>
                             <option value="Pulivendula">Pulivendula</option>
                             <option value="Vizag">Vizag</option>
-                         </select><br>
+                        </select><br>
                         <span *ngIf="city?.touched && !city?.valid" class="badge badge-warning">Invalid City</span>
                     </td>
                 </tr>
-				<tr>
-					<td style="line-height: 50px;">Role</td>
-					<td align="left">
-						<select class="form-select" style="width: 30rem; height: 2.5rem;" data-style="btn-new" name='role'  formControlName="Role">
-							<option value="" selected disabled>Please select a role</option>
-							<option value="customer">Customer</option>
-							<option value="broker">Broker</option>
-						</select><br>
-                        <span *ngIf="Role?.touched && !Role?.valid" class="badge badge-warning">Please select any of the role</span>
-					</td>
-				</tr>
+                <tr>
+                    <td style="line-height: 50px;">Role</td>
+                    <td align="left">
+                        <select class="form-select" style="width: 30rem; height: 2.5rem;" data-style="btn-new"
+                            name='role' formControlName="Role">
+                            <option value="" selected disabled>Please select a role</option>
+                            <option value="customer">Customer</option>
+                            <option value="broker">Broker</option>
+                        </select><br>
+                        <span *ngIf="Role?.touched && !Role?.valid" class="badge badge-warning">Please select any of the
+                            role</span>
+                    </td>
+                </tr>
                 <tr>
             </table>
         </div>
-		<button  type="submit">Sign up</button>
-		<br>
-	  </form>
-	  
+        <button type="submit">Sign up</button>
+        <br>
+    </form>
+
 </div>
-<br>
-<div class="text-center">Already have an account? <button [routerLink]="['/login']">Sign in</button></div>
+<br><br>
+<div class="text-center"><b>Already have an account ?</b> &nbsp; <button [routerLink]="['/login']">Sign in</button>
+</div>
 <br><br>

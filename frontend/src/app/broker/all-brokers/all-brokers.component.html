@@ -1,5 +1,6 @@
 <style>
-    th, td{
+    th,
+    td {
         text-align: center;
     }
 </style>
@@ -14,14 +15,16 @@
 <hr>
 
 <div class="card-columns">
-    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let b of broks | filter:searchText">
+    <div class="card mb-5 rounded border shadow-sm" align="center" *ngFor="let b of broks | filter:searchText">
         <div class="card-header">
             <div align="left">
                 <b>BrokerID:{{b.userId}}</b>
             </div>
             <div align="right">
-                <button class="btn btn-danger btn-sm" (click)='delete(b.userId)'><i class="bi bi-trash"></i></button>&nbsp;
-                <button class="btn btn-success btn-sm" [routerLink]="['/broker/update',b.userId]"><i class="bi bi-pen"></i></button>
+                <button class="btn btn-danger btn-sm" (click)='delete(b.userId)'><i
+                        class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/broker/update',b.userId]"><i
+                        class="bi bi-pen"></i></button>
             </div>
         </div>
         <div class="card-body" style="float: center;">
@@ -34,9 +37,5 @@
             <i class="bi bi-geo-alt-fill"></i> {{b.city}}
         </div>
     </div>
-  
+
 </div>
-
-
-  
-
