@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Property } from 'src/app/property';
 import { PropertyServiceService } from 'src/app/property-service.service';
+import { UserServiceService } from 'src/app/user-service.service';
 import { BrokService } from '../brok.service';
 
 @Component({
@@ -11,14 +12,14 @@ import { BrokService } from '../brok.service';
 export class MyPropertiesComponentB implements OnInit {
   properties!:Property[];
 
-  constructor(private bService:BrokService, private pService:PropertyServiceService) { }
+  constructor(private bService:BrokService, private pService:PropertyServiceService, private uService:UserServiceService) { }
 
 
   ngOnInit(): void {
     this.getProperty();
   }
   getProperty(){
-    this.bService.getProperties(1).subscribe(data=>{
+    this.bService.getProperties(this.uService.getId()).subscribe(data=>{
       this.properties=data;
     });
   }

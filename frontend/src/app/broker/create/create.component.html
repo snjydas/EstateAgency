@@ -1,3 +1,42 @@
+<div class="card text-white bg-secondary" align="center" style="width: 50rem; float: center;">
+    <form (ngSubmit)="regBroker()">
+        <div class="card-header">
+            <h4>Broker Registration Form</h4>
+        </div>
+        <div class="form-group card-body">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter Broker Name" formControlName="broName"></td>
+                </tr>
+                <tr>
+                    <th>e-mail</th>
+                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter e-mail" formControlName="email"></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="email" class="form-control" style="width: 30rem;" placeholder="Enter password" formControlName="password"></td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter mobile" formControlName="mobile"></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter city" formControlName="city"></td>
+                </tr>
+                <tr>
+            </table>
+        </div>
+        <div class="form-group card-footer">
+            <button class="btn btn-success btn-sm">Register</button>
+        </div>
+    </form>
+</div>
+
+
+
+
 <div class="container">
     <h1>Broker Registration Form</h1>
 </div>
