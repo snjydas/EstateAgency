@@ -1,75 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
 
-<head>
-	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-	<title>EstateAgency</title>
-	<meta content="" name="description">
-	<meta content="" name="keywords">
-
-	<!-- Favicons -->
-	<link href="assets/img/favicon.png" rel="icon">
-	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
-	<!-- Template Main CSS File -->
-	<link rel="stylesheet" href="./login.component.css">
-
-	<!-- =======================================================
-  * File Name: styles.css
-  * Template URL: /real-estate-application/login
-  * Author: Sanjay Das
-  ======================================================== -->
-
-</head>
-
-<body>
-
-	<div class="container" id="container">
-		<div class="form-container sign-up-container">
-			<form action="#">
-				<h1>Create Account</h1>
-				<input type="text" placeholder="Name" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
-
-				<input type="Mobile" placeholder="Mobile" />
-				<input type="City" placeholder="City" />
-				<label for="role">Choose a role:</label>
-				<select name="role" id="role">
-					<option value="customer">Customer</option>
-					<option value="broker">Broker</option>
-				</select>
-				<br>
-				<button>Sign Up</button>
-			</form>
-		</div>
-		<div class="form-container sign-in-container">
-			<form action="#" [formGroup]="loginForm" (ngSubmit)='login()'>
-				<h1>Sign in</h1>
-				<input type="email" placeholder="Email Id" formControlName="email"/>
-				<input type="password" placeholder="Password" formControlName="password"/>
-				<button type="submit" >Sign In</button>
-			</form>
-		</div>
-		<div class="overlay-container">
-			<div class="overlay">
-				<div class="overlay-panel overlay-left">
-					<h1>Welcome Back!</h1>
-					<p>To keep connected with us please sign in with your personal info</p>
-					<button class="ghost" id="signIn">Sign In</button>
-				</div>
-				<div class="overlay-panel overlay-right">
-					<h1>Hello, Friend!</h1>
-					<p>Enter your personal details and start journey with us</p>
-					<button class="ghost" id="signUp">Sign Up</button>
-				</div>
+			<input type="Mobile" placeholder="Mobile" />
+			<input type="City" placeholder="City" />
+			<label for="role">Choose a role:</label>
+			<select name="role" id="role">
+				<option value="customer">Customer</option>
+				<option value="broker">Broker</option>
+			</select>
+			<br>
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#" [formGroup]="loginForm" (ngSubmit)='login()'>
+			<h1>Sign in</h1>
+			<input type="email" placeholder="Email Id" formControlName="email" />
+			<input type="password" placeholder="Password" formControlName="password" />
+			<button type="submit">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please sign in with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp" [routerLink]="['/signup']">Sign Up</button>
 			</div>
 		</div>
 	</div>
-	<script src="login.component.js"></script>
-</body>
+</div>
+<script src="login.component.js"></script>
