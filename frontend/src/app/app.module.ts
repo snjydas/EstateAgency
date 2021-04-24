@@ -18,12 +18,8 @@ import { AvailablePropPipe } from './available-prop.pipe';
 import { OfferPipe } from './offer.pipe';
 import { DealComponent } from './customer/deal/deal.component';
 import { AllPropertyByCriteriaComponent } from './customer/all-property-by-criteria/all-property-by-criteria.component';
-import { AllBrokersComponent } from './broker/all-brokers/all-brokers.component';
-import { CreateComponent } from './broker/create/create.component';
-import { MyPropertiesComponentB } from './broker/my-properties/my-properties.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
-import { UpdateUserComponent } from './broker/update-user/update-user.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -34,25 +30,21 @@ import { UpdateUserComponent } from './broker/update-user/update-user.component'
     SignupComponent,
     PropertySearchComponent,
     UpdateComponent,
-    UpdateMypropsComponent,
-    CreateComponent,
-    AllBrokersComponent,
     MyPropertiesComponent,
-    MyPropertiesComponentB,
     AllPropertyByCriteriaComponent,
     UpdateCustomerComponent,
     AvailablePropPipe,
     OfferPipe,
     DealComponent,
-    UpdateUserComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    Ng2SearchPipeModule
+    HttpClientModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
