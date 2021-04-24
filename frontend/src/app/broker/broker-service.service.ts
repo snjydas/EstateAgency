@@ -7,7 +7,7 @@ import {catchError} from 'rxjs/operators'
   providedIn: 'root'
 })
 export class BrokerServiceService {
-  private url="http://localhost:8085/real-estate-broker-application/broke"
+  private url="http://localhost:8085/real-estate-broker-application/broker"
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json'

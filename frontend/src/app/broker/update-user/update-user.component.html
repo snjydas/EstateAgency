@@ -1,1 +1,31 @@
-<p>update-user works!</p>
+<div class="container">
+    <form (ngSubmit)="updateBroker()">
+        <div class="form-group">
+            Name
+            <input class="form-control" [(ngModel)]="broker.broName" name="broName">
+        </div>
+        <div class="form-group">
+            Email
+            <input type="email" class="form-control" [(ngModel)]="broker.email" name="email">
+        </div>
+        <div class="form-group">
+            Mobile Number
+            <input class="form-control" [(ngModel)]="broker.mobile" name="mobile">
+        </div>
+        <div class="form-group">
+            City
+            <input class="form-control" [(ngModel)]="broker.city" name="city">
+        </div>
+        <div class="form-group">
+            Password
+            <input type="password" class="form-control" [(ngModel)]="broker.password" name="password">
+        </div>
+        <div class="form-group">
+            Re-enter Password
+            <input type="password" class="form-control" [(ngModel)]="pass" name="repassword">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>
