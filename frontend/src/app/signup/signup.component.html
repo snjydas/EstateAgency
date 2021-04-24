@@ -4,35 +4,56 @@
 	<form [formGroup]="signupForm" (ngSubmit)='signup()'>
 		<h1>Create Account</h1>
 		<div class="form-group card-body">
-            <table>
+            <table class="table table-borderless ">
                 <tr>
-                    <th>Name</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter Name" formControlName="name"></td>
+                    <td style="line-height: 50px;">Name</td>
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter Name" formControlName="name">
+                        <span *ngIf="name?.touched && !name?.valid" class="badge badge-warning">Invalid Name</span>
+                    </td>
                 </tr>
                 <tr>
-                    <th>e-mail</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter e-mail" formControlName="email"></td>
+                    <td style="line-height: 50px;">e-mail</td>
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter e-mail" formControlName="email">
+                        <span *ngIf="email?.touched && !email?.valid" class="badge badge-warning">Invalid email</span>
+                    </td>
                 </tr>
                 <tr>
-                    <th>Password</th>
-                    <td><input type="email" class="form-control" style="width: 30rem;" placeholder="Enter password" formControlName="password"></td>
+                    <td style="line-height: 50px;">Password</td>
+                    <td align="left"><input type="password" class="form-control" style="width: 30rem;" placeholder="Enter password" formControlName="password">
+                        <span *ngIf="password?.touched && !password?.valid" class="badge badge-warning">Invalid Password</span>
+                    </td>
                 </tr>
                 <tr>
-                    <th>Mobile</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter mobile" formControlName="mobile"></td>
+                    <td style="line-height: 50px;">Mobile</td>
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter mobile" formControlName="mobile">
+                        <span *ngIf="mobile?.touched && !mobile?.valid" class="badge badge-warning">Invalid Mobile number</span>
+                    </td>
                 </tr>
                 <tr>
-                    <th>City</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter city" formControlName="city"></td>
+                    <td style="line-height: 50px;">City</td>
+                    <td align="left">
+                        <select class="form-select" name="city" style="width: 30rem; height: 2rem;" formControlName='city'>
+                            <option value="" selected disabled>Please select a City                   </option>
+                            <option value="Rajahmundry">Rajahmundry</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Vijayawada">Vijayawada</option>
+                            <option value="Khammam">Khammam</option>
+                            <option value="Warangal">Warangal</option>
+                            <option value="Pulivendula">Pulivendula</option>
+                            <option value="Vizag">Vizag</option>
+                         </select><br>
+                        <span *ngIf="city?.touched && !city?.valid" class="badge badge-warning">Invalid City</span>
+                    </td>
                 </tr>
 				<tr>
-					<th>Role</th>
+					<td style="line-height: 50px;">Role</td>
 					<td align="left">
-						<select class="selectpicker" data-style="btn-primary" name='role'  formControlName="Role">
-							<option selected="selected">Select</option>
+						<select class="form-select" style="width: 30rem; height: 2rem;" data-style="btn-primary" name='role'  formControlName="Role">
+							<option value="" selected disabled>Please select a role</option>
 							<option value="customer">Customer</option>
 							<option value="broker">Broker</option>
-						</select>
+						</select><br>
+                        <span *ngIf="Role?.touched && !Role?.valid" class="badge badge-warning">Please select any of the role</span>
 					</td>
 				</tr>
                 <tr>

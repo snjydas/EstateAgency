@@ -19,12 +19,31 @@ export class SignupComponent implements OnInit {
       broName:['',Validators.required],
       custName:['',Validators.required],
       name:['',Validators.required],
-      email:['',Validators.required],
+      email:['',[Validators.required, Validators.pattern("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")]],
       password:['',Validators.required],
-      mobile:['',Validators.required],
+      mobile:['',[Validators.required, Validators.pattern("^[7-9][0-9]{9}$")]],
       city:['',Validators.required],
       Role:['',Validators.required],
     })
+  }
+
+  get name(){
+    return this.signupForm.get('name');
+  }
+  get email(){
+    return this.signupForm.get('email');
+  }
+  get password(){
+    return this.signupForm.get('password');
+  }
+  get mobile(){
+    return this.signupForm.get('mobile');
+  }
+  get city(){
+    return this.signupForm.get('city');
+  }
+  get Role(){
+    return this.signupForm.get("Role");
   }
 
   signup(){
