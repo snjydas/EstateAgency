@@ -1,0 +1,10 @@
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 15px; /* Added */
+}
+.box{
+    width: 80%;
+    position: center;
+    margin-bottom: 15px;
+}
