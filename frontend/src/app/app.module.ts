@@ -27,6 +27,13 @@ import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.c
 import { UpdateUserComponent } from './broker/update-user/update-user.component';
 import { MyPropertiesComponentB } from './broker/my-properties/my-properties.component';
 import { CreatePropertiesComponent } from './broker/create-properties/create-properties.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminBrokerComponent } from './admin/admin-broker/admin-broker.component';
+import { AdminCustomerComponent } from './admin/admin-customer/admin-customer.component';
+import { AdminDealComponent } from './admin/admin-deal/admin-deal.component';
+import { AdminPropertyComponent } from './admin/admin-property/admin-property.component';
+import { AllPropertiesComponent } from './all-properties/all-properties.component';
+import { UpdateMypropsComponentA } from './admin/admin-property/update-myprops/update-myprops.component';
 
 @NgModule({
   declarations: [
@@ -50,8 +57,14 @@ import { CreatePropertiesComponent } from './broker/create-properties/create-pro
     UpdateMypropsComponent,
     UpdateUserComponent,
     MyPropertiesComponentB,
-    CreatePropertiesComponent
-
+    CreatePropertiesComponent,
+    AdminComponent,
+    AdminBrokerComponent,
+    AdminCustomerComponent,
+    AdminDealComponent,
+    AdminPropertyComponent,
+    AllPropertiesComponent,
+    UpdateMypropsComponentA
 
   ],
   imports: [

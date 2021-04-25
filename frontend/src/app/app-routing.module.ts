@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminBrokerComponent } from './admin/admin-broker/admin-broker.component';
+import { AdminCustomerComponent } from './admin/admin-customer/admin-customer.component';
+import { AdminDealComponent } from './admin/admin-deal/admin-deal.component';
+import { AdminPropertyComponent } from './admin/admin-property/admin-property.component';
+import { UpdateMypropsComponentA } from './admin/admin-property/update-myprops/update-myprops.component';
+import { AdminComponent } from './admin/admin.component';
+import { AllPropertiesComponent } from './all-properties/all-properties.component';
 import { AllBrokersComponent } from './broker/all-brokers/all-brokers.component';
 import { BrokerComponent } from './broker/broker.component';
 import { CreatePropertiesComponent } from './broker/create-properties/create-properties.component';
@@ -36,6 +43,25 @@ const routes: Routes = [
       { path: 'create', component:CreatePropertiesComponent}
     ]
 
+  },
+  {
+    path:'admin', component:AdminComponent,
+    children:[
+      {path:'broker', component:AdminBrokerComponent, 
+        children:[
+          {path:'all', component:AllBrokersComponent},
+          {path:'add', component:CreateComponent},
+          { path: 'update/:userid', component:UpdateComponent},
+        ]},
+      {path:'customer', component:AdminCustomerComponent},
+      {path:'deal', component:AdminDealComponent},
+      {path:'property', component:AdminPropertyComponent,
+        children:[
+          {path:'all', component:AllPropertiesComponent},
+          {path:'updating/:propid',component:UpdateMypropsComponentA}
+        ]
+      }
+    ]
   },
   {
     path:'customer',component:CustomerComponent,

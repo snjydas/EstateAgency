@@ -1,0 +1,52 @@
+<style>
+    th, td{
+        text-align: center;
+    }
+</style>
+<div class="container" align="center">
+    <h1>All Deals</h1>
+</div>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let d of deals">
+        <div class="card-header">
+            <div align="left">
+                <b>Deal ID:{{d.dealId}}</b>
+            </div>
+            <!-- <div align="right">
+                <button class="btn btn-danger btn-sm" (click)='delete(p.propId)'><i class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/admin/property/updating',p.propId]"><i class="bi bi-pen"></i></button>
+            </div> -->
+        </div>
+        <div class="card-body">
+            <img class="card-img-top" src="../assets/img/property.jfif" alt="img not found">
+            <table class="table table-borderless">
+                
+            </table>
+            <table class="table table-borderless">
+                <tr>
+                    <th>Customer Id</th>
+                    <td>{{d.customer.userId}}</td>
+                </tr>
+                <tr>
+                    <th>Propoerty Id</th>
+                    <td>{{d.property.propId}}</td>
+                </tr>
+                <tr>
+                    <th>Deal Date</th>
+                    <td>Deal Date: {{d.dealData}}</td>
+                </tr>
+                <tr>
+                    <th>Deal Cost</th>
+                    <td>{{d.dealCost}}</td>
+                </tr>
+            </table>
+                
+                
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+  
+</div>

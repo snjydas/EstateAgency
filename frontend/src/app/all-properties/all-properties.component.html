@@ -1,0 +1,56 @@
+<style>
+    th, td{
+        text-align: center;
+    }
+</style>
+<div class="container" align="center">
+    <h1>My Properties</h1>
+</div>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let p of properties">
+        <div class="card-header">
+            <div align="left">
+                <b>Property ID:{{p.propId}}</b>
+            </div>
+            <div align="right">
+                <button class="btn btn-danger btn-sm" (click)='delete(p.propId)'><i class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/admin/property/updating',p.propId]"><i class="bi bi-pen"></i></button>
+            </div>
+        </div>
+        <div class="card-body">
+            <img class="card-img-top" src="../assets/img/property.jfif" alt="img not found">
+            <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>
+            <ng-template #loggedIn>
+                <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-success btn-sm"><i class="bi bi-check-circle"></i></button></h4>
+            </ng-template>
+            <ng-template #loggedOut>
+                <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-danger btn-sm"><i class="bi bi-check-circle"></i></button></h4>
+            </ng-template>
+            <table class="card-text">
+                <tr>
+                    <th>Offer:</th>
+                    <td align="left">{{p.offerType}}</td>
+                </tr>
+                <tr>
+                    <th>Area:</th>
+                    <td align="left">{{p.areaSqft}}sq.ft.</td>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <td align="left">{{p.street}},&nbsp;&nbsp;{{p.address}}</td>
+                </tr>    
+            </table>
+        </div>
+        <div class="card-footer text-muted">
+            <div align="left">
+                <i class="bi bi-geo-alt-fill"></i> {{p.city}}
+            </div>
+            <div align="right">
+                <h4>&#8377; {{p.offerCost}}</h4> 
+            </div>
+        </div>
+    </div>
+  
+</div>
