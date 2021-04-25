@@ -1,6 +1,5 @@
 <style>
-    th,
-    td {
+    th, td {
         text-align: center;
     }
 </style>
@@ -11,6 +10,9 @@
     <p style="float: center; width: 50rem;">
         <input class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here">
     </p>
+</div>
+<div align="center">
+    <p style="float: center;"><a [routerLink]="['../add']"><button class="btn btn-info"><i class="bi bi-file-earmark-plus-fill"></i>Create Broker</button></a></p>
 </div>
 <hr>
 
