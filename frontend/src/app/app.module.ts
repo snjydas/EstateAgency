@@ -34,6 +34,7 @@ import { AdminDealComponent } from './admin/admin-deal/admin-deal.component';
 import { AdminPropertyComponent } from './admin/admin-property/admin-property.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
 import { UpdateMypropsComponentA } from './admin/admin-property/update-myprops/update-myprops.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { UpdateMypropsComponentA } from './admin/admin-property/update-myprops/u
     AdminDealComponent,
     AdminPropertyComponent,
     AllPropertiesComponent,
-    UpdateMypropsComponentA
+    UpdateMypropsComponentA,
+    FooterComponent
 
   ],
   imports: [
