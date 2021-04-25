@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllBrokersComponent } from './broker/all-brokers/all-brokers.component';
 import { BrokerComponent } from './broker/broker.component';
+import { CreatePropertiesComponent } from './broker/create-properties/create-properties.component';
 import { CreateComponent } from './broker/create/create.component';
 import { MyPropertiesComponentB } from './broker/my-properties/my-properties.component';
 import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
@@ -31,7 +32,8 @@ const routes: Routes = [
       { path: 'add', component:CreateComponent},
       { path:'myprops', component:MyPropertiesComponentB},
       {path:'updating/:propid',component:UpdateMypropsComponent},
-      { path: 'updateuser', component:UpdateUserComponent}
+      { path: 'updateuser', component:UpdateUserComponent},
+      { path: 'create', component:CreatePropertiesComponent}
     ]
 
   },

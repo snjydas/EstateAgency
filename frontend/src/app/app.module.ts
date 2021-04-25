@@ -26,6 +26,7 @@ import { CreateComponent } from './broker/create/create.component';
 import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
 import { UpdateUserComponent } from './broker/update-user/update-user.component';
 import { MyPropertiesComponentB } from './broker/my-properties/my-properties.component';
+import { CreatePropertiesComponent } from './broker/create-properties/create-properties.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { MyPropertiesComponentB } from './broker/my-properties/my-properties.com
     CreateComponent,
     UpdateMypropsComponent,
     UpdateUserComponent,
-    MyPropertiesComponentB
+    MyPropertiesComponentB,
+    CreatePropertiesComponent
 
 
   ],
