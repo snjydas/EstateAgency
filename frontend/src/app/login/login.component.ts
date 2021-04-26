@@ -43,10 +43,11 @@ export class LoginComponent implements OnInit {
         this.uService.getUserByEmail(this.loginForm.value.email).subscribe(data=>{
           this.role=data.role
           this.uService.setId(data.userId);
-          if(this.role=="Broker"){
+          if(this.role==="Broker"){
+            console.log('ahsgsj');
             this.router.navigate(['/broker'])
           }
-          else if(this.role=="Admin"){
+          else if(this.role==="Admin"){
             this.router.navigate(['/admin'])
           }
           else{

@@ -30,6 +30,30 @@ export class CreatePropertiesComponent implements OnInit {
       broker:[this.broker]
     })
   }
+  get configuration(){
+    return this.propForm.get('configuration');
+  }
+  get offerType(){
+    return this.propForm.get('offerType');
+  }
+  get offerCost(){
+    return this.propForm.get('offerCost');
+  }
+  get areaSqft(){
+    return this.propForm.get('areaSqft');
+  }
+  get city(){
+    return this.propForm.get('city');
+  }
+  get address(){
+    return this.propForm.get('address');
+  }
+  get street(){
+    return this.propForm.get('street');
+  }
+  get status(){
+    return this.propForm.get('status');
+  }
   regProperty(){
     this.pService.addProperty(this.propForm.value).subscribe(res=>{
       this.router.navigate(['broker/myprops'])

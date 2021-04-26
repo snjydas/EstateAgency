@@ -14,9 +14,12 @@
     </div>
 </div>
 <div align="center">
-    <p style="float: center; width: 50rem;">
-        <input class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here">
-    </p>
+    <table>
+        <tr>
+            <th><i class="bi bi-search"></i></th>
+            <td><input style="float: center; width: 50rem;" class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here"></td>
+        </tr>
+    </table>
 </div>
 <div align="center">
     <p style="float: center;"><a [routerLink]="['../add']"><button class="btn btn-info"><i class="bi bi-file-earmark-plus-fill"></i>Create Broker</button></a></p>
@@ -37,7 +40,7 @@
             </div>
         </div>
         <div class="card-body" style="float: center;">
-            <img class="card-img-top" src="../assets/img/broker.jpg" alt="img not found">
+            <img class="card-img-top" src="/assets/img/broker.jpg" alt="img not found">
             <h4 class="card-title">{{b.broName}}</h4>
             <p class="card-text"><i class="bi bi-telephone-fill"></i> +91{{b.mobile}}</p>
             <p><i class="bi bi-envelope-fill"></i> {{b.email}}</p>

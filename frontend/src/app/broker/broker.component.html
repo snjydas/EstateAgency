@@ -5,20 +5,24 @@
 </style>
 <div class="container">
   <div class="center">
-    <h4>Broker Page</h4>
+    <!-- <h4>Broker Page</h4> -->
   </div>
 </div>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="box-shadow: none;">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li>
-        <a [routerLink]="['./all']"><button class="btn btn-warning">All Brokers</button></a> |
-        <!-- <a [routerLink]="['./add']"><button class="btn btn-info">Create Broker</button></a> | -->
-        <a [routerLink]="['./myprops']"><button class="btn btn-secondary">My Properties</button></a> |
-        <a [routerLink]="['./updateuser']"><button class="btn btn-primary">Update Profile</button></a>
+        <a [routerLink]="['./myprops']"><button class="btn btn-warning"><i class="bi bi-house-fill"></i></button></a> 
+        <!-- <a [routerLink]="['./updateuser']"><button class="btn btn-primary">Update Profile</button></a> -->
       </li>
     </ul>
   </div>
 </nav>
 <hr>
 <router-outlet></router-outlet>
+
+
+<!-- these below things should be presesnt betweeen li tags -->
+
+        <!-- <a [routerLink]="['./all']"><button class="btn btn-warning">All Brokers</button></a> |
+        <a [routerLink]="['./add']"><button class="btn btn-info">Create Broker</button></a> | -->
