@@ -1,3 +1,4 @@
+import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -13,6 +14,10 @@ export class LoginComponent implements OnInit {
   loginForm:FormGroup
   private allow:boolean;
 
+  alert:boolean
+  
+  
+
   constructor(private fb:FormBuilder, private uService:UserServiceService, private router:Router) { }
 
   ngOnInit(): void {
@@ -20,6 +25,14 @@ export class LoginComponent implements OnInit {
       email:['',Validators.required],
       password:['',Validators.required]
     })
+  }
+
+  get email(){
+    return this.loginForm.get('email')
+  }
+
+  get password(){
+    return this.loginForm.get('password')
   }
 
 
@@ -41,10 +54,8 @@ export class LoginComponent implements OnInit {
           }
         })
       }
-      else{
-        //alert("Enter correct userId and Password");
-        this.router.navigate(['/login'])
-      }
+      }, err=>{
+        this.alert=true
       })
     
   }

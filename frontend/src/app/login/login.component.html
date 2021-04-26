@@ -1,5 +1,6 @@
 <br><br><br>
 <div class="container" id="container">
+	
 	<div class="form-container sign-up-container">
 		<form action="#">
 			<h1>Create Account</h1>
@@ -20,11 +21,21 @@
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="#" [formGroup]="loginForm" (ngSubmit)='login()'>
-			<h1>Sign in</h1><br>
-			<input type="email" placeholder="Email Id" formControlName="email" />
-			<input type="password" placeholder="Password" formControlName="password" />
-			<button type="submit">Sign In</button>
+			
+				<h1>Sign in</h1><br>
+			<div align="left">
+				<p style="font-size: 12px;" class="alert alert-danger" *ngIf="alert"><strong>! Please enter correct email and password</strong></p>
+				
+				<input type="email" placeholder="Email Id" formControlName="email" />
+				<span *ngIf="email?.touched && !email?.valid" class="badge badge-warning">Invalid email</span>
+				
+				<input type="password" placeholder="Password" formControlName="password" />
+				<span *ngIf="password?.touched && !password?.valid" class="badge badge-warning">Invalid Password</span>
+			</div>	
+				<button align="center" type="submit">Sign In</button>
+			
 		</form>
+		
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
