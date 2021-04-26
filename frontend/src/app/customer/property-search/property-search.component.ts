@@ -28,14 +28,5 @@ export class PropertySearchComponent implements OnInit {
     this.pService.setCriteria(this.propForm.value)
     this.router.navigate(['/customer/criteria'])
   }
-  // searchProp() {
-  //   this.pService.getPropertyByCriteria(this.propForm.value).subscribe(res=>{
-  //     this.router.navigate([''])
-  //   }, err=>{
-  //     console.log(err);
-  //   }
-  //   );
-    
-  // }
 
 }

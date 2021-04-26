@@ -1,39 +1,37 @@
-<div class="container">
-    <h1>Enter Property Criteria</h1>
-</div>
+<div class="container" align="center">
+    <br><br>
+    <h1>Enter Property Criteria</h1><br>
 
-<div class="container">
-    <div>
-        <form [formGroup]="propForm" (ngSubmit)="searchProp()">
-            <div class="row">
-                <div class="col-2">
-                    <label class="form-check form-check-inline" for="config">Configuration</label>
-                </div>
-                <div class="col-3">
-                    <select name="config"  formControlName='config'>
+    <form [formGroup]="propForm" (ngSubmit)="searchProp()">
+        <table>
+            <tr>
+                <td align="left" style="line-height: 50px;">Configuration</td>
+                <td align="left">
+                    <select name="config" class="form-select" name="city" style="width: 30rem; height: 2.5rem;"
+                        formControlName='config'>
                         <option value="Flat">Flat</option>
                         <option value="Shop">Shop</option>
                         <option value="Plot">Plot</option>
                     </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <label class="form-check form-check-inline" for="offer">Offer Type</label>
-                </div>
-                <div class="col-3">
-                    <select name="offer"  formControlName='offer'>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="line-height: 50px;">Offer Type</td>
+                <td align="left">
+                    <select name="offer" class="form-select" name="city" style="width: 30rem; height: 2.5rem;"
+                        formControlName='offer'>
                         <option value="Sell">Sell</option>
                         <option value="Rent">Rent</option>
                     </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <label class="form-check form-check-inline" for="city">City</label>
-                </div>
-                <div class="col-3">
-                    <select name="city"  formControlName='city'>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="line-height: 50px;">City</td>
+                <td align="left">
+                    <select name="city" class="form-select" name="city" style="width: 30rem; height: 2.5rem;"
+                        formControlName='city'>
                         <option value="Rajahmundry">Rajahmundry</option>
                         <option value="Hyderabad">Hyderabad</option>
                         <option value="Vijayawada">Vijayawada</option>
@@ -42,25 +40,29 @@
                         <option value="Pulivendula">Pulivendula</option>
                         <option value="Vizag">Vizag</option>
                     </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">Minimum Cost</div>
-                <div class="col-3">
-                    <input class="form-control" placeholder="Enter minimum cost" formControlName="minCost">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    Maximum Cost
-                </div>
-                <div class="col-3">
-                    <input class="form-control" placeholder="Enter maximum cost" formControlName="maxCost">
-                </div>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary" [disabled]="!propForm.valid">Search</button>
-            </div>
-        </form>
-    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="line-height: 50px;">Minimum cost</td>
+                <td align="left">
+                    <input class="form-control" style="width: 30rem;" placeholder="Enter minimum cost"
+                        formControlName="minCost">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="line-height: 50px;">Maximum cost</td>
+                <td align="left">
+                    <input class="form-control" style="width: 30rem;" placeholder="Enter maximum cost"
+                        formControlName="maxCost">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </form>
+    <br><br>
+
 </div>
