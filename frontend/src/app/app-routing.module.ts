@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminBrokerComponent } from './admin/admin-broker/admin-broker.component';
+import { UpdatebrokerDetailsComponent } from './admin/admin-broker/updatebroker-details/updatebroker-details.component';
+import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-customer.component';
 import { AdminCustomerComponent } from './admin/admin-customer/admin-customer.component';
+import { UpdatecustomerDetailsComponent } from './admin/admin-customer/updatecustomer-details/updatecustomer-details.component';
 import { AdminDealComponent } from './admin/admin-deal/admin-deal.component';
 import { AdminPropertyComponent } from './admin/admin-property/admin-property.component';
 import { UpdateMypropsComponentA } from './admin/admin-property/update-myprops/update-myprops.component';
@@ -15,6 +18,7 @@ import { MyPropertiesComponentB } from './broker/my-properties/my-properties.com
 import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
 import { UpdateUserComponent } from './broker/update-user/update-user.component';
 import { UpdateComponent } from './broker/update/update.component';
+import { AllCustomersComponent } from './customer/all-customers/all-customers.component';
 import { AllPropertyByCriteriaComponent } from './customer/all-property-by-criteria/all-property-by-criteria.component';
 import { CustomerComponent } from './customer/customer.component';
 import { DealComponent } from './customer/deal/deal.component';
@@ -51,9 +55,15 @@ const routes: Routes = [
         children:[
           {path:'all', component:AllBrokersComponent},
           {path:'add', component:CreateComponent},
-          { path: 'update/:userid', component:UpdateComponent},
+          { path: 'update/:userid', component:UpdatebrokerDetailsComponent},
         ]},
-      {path:'customer', component:AdminCustomerComponent},
+      {path:'customer', component:AdminCustomerComponent,
+        children:[
+          {path:'all', component:AllCustomersComponent},
+          {path: 'update/:userid', component:UpdatecustomerDetailsComponent},
+          {path: 'add', component: AddCustomerComponent}
+        ]  
+      },
       {path:'deal', component:AdminDealComponent},
       {path:'property', component:AdminPropertyComponent,
         children:[

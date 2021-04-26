@@ -3,7 +3,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BrokerComponent } from './broker/broker.component';
@@ -35,6 +34,11 @@ import { AdminPropertyComponent } from './admin/admin-property/admin-property.co
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
 import { UpdateMypropsComponentA } from './admin/admin-property/update-myprops/update-myprops.component';
 import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AllCustomersComponent } from './customer/all-customers/all-customers.component';
+import { UpdatecustomerDetailsComponent } from './admin/admin-customer/updatecustomer-details/updatecustomer-details.component';
+import { UpdatebrokerDetailsComponent } from './admin/admin-broker/updatebroker-details/updatebroker-details.component';
+import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-customer.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +70,11 @@ import { FooterComponent } from './footer/footer.component';
     AdminPropertyComponent,
     AllPropertiesComponent,
     UpdateMypropsComponentA,
-    FooterComponent
+    FooterComponent,
+    AllCustomersComponent,
+    UpdatecustomerDetailsComponent,
+    UpdatebrokerDetailsComponent,
+    AddCustomerComponent
 
   ],
   imports: [

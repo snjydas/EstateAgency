@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="card-body">
-            <img class="card-img-top" src="../assets/img/property.jfif" alt="img not found">
+            <img class="card-img-top" src="/assets/img/property.jfif" alt="img not found">
             <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>
             <ng-template #loggedIn>
                 <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-success btn-sm"><i class="bi bi-check-circle"></i></button></h4>
