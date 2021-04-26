@@ -1,4 +1,5 @@
 /**
+* File Name: styles.css
 * Author: Sanjay Das
 */
 
@@ -6,7 +7,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #555555;
 }
 
@@ -21,7 +22,7 @@ h6 {
 
 a {
   color: #000000;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 a:hover {
@@ -31,7 +32,7 @@ a:hover {
 
 .link-two {
   color: #000000;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .link-two:hover {
@@ -41,7 +42,7 @@ a:hover {
 
 .link-one {
   color: #000000;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .link-one:hover {
@@ -67,7 +68,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .link-a {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -144,7 +145,7 @@ a:hover {
 }
 
 .nav-pills-a.nav-pills .nav-link.active:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -185,7 +186,7 @@ a:hover {
 }
 
 .list-a li:before {
-  content: '';
+  content: "";
   width: 10px;
   height: 2px;
   position: absolute;
@@ -196,13 +197,15 @@ a:hover {
 
 /*------/ Pagination-a /------*/
 .pagination-a .pagination .page-link {
-  margin: 0 .2rem;
+  margin: 0 0.2rem;
   border-color: transparent;
-  padding: .5rem .8rem;
+  padding: 0.5rem 0.8rem;
   color: #000000;
 }
 
-.pagination-a .pagination .page-link:hover, .pagination-a .pagination .page-link:active, .pagination-a .pagination .page-link:focus {
+.pagination-a .pagination .page-link:hover,
+.pagination-a .pagination .page-link:active,
+.pagination-a .pagination .page-link:focus {
   background-color: #2eca6a;
 }
 
@@ -211,7 +214,7 @@ a:hover {
 }
 
 .pagination-a .pagination .next .page-link {
-  padding: .4rem .9rem;
+  padding: 0.4rem 0.9rem;
 }
 
 .pagination-a .pagination .page-item:last-child .page-link {
@@ -225,7 +228,7 @@ a:hover {
 }
 
 .pagination-a .pagination .page-item.disabled .page-link {
-  padding: .4rem .9rem;
+  padding: 0.4rem 0.9rem;
   color: #555555;
 }
 
@@ -237,6 +240,102 @@ a:hover {
   color: #2eca6a;
   font-size: 1.3rem;
 }
+
+
+/*==================
+	ADVANCE SEARCH SECTION
+====================*/
+
+#aa-advance-search {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#aa-advance-search .aa-advance-search-area {
+  background-color: rgba(221, 221, 221, 0.8);
+  border-radius: 10px 10px 0 0;
+  display: inline;
+  float: left;
+  margin-top: -100px;
+  min-height: 200px;
+  padding: 25px 20px;
+  position: relative;
+  width: 100%;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-top {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search input[type="text"] {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #555;
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search select {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #555;
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search .aa-search-btn {
+  border: medium none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  outline: medium none;
+  text-transform: uppercase;
+  width: 100%;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-bottom {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-bottom .aa-single-filter-search {
+  display: inline;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-bottom .aa-single-filter-search span {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;{
+    background-color: #59abe3;
+}
+  margin: 0 10px;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-bottom .aa-single-filter-search .noUi-connect {
+  box-shadow: 0 0 3px rgba(51, 51, 51, 0.45) inset;
+  transition: background 450ms ease 0s;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-bottom .aa-single-filter-search .noUi-handle {
+  border: none;
+  border-radius: 50%;
+  box-shadow: none;
+  height: 25px;
+  left: -17px;
+  top: -12px;
+  width: 25px;
+}
+#aa-advance-search .aa-advance-search-area .aa-advance-search-bottom .aa-single-filter-search .noUi-handle:after, #aa-advance-search .aa-advance-search-area .aa-advance-search-bottom .aa-single-filter-search .noUi-handle:before {
+  display: none;
+}
+
 
 /*------/ Icon Box /------*/
 .icon-box .icon-box-icon {
@@ -335,7 +434,7 @@ a:hover {
 }
 
 .title-box-d .title-d:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 70px;
   height: 4px;
@@ -357,7 +456,9 @@ a:hover {
 }
 
 /*------/ Ul Resect /------*/
-.ul-resect ul, .list-a ul, .box-comments ul {
+.ul-resect ul,
+.list-a ul,
+.box-comments ul {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
@@ -365,7 +466,12 @@ a:hover {
 
 /*------/ Overlay /------*/
 .overlay-a {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 27%, rgba(0, 0, 0, 0.65) 90%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 27%,
+    rgba(0, 0, 0, 0.65) 90%
+  );
 }
 
 .overlay {
@@ -450,12 +556,12 @@ a:hover {
 
 .nav-arrow-b .owl-arrow .owl-nav .owl-prev,
 .nav-arrow-b .owl-arrow .owl-nav .owl-next {
-  padding: .7rem 1.5rem !important;
+  padding: 0.7rem 1.5rem !important;
   display: inline-block;
   transition: all 0.6s ease-in-out;
   color: #ffffff;
   background-color: #2eca6a;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .nav-arrow-b .owl-arrow .owl-nav .owl-prev.disabled,
@@ -552,16 +658,17 @@ a:hover {
 }
 
 /*======================================
-//--//-->   BUTTON
-======================================*/
+  //--//-->   BUTTON
+  ======================================*/
 .btn {
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
-.btn.btn-a, .btn.btn-b {
+.btn.btn-a,
+.btn.btn-b {
   border-radius: 0;
   padding: 1rem 3rem;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
 }
 
 .btn.btn-a {
@@ -596,10 +703,10 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Navbar
---------------------------------------------------------------*/
+  # Navbar
+  --------------------------------------------------------------*/
 .navbar-default {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: #ffffff;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -617,12 +724,14 @@ a:hover {
   box-shadow: 1px 2px 15px rgba(100, 100, 100, 0.3);
 }
 
-.navbar-default.navbar-trans, .navbar-default.navbar-reduce {
+.navbar-default.navbar-trans,
+.navbar-default.navbar-reduce {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.navbar-default.navbar-trans .nav-item, .navbar-default.navbar-reduce .nav-item {
+.navbar-default.navbar-trans .nav-item,
+.navbar-default.navbar-reduce .nav-item {
   position: relative;
   padding-right: 10px;
   padding-bottom: 8px;
@@ -630,24 +739,27 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .navbar-default.navbar-trans .nav-item, .navbar-default.navbar-reduce .nav-item {
+  .navbar-default.navbar-trans .nav-item,
+  .navbar-default.navbar-reduce .nav-item {
     margin-left: 15px;
   }
 }
 
-.navbar-default.navbar-trans .nav-link, .navbar-default.navbar-reduce .nav-link {
+.navbar-default.navbar-trans .nav-link,
+.navbar-default.navbar-reduce .nav-link {
   font-size: 1.1rem;
   color: #000000;
   font-weight: 600;
-  letter-spacing: 0.030em;
+  letter-spacing: 0.03em;
   transition: all 0.1s ease-in-out;
   position: relative;
   padding-left: 0;
   padding-right: 0;
 }
 
-.navbar-default.navbar-trans .nav-link:before, .navbar-default.navbar-reduce .nav-link:before {
-  content: '';
+.navbar-default.navbar-trans .nav-link:before,
+.navbar-default.navbar-reduce .nav-link:before {
+  content: "";
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -657,14 +769,16 @@ a:hover {
   background-color: #2eca6a;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform .2s ease-out, opacity .2s ease-out 0.3s;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out 0.3s;
 }
 
-.navbar-default.navbar-trans .nav-link:hover, .navbar-default.navbar-reduce .nav-link:hover {
+.navbar-default.navbar-trans .nav-link:hover,
+.navbar-default.navbar-reduce .nav-link:hover {
   color: #000000;
 }
 
-.navbar-default.navbar-trans .nav-link:hover:before, .navbar-default.navbar-reduce .nav-link:hover:before {
+.navbar-default.navbar-trans .nav-link:hover:before,
+.navbar-default.navbar-reduce .nav-link:hover:before {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -672,7 +786,8 @@ a:hover {
 .navbar-default.navbar-trans .show > .nav-link:before,
 .navbar-default.navbar-trans .active > .nav-link:before,
 .navbar-default.navbar-trans .nav-link.show:before,
-.navbar-default.navbar-trans .nav-link.active:before, .navbar-default.navbar-reduce .show > .nav-link:before,
+.navbar-default.navbar-trans .nav-link.active:before,
+.navbar-default.navbar-reduce .show > .nav-link:before,
 .navbar-default.navbar-reduce .active > .nav-link:before,
 .navbar-default.navbar-reduce .nav-link.show:before,
 .navbar-default.navbar-reduce .nav-link.active:before {
@@ -695,7 +810,7 @@ a:hover {
 }
 
 .navbar-default.navbar-reduce {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   padding-top: 19px;
   padding-bottom: 19px;
 }
@@ -732,7 +847,8 @@ a:hover {
   opacity: 0;
   filter: alpha(opacity=0);
   visibility: hidden;
-  transition: all 0.5s cubic-bezier(0.3, 0.65, 0.355, 1) 0s, opacity 0.31s ease 0s, height 0s linear 0.36s;
+  transition: all 0.5s cubic-bezier(0.3, 0.65, 0.355, 1) 0s,
+    opacity 0.31s ease 0s, height 0s linear 0.36s;
   margin: 0;
   border-radius: 0;
   padding: 12px 0;
@@ -797,7 +913,7 @@ a:hover {
 
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
-  transition: transform .35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(1) {
@@ -823,8 +939,8 @@ a:hover {
 }
 
 /*======================================
-//--//-->   BOX COLAPSE
-======================================*/
+  //--//-->   BOX COLAPSE
+  ======================================*/
 .box-collapse {
   position: fixed;
   top: 0;
@@ -848,7 +964,7 @@ a:hover {
   left: 60px;
   opacity: 0;
   transition: all 1s ease;
-  transition-delay: .3s;
+  transition-delay: 0.3s;
 }
 
 @media (max-width: 575px) {
@@ -899,7 +1015,7 @@ a:hover {
 }
 
 .box-collapse-closed .box-collapse {
-  opacity: .7;
+  opacity: 0.7;
   transition-delay: 0s;
 }
 
@@ -922,7 +1038,7 @@ a:hover {
   visibility: hidden;
   z-index: 1035;
   background-color: #000000;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .close-box-collapse {
@@ -941,8 +1057,8 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+  # Hero Section
+  --------------------------------------------------------------*/
 .intro {
   height: 100vh;
   position: relative;
@@ -1007,22 +1123,22 @@ a:hover {
   border: 2px solid #2eca6a;
   border-radius: 50px;
   text-transform: uppercase;
-  letter-spacing: 0.030em;
+  letter-spacing: 0.03em;
 }
 
 .intro .spacial {
-  -webkit-animation-delay: .2s;
-  animation-delay: .2s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
   color: #ffffff;
 }
 
 .intro .intro-title-top {
-  -webkit-animation-delay: .6s;
-  animation-delay: .6s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
   margin-bottom: 1rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #ffffff;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 
 @media (min-width: 768px) {
@@ -1137,7 +1253,7 @@ a:hover {
 }
 
 .intro-single .breadcrumb-box {
-  padding: 1rem 0 0 .5rem;
+  padding: 1rem 0 0 0.5rem;
 }
 
 .intro-single .breadcrumb {
@@ -1147,8 +1263,8 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Card General
---------------------------------------------------------------*/
+  # Card General
+  --------------------------------------------------------------*/
 @media (max-width: 767px) {
   .card-box-a,
   .card-box-b,
@@ -1180,7 +1296,7 @@ a:hover {
 .card-box-a .img-b,
 .card-box-b .img-a,
 .card-box-b .img-b {
-  transition: .8s all ease-in-out;
+  transition: 0.8s all ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -1195,7 +1311,7 @@ a:hover {
 @media (min-width: 768px) {
   .card-box-a .price-a,
   .card-box-b .price-a {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1220,19 +1336,24 @@ a:hover {
 }
 
 .card-shadow:before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 27%, rgba(0, 0, 0, 0.65) 90%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 27%,
+    rgba(0, 0, 0, 0.65) 90%
+  );
 }
 
 /*======================================
-//--//-->   PROPERTY - CARD-A
-======================================*/
+  //--//-->   PROPERTY - CARD-A
+  ======================================*/
 @media (min-width: 768px) {
   .card-box-a:hover .card-overlay-a-content {
     bottom: 60px;
@@ -1267,7 +1388,7 @@ a:hover {
 }
 
 .card-overlay-a-content {
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   position: absolute;
   width: 100%;
   bottom: 0px;
@@ -1293,7 +1414,7 @@ a:hover {
 .card-header-a .card-title-a {
   color: #ffffff;
   margin-bottom: 0;
-  padding-bottom: .7rem;
+  padding-bottom: 0.7rem;
 }
 
 @media (min-width: 768px) {
@@ -1315,21 +1436,21 @@ a:hover {
 
 .card-body-a {
   z-index: 2;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   padding: 0rem 1rem 2rem 1rem;
 }
 
 .card-body-a .price-box {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .price-a {
   color: #ffffff;
-  padding: .6rem .8rem;
+  padding: 0.6rem 0.8rem;
   border: 2px solid #2eca6a;
   border-radius: 50px;
   text-transform: uppercase;
-  letter-spacing: 0.030em;
+  letter-spacing: 0.03em;
 }
 
 .card-footer-a {
@@ -1342,7 +1463,7 @@ a:hover {
 .card-info {
   list-style: none;
   margin-bottom: 0;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .card-info .card-info-title {
@@ -1352,7 +1473,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .card-info .card-info-title {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1364,12 +1485,12 @@ a:hover {
 
 .card-info li span {
   color: #ffffff;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 @media (min-width: 768px) {
   .card-info li span {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1391,7 +1512,9 @@ a:hover {
   border-color: #313131;
 }
 
-.property-grid .grid-option .custom-select:hover, .property-grid .grid-option .custom-select:active, .property-grid .grid-option .custom-select:focus {
+.property-grid .grid-option .custom-select:hover,
+.property-grid .grid-option .custom-select:active,
+.property-grid .grid-option .custom-select:focus {
   border-color: #313131;
 }
 
@@ -1452,8 +1575,8 @@ a:hover {
 }
 
 /*======================================
-//--//-->   NEWS - CARD-B
-======================================*/
+  //--//-->   NEWS - CARD-B
+  ======================================*/
 .card-header-b {
   padding: 1rem;
   color: #ffffff;
@@ -1475,18 +1598,18 @@ a:hover {
 }
 
 .card-header-b .category-b {
-  font-size: .9rem;
+  font-size: 0.9rem;
   background-color: #2eca6a;
-  padding: .3rem .7rem;
+  padding: 0.3rem 0.7rem;
   color: #313131;
-  letter-spacing: 0.030em;
+  letter-spacing: 0.03em;
   border-radius: 50px;
   text-decoration: none;
 }
 
 .card-header-b .title-2 {
   margin-bottom: 0;
-  padding: .6rem 0;
+  padding: 0.6rem 0;
   font-size: 1.5rem;
 }
 
@@ -1514,7 +1637,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .card-header-b .date-b {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -1568,7 +1691,7 @@ a:hover {
 }
 
 .post-share .socials li {
-  margin-left: .6rem;
+  margin-left: 0.6rem;
 }
 
 /*------/ Comments /------*/
@@ -1603,7 +1726,7 @@ a:hover {
 }
 
 .box-comments .list-comments .comment-description {
-  padding: .8rem 0 .5rem 0;
+  padding: 0.8rem 0 0.5rem 0;
 }
 
 .box-comments .list-comments a {
@@ -1612,7 +1735,7 @@ a:hover {
 
 .box-comments .list-comments span {
   display: block;
-  color: #2B2A2A;
+  color: #2b2a2a;
   font-style: italic;
 }
 
@@ -1621,8 +1744,8 @@ a:hover {
 }
 
 /*======================================
-//--//-->   SERVICES - CARD-C
-======================================*/
+  //--//-->   SERVICES - CARD-C
+  ======================================*/
 .card-box-c {
   position: relative;
 }
@@ -1638,7 +1761,7 @@ a:hover {
 }
 
 .card-body-c {
-  padding: .5rem .5rem 0 .5rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
 @media (max-width: 767px) {
@@ -1648,7 +1771,7 @@ a:hover {
 }
 
 .card-footer-c {
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 .card-box-ico {
@@ -1680,10 +1803,10 @@ a:hover {
 }
 
 /*======================================
-//--//-->   AGENTS - CARD-D
-======================================*/
+  //--//-->   AGENTS - CARD-D
+  ======================================*/
 .card-box-d .card-overlay-hover {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   padding: 15px 40px 15px 35px;
 }
 
@@ -1706,7 +1829,7 @@ a:hover {
 }
 
 .card-box-d .title-d {
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   font-size: 2rem;
   font-weight: 600;
   margin: 1rem 0;
@@ -1717,7 +1840,7 @@ a:hover {
 @media (min-width: 768px) {
   .card-box-d .title-d {
     font-size: 1.1rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
   }
 }
 
@@ -1737,21 +1860,21 @@ a:hover {
 
 .card-box-d .content-d {
   opacity: 0;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   transform: translateY(-40px);
 }
 
 @media (min-width: 768px) {
   .card-box-d .content-d {
-    font-size: .8rem;
-    margin: .5rem 0;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
   }
 }
 
 @media (min-width: 768px) {
   .card-box-d .card-body-d p {
     margin-bottom: 8px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1764,11 +1887,11 @@ a:hover {
 
 .card-box-d .info-agents {
   opacity: 0;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .card-box-d .card-footer-d {
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   transform: translateY(40px);
   opacity: 0;
   position: absolute;
@@ -1783,7 +1906,7 @@ a:hover {
 
 .card-box-d:hover .card-overlay-hover {
   background-color: #2eca6a;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .card-box-d:hover .title-d,
@@ -1804,8 +1927,8 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+  # About Section
+  --------------------------------------------------------------*/
 .section-about .title-vertical {
   position: absolute;
   letter-spacing: 0;
@@ -1891,7 +2014,7 @@ a:hover {
 }
 
 .sinse-box .sinse-title span:after {
-  content: ' ';
+  content: " ";
   width: 35px;
   height: 2px;
   background-color: #000000;
@@ -1901,12 +2024,12 @@ a:hover {
 
 .sinse-box p {
   margin-bottom: 0;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 @media (min-width: 576px) {
   .sinse-box p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1917,8 +2040,8 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
+  # Testimonials Section
+  --------------------------------------------------------------*/
 .testimonials-box {
   padding: 1rem 0;
 }
@@ -1937,7 +2060,7 @@ a:hover {
   font-size: 1.8rem;
   background-color: #2eca6a;
   color: #ffffff;
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 50px;
 }
 
@@ -1973,8 +2096,8 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
+  # Contact Section
+  --------------------------------------------------------------*/
 .form-as #sendmessage {
   color: #2eca6a;
   border: 1px solid #26a356;
@@ -1995,7 +2118,9 @@ a:hover {
   margin-bottom: 15px;
 }
 
-.form-as #sendmessage.show, .form-as #errormessage.show, .form-as .show {
+.form-as #sendmessage.show,
+.form-as #errormessage.show,
+.form-as .show {
   display: block;
 }
 
@@ -2119,9 +2244,11 @@ a:hover {
   }
 }
 
+
+
 /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+  # Footer
+  --------------------------------------------------------------*/
 .section-footer {
   padding-top: 60px;
   margin-top: 60px;
