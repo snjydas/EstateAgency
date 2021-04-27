@@ -36,9 +36,10 @@
                         class="bi bi-pen"></i></button>
             </div>
         </div>
-        <div class="card-body">
-            <img class="card-img-top" src="../assets/img/home.jpg" alt="img not found">
-            <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>
+        <img class="card-img-top" src="../assets/img/forsale.png" alt="img not found" style="opacity: 0.5;">
+        <div class="card-img-overlay">
+            <div class="card-body topper">
+                <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>
             <ng-template #loggedIn>
                 <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-success btn-sm"><i
                             class="bi bi-check-circle"></i></button></h4>
@@ -61,6 +62,7 @@
                     <td align="left">{{p.address}},&nbsp;&nbsp;{{p.street}}</td>
                 </tr>
             </table>
+            </div>
         </div>
         <div class="card-footer text-muted">
             <div align="left">
