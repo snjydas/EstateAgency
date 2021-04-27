@@ -39,6 +39,7 @@ import { AllCustomersComponent } from './customer/all-customers/all-customers.co
 import { UpdatecustomerDetailsComponent } from './admin/admin-customer/updatecustomer-details/updatecustomer-details.component';
 import { UpdatebrokerDetailsComponent } from './admin/admin-broker/updatebroker-details/updatebroker-details.component';
 import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-customer.component';
+import { DevelopersComponent } from './developers/developers.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-cu
     AllCustomersComponent,
     UpdatecustomerDetailsComponent,
     UpdatebrokerDetailsComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    DevelopersComponent
 
   ],
   imports: [
