@@ -250,6 +250,14 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+select {
+  display: block;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  border: white;
+  color: gray;
+  border-radius: 3px;
+}
 .card {
     margin: 0 auto; /* Added */
     float: none; /* Added */
