@@ -20,7 +20,7 @@
                 <b>CustomerID:{{c.userId}}</b>
             </div>
             <div align="right">
-                <button class="btn btn-danger btn-sm" (click)='delete(c.userId)'><i class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-danger btn-sm" (click)='deleteCustomer(c.userId)'><i class="bi bi-trash"></i></button>&nbsp;
                 <button class="btn btn-success btn-sm" [routerLink]="['/admin/customer/update',c.userId]"><i class="bi bi-pen"></i></button>
             </div>
         </div>
