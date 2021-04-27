@@ -40,6 +40,7 @@ import { UpdatecustomerDetailsComponent } from './admin/admin-customer/updatecus
 import { UpdatebrokerDetailsComponent } from './admin/admin-broker/updatebroker-details/updatebroker-details.component';
 import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-customer.component';
 import { DevelopersComponent } from './developers/developers.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { DevelopersComponent } from './developers/developers.component';
     UpdatecustomerDetailsComponent,
     UpdatebrokerDetailsComponent,
     AddCustomerComponent,
-    DevelopersComponent
+    DevelopersComponent,
+    AboutComponent
 
   ],
   imports: [

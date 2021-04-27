@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+<<<<<<< Updated upstream
 import { AdminGuard } from './admin.guard';
+=======
+import { AboutComponent } from './about/about.component';
+>>>>>>> Stashed changes
 import { AdminBrokerComponent } from './admin/admin-broker/admin-broker.component';
 import { UpdatebrokerDetailsComponent } from './admin/admin-broker/updatebroker-details/updatebroker-details.component';
 import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-customer.component';
@@ -33,27 +37,32 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
-
 const routes: Routes = [
-   { path:'',redirectTo:'home', pathMatch:'full' },
-   { path: 'home', component:HomeComponent },
-  { path: 'login', component:LoginComponent },
-  { path: 'developers', component:DevelopersComponent },
-  { path: 'signup', component:SignupComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'developers', component: DevelopersComponent },
+  { path: 'signup', component: SignupComponent },
   {
+<<<<<<< Updated upstream
     path:'broker', component:BrokerComponent, canActivate:[BrokerGuard],
+=======
+    path: 'broker',
+    component: BrokerComponent,
+>>>>>>> Stashed changes
     children: [
-      { path: 'update/:userid', component:UpdateComponent},
-      { path: 'all', component:AllBrokersComponent},
-      { path: 'add', component:CreateComponent},
-      { path:'myprops', component:MyPropertiesComponentB},
-      {path:'updating/:propid',component:UpdateMypropsComponent},
-      { path: 'updateuser', component:UpdateUserComponent},
-      { path: 'create', component:CreatePropertiesComponent}
-    ]
-
+      { path: 'update/:userid', component: UpdateComponent },
+      { path: 'all', component: AllBrokersComponent },
+      { path: 'add', component: CreateComponent },
+      { path: 'myprops', component: MyPropertiesComponentB },
+      { path: 'updating/:propid', component: UpdateMypropsComponent },
+      { path: 'updateuser', component: UpdateUserComponent },
+      { path: 'create', component: CreatePropertiesComponent },
+    ],
   },
   {
+<<<<<<< Updated upstream
     path:'admin', component:AdminComponent, canActivate:[AdminGuard],
     children:[
       {path:'broker', component:AdminBrokerComponent, 
@@ -68,17 +77,42 @@ const routes: Routes = [
           {path: 'update/:userid', component:UpdatecustomerDetailsComponent},
           {path: 'add', component: AddCustomerComponent}
         ]  
+=======
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      {
+        path: 'broker',
+        component: AdminBrokerComponent,
+        children: [
+          { path: 'all', component: AllBrokersComponent },
+          { path: 'add', component: CreateComponent },
+          { path: 'update/:userid', component: UpdatebrokerDetailsComponent },
+        ],
       },
-      {path:'deal', component:AdminDealComponent},
-      {path:'property', component:AdminPropertyComponent,
-        children:[
-          {path:'all', component:AllPropertiesComponent},
-          {path:'updating/:propid',component:UpdateMypropsComponentA}
-        ]
-      }
-    ]
+      {
+        path: 'customer',
+        component: AdminCustomerComponent,
+        children: [
+          { path: 'all', component: AllCustomersComponent },
+          { path: 'update/:userid', component: UpdatecustomerDetailsComponent },
+          { path: 'add', component: AddCustomerComponent },
+        ],
+>>>>>>> Stashed changes
+      },
+      { path: 'deal', component: AdminDealComponent },
+      {
+        path: 'property',
+        component: AdminPropertyComponent,
+        children: [
+          { path: 'all', component: AllPropertiesComponent },
+          { path: 'updating/:propid', component: UpdateMypropsComponentA },
+        ],
+      },
+    ],
   },
   {
+<<<<<<< Updated upstream
     path:'customer',component:CustomerComponent, canActivate:[CustomerGuard],
     children:[
       {path:'search',component:PropertySearchComponent},
@@ -88,10 +122,22 @@ const routes: Routes = [
       {path:'deal/:propid',component:DealComponent}
     ]
   }
+=======
+    path: 'customer',
+    component: CustomerComponent,
+    children: [
+      { path: 'search', component: PropertySearchComponent },
+      { path: 'criteria', component: AllPropertyByCriteriaComponent },
+      { path: 'myprops', component: MyPropertiesComponent },
+      { path: 'update', component: UpdateCustomerComponent },
+      { path: 'deal/:propid', component: DealComponent },
+    ],
+  },
+>>>>>>> Stashed changes
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
