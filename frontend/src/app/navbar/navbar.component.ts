@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserServiceService } from '../user-service.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserServiceService } from '../user-service.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private uService:UserServiceService) { }
+  constructor(private uService:UserServiceService, private router:Router) { }
   ngOnInit(): void {
   }
 

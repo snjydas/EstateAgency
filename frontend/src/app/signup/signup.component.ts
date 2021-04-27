@@ -53,12 +53,18 @@ export class SignupComponent implements OnInit {
       console.log(this.signupForm.value.broName)
       this.cService.addCustomer(this.signupForm.value).subscribe(res=>{
         this.router.navigate(['login'])
+        alert("You have succesfully registered as Customer");
+      }, err=>{
+        alert("User with this Email or Mobile number already exists. Try with different details");
       })
     }
     else{
       this.signupForm.value.broName=this.signupForm.value.name
       this.bService.addBroker(this.signupForm.value).subscribe(res=>{
         this.router.navigate(['login'])
+        alert("You have succesfully registered as Broker");
+      }, err=>{
+        alert("User with this Email or Mobile number already exists. Try with different details");
       })
     }
     
