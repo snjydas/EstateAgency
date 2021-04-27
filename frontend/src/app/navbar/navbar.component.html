@@ -7,6 +7,10 @@
         <span></span>
         <span></span>
       </button>
+      <!-- Brand/logo -->
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/img/apple-touch-icon.png" alt="logo" style="width:70px;">
+      </a>
       <a class="navbar-brand text-brand" href="index.html">Estate<span class="color-b">Agency</span></a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
@@ -33,7 +37,11 @@
             <a class="nav-link" [routerLink]="['/login']">Login</a>
           </li>
           <li *ngIf="login()" class="nav-item">
+<<<<<<< Updated upstream
             <a class="nav-link" (click)="logout()" [routerLink]="['/login']">Logout</a>
+=======
+            <a class="nav-link" (click)="logout()" [routerLink]="['/home']">Logout</a>
+>>>>>>> Stashed changes
           </li>
           <li class="login-icon mt-2">
             <a class="user"><span class="fa fa-user-circle-o" aria-hidden="true"></span></a>

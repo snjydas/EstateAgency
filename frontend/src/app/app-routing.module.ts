@@ -34,6 +34,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'developers', component: DevelopersComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'navbar', component: NavbarComponent },
   {
     path:'broker', component:BrokerComponent, canActivate:[BrokerGuard],
     children: [
