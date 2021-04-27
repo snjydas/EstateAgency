@@ -46,13 +46,15 @@ export class LoginComponent implements OnInit {
           this.role=data.role
           this.uService.setId(data.userId);
           if(this.role==="Broker"){
-            console.log('ahsgsj');
+            this.uService.setUser("Broker")
             this.router.navigate(['/broker'])
           }
           else if(this.role==="Admin"){
+            this.uService.setUser("Admin")
             this.router.navigate(['/admin'])
           }
           else{
+            this.uService.setUser("Customer")
             this.router.navigate(['/customer'])
           }
         })

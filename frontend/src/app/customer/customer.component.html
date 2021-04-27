@@ -1,13 +1,19 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav">
-            <li><a [routerLink]="['/customer/search']">Search Propertty</a> |
-                <a [routerLink]="['/customer/criteria']">List of Properties</a> |
-                <a [routerLink]="['/customer/myprops']">My Properties</a> |
-                <a [routerLink]="['/customer/update']">Update my details</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/search']">Search Propertty</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/criteria']">List of Properties</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/myprops']">My Properties</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/update']">Update my details</a>
+      </li>
+    </ul>
+  </nav>
+
 <hr>
 <router-outlet></router-outlet>

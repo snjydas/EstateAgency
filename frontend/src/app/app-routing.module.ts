@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminGuard } from './admin.guard';
 import { AdminBrokerComponent } from './admin/admin-broker/admin-broker.component';
 import { UpdatebrokerDetailsComponent } from './admin/admin-broker/updatebroker-details/updatebroker-details.component';
 import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-customer.component';
@@ -10,6 +11,7 @@ import { AdminPropertyComponent } from './admin/admin-property/admin-property.co
 import { UpdateMypropsComponentA } from './admin/admin-property/update-myprops/update-myprops.component';
 import { AdminComponent } from './admin/admin.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
+import { BrokerGuard } from './broker.guard';
 import { AllBrokersComponent } from './broker/all-brokers/all-brokers.component';
 import { BrokerComponent } from './broker/broker.component';
 import { CreatePropertiesComponent } from './broker/create-properties/create-properties.component';
@@ -18,6 +20,7 @@ import { MyPropertiesComponentB } from './broker/my-properties/my-properties.com
 import { UpdateMypropsComponent } from './broker/update-myprops/update-myprops.component';
 import { UpdateUserComponent } from './broker/update-user/update-user.component';
 import { UpdateComponent } from './broker/update/update.component';
+import { CustomerGuard } from './customer.guard';
 import { AllCustomersComponent } from './customer/all-customers/all-customers.component';
 import { AllPropertyByCriteriaComponent } from './customer/all-property-by-criteria/all-property-by-criteria.component';
 import { CustomerComponent } from './customer/customer.component';
@@ -38,7 +41,7 @@ const routes: Routes = [
   { path: 'developers', component:DevelopersComponent },
   { path: 'signup', component:SignupComponent },
   {
-    path:'broker', component:BrokerComponent,
+    path:'broker', component:BrokerComponent, canActivate:[BrokerGuard],
     children: [
       { path: 'update/:userid', component:UpdateComponent},
       { path: 'all', component:AllBrokersComponent},
@@ -51,7 +54,7 @@ const routes: Routes = [
 
   },
   {
-    path:'admin', component:AdminComponent,
+    path:'admin', component:AdminComponent, canActivate:[AdminGuard],
     children:[
       {path:'broker', component:AdminBrokerComponent, 
         children:[
@@ -76,7 +79,7 @@ const routes: Routes = [
     ]
   },
   {
-    path:'customer',component:CustomerComponent,
+    path:'customer',component:CustomerComponent, canActivate:[CustomerGuard],
     children:[
       {path:'search',component:PropertySearchComponent},
       {path:'criteria',component:AllPropertyByCriteriaComponent},

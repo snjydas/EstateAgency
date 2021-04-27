@@ -18,8 +18,7 @@ export class NavbarComponent implements OnInit {
 
   logout(){
     this.uService.setStatus(false)
-    this.uService.setId(null)
-    window.location.reload();
+    this.uService.setUser("none");
   }
 
 }

@@ -16,7 +16,17 @@ export class UserServiceService {
       'Content-Type':'application/json'
     })
   }
+  user:string;
+
   constructor( private httpClient:HttpClient ) { }
+
+  setUser(user:string){
+    this.user=user
+  }
+
+  getUser(){
+    return this.user
+  }
 
   getStatus(){
     return this.loginStatus;
