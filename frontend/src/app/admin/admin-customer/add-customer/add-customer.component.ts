@@ -39,7 +39,7 @@ export class AddCustomerComponent implements OnInit {
     return this.customerForm.get('city');
   }
 
-  signup(){
+  create(){
     this.customerForm.value.Role="customer"
     this.cService.addCustomer(this.customerForm.value).subscribe(res=>{
       this.router.navigate(['/admin/customer'])

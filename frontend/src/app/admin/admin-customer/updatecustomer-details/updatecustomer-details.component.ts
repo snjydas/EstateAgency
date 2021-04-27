@@ -24,20 +24,12 @@ export class UpdatecustomerDetailsComponent implements OnInit {
 
 
   updateCustomer(){
-    if(this.customer.password==this.pass)
-    {
-      this.cService.updateCustomer(this.customer).subscribe(res=>{
-        this.router.navigate(['/admin/customer'])
-      }, err=>{
-        console.log(err);
-      }
-      );
+    this.cService.updateCustomer(this.customer).subscribe(res=>{
+      this.router.navigate(['/admin/customer'])
+    }, err=>{
+      console.log(err);
     }
-    else
-    {
-      alert("Password must be same as re-entered password")
-    }
-  
+    );
   }
 
 }
