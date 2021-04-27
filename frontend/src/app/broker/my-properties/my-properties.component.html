@@ -36,33 +36,32 @@
                         class="bi bi-pen"></i></button>
             </div>
         </div>
-        <img class="card-img-top" src="../assets/img/forsale.png" alt="img not found" style="opacity: 0.5;">
-        <div class="card-img-overlay">
-            <div class="card-body topper">
-                <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>
-            <ng-template #loggedIn>
-                <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-success btn-sm"><i
-                            class="bi bi-check-circle"></i></button></h4>
-            </ng-template>
-            <ng-template #loggedOut>
-                <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-danger btn-sm"><i
-                            class="bi bi-check-circle"></i></button></h4>
-            </ng-template>
-            <table class="card-text">
-                <tr>
-                    <th align="left">Offer:</th>
-                    <td align="left">{{p.offerType}}</td>
-                </tr>
-                <tr>
-                    <th align="left">Area:</th>
-                    <td align="left">{{p.areaSqft}}sq.ft.</td>
-                </tr>
-                <tr>
-                    <th align="left">Address:</th>
-                    <td align="left">{{p.address}},&nbsp;&nbsp;{{p.street}}</td>
-                </tr>
-            </table>
-            </div>
+        <!-- <img class="card-img-top" src="../assets/img/forsale.png" alt="img not found" style="opacity: 0.5;"> -->
+        <div class="card-body">
+            <img class="card-img-top" src="../assets/img/home.jpg" alt="img not found">
+            <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>
+        <ng-template #loggedIn>
+            <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-success btn-sm"><i
+                        class="bi bi-check-circle"></i></button></h4>
+        </ng-template>
+        <ng-template #loggedOut>
+            <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-danger btn-sm"><i
+                        class="bi bi-check-circle"></i></button></h4>
+        </ng-template>
+        <table class="card-text">
+            <tr>
+                <th align="left">Offer:</th>
+                <td align="left">{{p.offerType}}</td>
+            </tr>
+            <tr>
+                <th align="left">Area:</th>
+                <td align="left">{{p.areaSqft}}sq.ft.</td>
+            </tr>
+            <tr>
+                <th align="left">Address:</th>
+                <td align="left">{{p.address}},&nbsp;&nbsp;{{p.street}}</td>
+            </tr>
+        </table>
         </div>
         <div class="card-footer text-muted">
             <div align="left">
