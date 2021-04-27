@@ -15,7 +15,7 @@
 <div align="center">
     <a [routerLink]="['../create']"><button class="btn btn-info"><i class="bi bi-file-earmark-plus-fill"></i>Create
             Property</button></a>&nbsp;&nbsp;
-    <a [routerLink]="['../updateuser']"><button class="btn btn-secondary"><i class="bi bi-file-person"></i></button></a>
+    <a [routerLink]="['../updateuser']"><button class="btn btn-dark"><i class="bi bi-file-person"></i>My Profile</button></a>
 </div>
 <hr>
 
@@ -45,16 +45,16 @@
             </ng-template>
             <table class="card-text">
                 <tr>
-                    <th>Offer:</th>
+                    <th align="left">Offer:</th>
                     <td align="left">{{p.offerType}}</td>
                 </tr>
                 <tr>
-                    <th>Area:</th>
+                    <th align="left">Area:</th>
                     <td align="left">{{p.areaSqft}}sq.ft.</td>
                 </tr>
                 <tr>
-                    <th>Address:</th>
-                    <td align="left">{{p.street}},&nbsp;&nbsp;{{p.address}}</td>
+                    <th align="left">Address:</th>
+                    <td align="left">{{p.address}},&nbsp;&nbsp;{{p.street}}</td>
                 </tr>
             </table>
         </div>
