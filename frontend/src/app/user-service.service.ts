@@ -9,6 +9,7 @@ import { catchError } from 'rxjs/operators';
 export class UserServiceService {
 
   id:number;
+  loginStatus:boolean=false;
   private url="http://localhost:8085/real-estate-broker-application/user"
   httpOptions={
     headers:new HttpHeaders({
@@ -16,6 +17,14 @@ export class UserServiceService {
     })
   }
   constructor( private httpClient:HttpClient ) { }
+
+  getStatus(){
+    return this.loginStatus;
+  }
+
+  setStatus(status:boolean){
+    this.loginStatus=status;
+  }
 
   setId(id:number){
     this.id=id;

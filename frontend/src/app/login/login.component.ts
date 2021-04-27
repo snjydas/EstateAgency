@@ -40,6 +40,8 @@ export class LoginComponent implements OnInit {
     this.uService.login(this.loginForm.value).subscribe(data=>{
       this.allow=data;
       if(this.allow){
+        this.uService.setStatus(true);
+        console.log(this.uService.getStatus())
         this.uService.getUserByEmail(this.loginForm.value.email).subscribe(data=>{
           this.role=data.role
           this.uService.setId(data.userId);
