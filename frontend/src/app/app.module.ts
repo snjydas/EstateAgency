@@ -41,6 +41,7 @@ import { UpdatebrokerDetailsComponent } from './admin/admin-broker/updatebroker-
 import { AddCustomerComponent } from './admin/admin-customer/add-customer/add-customer.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { AboutComponent } from './about/about.component';
     UpdatebrokerDetailsComponent,
     AddCustomerComponent,
     DevelopersComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
 
   ],
   imports: [
