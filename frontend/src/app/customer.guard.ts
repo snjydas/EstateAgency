@@ -7,14 +7,14 @@ import { UserServiceService } from './user-service.service';
   providedIn: 'root'
 })
 export class CustomerGuard implements CanActivate {
-  constructor(private uService:UserServiceService){}
+  constructor(private uService: UserServiceService) { }
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(this.uService.getUser()==="Customer"){
-        return true
-      }
-      return false;
+    if (this.uService.getUser() === "Customer") {
+      return true
+    }
+    return false;
   }
-  
+
 }

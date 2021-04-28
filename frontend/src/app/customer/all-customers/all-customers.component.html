@@ -1,5 +1,6 @@
 <style>
-    th, td{
+    th,
+    td {
         text-align: center;
     }
 </style>
@@ -14,14 +15,16 @@
 <hr>
 
 <div class="card-columns">
-    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let c of cust | filter:searchText">
+    <div class="card mb-5 rounded border shadow-sm" align="center" *ngFor="let c of cust | filter:searchText">
         <div class="card-header">
             <div align="left">
                 <b>CustomerID:{{c.userId}}</b>
             </div>
             <div align="right">
-                <button class="btn btn-danger btn-sm" (click)='deleteCustomer(c.userId)'><i class="bi bi-trash"></i></button>&nbsp;
-                <button class="btn btn-success btn-sm" [routerLink]="['/admin/customer/update',c.userId]"><i class="bi bi-pen"></i></button>
+                <button class="btn btn-danger btn-sm" (click)='deleteCustomer(c.userId)'><i
+                        class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/admin/customer/update',c.userId]"><i
+                        class="bi bi-pen"></i></button>
             </div>
         </div>
         <div class="card-body" style="float: center;">
@@ -34,9 +37,5 @@
             <i class="bi bi-geo-alt-fill"></i> {{c.city}}
         </div>
     </div>
-  
+
 </div>
-
-
-  
-

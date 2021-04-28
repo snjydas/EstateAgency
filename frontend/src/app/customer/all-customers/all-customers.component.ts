@@ -8,24 +8,24 @@ import { CustomerServiceService } from 'src/app/customer-service.service';
   styleUrls: ['./all-customers.component.css']
 })
 export class AllCustomersComponent implements OnInit {
-  cust:any[];
-  searchText:any;
+  cust: any[];
+  searchText: any;
 
-  constructor(private cService:CustomerServiceService) { }
+  constructor(private cService: CustomerServiceService) { }
 
   ngOnInit(): void {
     this.getAll();
   }
 
-  getAll(){
-    this.cService.getAllCustomers().subscribe(data=>{
-      this.cust=data;
+  getAll() {
+    this.cService.getAllCustomers().subscribe(data => {
+      this.cust = data;
     });
-    
+
   }
 
   deleteCustomer(id: number) {
-    this.cService.deleteCustomer(id).subscribe(data=>{
+    this.cService.deleteCustomer(id).subscribe(data => {
       this.getAll();
     })
   }

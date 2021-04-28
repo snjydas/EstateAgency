@@ -7,28 +7,28 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DealServiceService {
-  private url="http://localhost:8085/real-estate-broker-application/deal"
-  httpOptions={
-    headers:new HttpHeaders({
-      'Content-Type':'application/json'
+  private url = "http://localhost:8085/real-estate-broker-application/deal"
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
     })
   }
-  constructor( private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  addDeal(deal:any):Observable<any[]>{
-    return this.httpClient.post<any[]>(this.url+"/add",JSON.stringify(deal),this.httpOptions).pipe(catchError(this.handleError))
+  addDeal(deal: any): Observable<any[]> {
+    return this.httpClient.post<any[]>(this.url + "/add", JSON.stringify(deal), this.httpOptions).pipe(catchError(this.handleError))
   }
 
-  getAllDeals():Observable<any[]>{
+  getAllDeals(): Observable<any[]> {
     return this.httpClient.get<any[]>(this.url)
   }
 
-  handleError(eResponse:HttpErrorResponse){
-    if(eResponse.error instanceof ErrorEvent){
-      console.log("Clinet Side Error ="+eResponse.error.message);
+  handleError(eResponse: HttpErrorResponse) {
+    if (eResponse.error instanceof ErrorEvent) {
+      console.log("Clinet Side Error =" + eResponse.error.message);
     }
-    else{
-      console.log("Server Side Error ="+eResponse.error.message)
+    else {
+      console.log("Server Side Error =" + eResponse.error.message)
     }
     return throwError(eResponse.error.message)
   }
