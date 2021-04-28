@@ -8,9 +8,9 @@ describe('AllPropertyByCriteriaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AllPropertyByCriteriaComponent ]
+      declarations: [AllPropertyByCriteriaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

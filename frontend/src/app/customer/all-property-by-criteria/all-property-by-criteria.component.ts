@@ -8,12 +8,12 @@ import { PropertyServiceService } from 'src/app/property-service.service';
 })
 export class AllPropertyByCriteriaComponent implements OnInit {
 
-  properties:any[]
-  constructor(private pService:PropertyServiceService) { }
+  properties: any[]
+  constructor(private pService: PropertyServiceService) { }
 
   ngOnInit(): void {
-    this.pService.getPropertyByCriteria(this.pService.getCriteria()).subscribe(data=>{
-      this.properties=data
+    this.pService.getPropertyByCriteria(this.pService.getCriteria()).subscribe(data => {
+      this.properties = data
     });
   }
 

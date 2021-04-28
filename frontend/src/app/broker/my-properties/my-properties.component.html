@@ -5,15 +5,10 @@
     }
 </style>
 <div class="container" align="Center">
-    <img src="../assets/img/propertyre.jpg" style="float: center; width:100%;">
+    <img src="../assets/img/propertyre.jpg" style="float: center; width:80%;">
     <div class="centered">
-      <h1>My Properties</h1>
+      <h3>My Properties</h3>
     </div>
-</div>
-<div align="center">
-    <!-- <p style="float: center; width: 50rem;">
-        <input class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here">
-    </p> -->
 </div>
 <br><br>
 <div align="center">
@@ -36,7 +31,6 @@
                         class="bi bi-pen"></i></button>
             </div>
         </div>
-        <!-- <img class="card-img-top" src="../assets/img/forsale.png" alt="img not found" style="opacity: 0.5;"> -->
         <div class="card-body">
             <img class="card-img-top" src="../assets/img/home.jpg" alt="img not found">
             <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>

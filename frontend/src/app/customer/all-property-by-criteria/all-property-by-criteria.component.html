@@ -1,18 +1,19 @@
-
+<br>
 <div class="container" align="center">
-    <h2>Properties based on Criteria</h2>
+    <h3>Properties based on Criteria</h3>
 </div>
-
+<br>
 <hr>
 
 <div class="card-columns">
-    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let p of properties | availableProp">
+    <div class="card mb-5 rounded border shadow-sm" align="center" *ngFor="let p of properties | availableProp">
         <div class="card-header">
             <div align="left">
                 <b>Property Id:{{p.propId}}</b>
             </div>
             <div align="right">
-                <button class="btn btn-success btn-sm" [routerLink]="['/customer/deal',p.propId]">{{p.offerType | offer}}</button>
+                <button class="btn btn-success btn-sm" [routerLink]="['/customer/deal',p.propId]">{{p.offerType |
+                    offer}}</button>
             </div>
         </div>
         <div class="card-body" style="float: center;">
@@ -26,7 +27,7 @@
             </table>
         </div>
         <div class="card-footer text-muted">
-            <div  class="container" align="left">
+            <div class="container" align="left">
                 <table>
                     <tr align="left">
                         <th>Address: </th>
@@ -47,5 +48,5 @@
             </div>
         </div>
     </div>
-  
+
 </div>
