@@ -16,32 +16,35 @@
             </div>
         </div>
         <div class="card-body" style="float: center;">
-            <img class="card-img-top" src="../assets/img/broker.jpg" alt="img not found">
+            <img class="card-img-top" src="../assets/img/home.jpg" alt="img not found">
             <h4 class="card-title">{{p.configuration}}</h4>
             <table>
-                <tr>
-                    <th>Offer Cost</th>
-                    <td>{{p.offerCost}}</td>
-                </tr>
-                <tr>
-                    <th>Area in square feet</th>
+                <tr align="left">
+                    <th align="left">Area in square feet: </th>
                     <td>{{p.areaSqft}}</td>
                 </tr>
             </table>
         </div>
         <div class="card-footer text-muted">
-            <tr>
-                <th>Address: </th>
-                <td>{{p.address}}</td>
-            </tr>
-            <tr>
-                <th>Street: </th>
-                <td>{{p.street}}</td>
-            </tr>
-            <tr>
-                <th>City: </th>
-                <td>{{p.city}}</td>
-            </tr>
+            <div  class="container" align="left">
+                <table>
+                    <tr align="left">
+                        <th>Address: </th>
+                        <td>{{p.address}}</td>
+                    </tr>
+                    <tr align="left">
+                        <th>Street: </th>
+                        <td>{{p.street}}</td>
+                    </tr>
+                    <tr align="left">
+                        <th>City: </th>
+                        <td>{{p.city}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div align="right">
+                <h4>&#8377; {{p.offerCost}}</h4>
+            </div>
         </div>
     </div>
   

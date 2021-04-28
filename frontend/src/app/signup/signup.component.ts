@@ -50,7 +50,6 @@ export class SignupComponent implements OnInit {
     console.log(this.signupForm.value)
     if(this.signupForm.value.Role=="customer"){
       this.signupForm.value.custName=this.signupForm.value.name
-      console.log(this.signupForm.value.broName)
       this.cService.addCustomer(this.signupForm.value).subscribe(res=>{
         this.router.navigate(['login'])
         alert("You have succesfully registered as Customer");

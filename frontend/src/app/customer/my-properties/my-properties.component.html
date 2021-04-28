@@ -1,5 +1,5 @@
 
-<div class="container"><h2>My Properties</h2></div>
+<div class="container" align="center"><h2>My Properties</h2></div>
 
 <div class="card-columns">
     <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let p of properties">
@@ -14,16 +14,12 @@
             </div>
         </div>
         <div class="card-body" style="float: center;">
-            <img class="card-img-top" src="../assets/img/broker.jpg" alt="img not found">
+            <img class="card-img-top" src="../assets/img/home.jpg" alt="img not found">
             <h4 class="card-title">{{p.configuration}}</h4>
             <table>
                 <tr>
                     <th>offerType: </th>
                     <td>{{p.offerType}}</td>
-                </tr>
-                <tr>
-                    <th>Offer Cost: </th>
-                    <td>{{p.offerCost}}</td>
                 </tr>
                 <tr>
                     <th>Area in square feet: </th>
@@ -32,18 +28,25 @@
             </table>
         </div>
         <div class="card-footer text-muted">
-            <tr>
-                <th>Address: </th>
-                <td>{{p.address}}</td>
-            </tr>
-            <tr>
-                <th>Street: </th>
-                <td>{{p.street}}</td>
-            </tr>
-            <tr>
-                <th>City: </th>
-                <td>{{p.city}}</td>
-            </tr>
+            <div class="container" align="left">
+                <table>
+                    <tr>
+                        <th>Address: </th>
+                        <td>{{p.address}}</td>
+                    </tr>
+                    <tr>
+                        <th>Street: </th>
+                        <td>{{p.street}}</td>
+                    </tr>
+                    <tr>
+                        <th>City: </th>
+                        <td>{{p.city}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div align="right">
+                <h4>&#8377; {{p.offerCost}}</h4>
+            </div>
         </div>
     </div>
   

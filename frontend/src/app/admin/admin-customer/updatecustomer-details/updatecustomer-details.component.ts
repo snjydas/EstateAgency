@@ -16,7 +16,6 @@ export class UpdatecustomerDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.custId=this.actRouter.snapshot.params['userid'];
-    console.log("====================="+this.custId+"===========================")
     this.cService.getCustomerById(this.custId).subscribe(data=>{
       this.customer=data
     })

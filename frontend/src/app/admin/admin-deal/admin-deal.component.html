@@ -14,10 +14,6 @@
             <div align="left">
                 <b>Deal ID:{{d.dealId}}</b>
             </div>
-            <!-- <div align="right">
-                <button class="btn btn-danger btn-sm" (click)='delete(p.propId)'><i class="bi bi-trash"></i></button>&nbsp;
-                <button class="btn btn-success btn-sm" [routerLink]="['/admin/property/updating',p.propId]"><i class="bi bi-pen"></i></button>
-            </div> -->
         </div>
         <div class="card-body">
             <img class="card-img-top" src="../assets/img/property.jfif" alt="img not found">
@@ -26,20 +22,20 @@
             </table>
             <table class="table table-borderless">
                 <tr>
-                    <th>Customer Id</th>
-                    <td>{{d.customer.userId}}</td>
+                    <th align="left">Customer Id</th>
+                    <td align="left">{{d.customer.userId}}</td>
                 </tr>
                 <tr>
-                    <th>Propoerty Id</th>
-                    <td>{{d.property.propId}}</td>
+                    <th align="left">Propoerty Id</th>
+                    <td align="left">{{d.property.propId}}</td>
                 </tr>
                 <tr>
-                    <th>Deal Date</th>
-                    <td>Deal Date: {{d.dealData}}</td>
+                    <th align="left">Deal Date</th>
+                    <td align="left">{{d.dealDate | date:'yyyy-MM-dd'}}</td>
                 </tr>
                 <tr>
-                    <th>Deal Cost</th>
-                    <td>{{d.dealCost}}</td>
+                    <th align="left">Deal Cost</th>
+                    <td align="left">{{d.dealCost}}</td>
                 </tr>
             </table>
                 
