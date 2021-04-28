@@ -46,7 +46,9 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'navbar', component: NavbarComponent },
   {
-    path:'broker', component:BrokerComponent, canActivate:[BrokerGuard],
+    path: 'broker',
+    component: BrokerComponent,
+    canActivate: [BrokerGuard],
     children: [
       { path: 'update/:userid', component: UpdateComponent },
       { path: 'all', component: AllBrokersComponent },
@@ -58,21 +60,27 @@ const routes: Routes = [
     ],
   },
   {
-    path:'admin', component:AdminComponent, canActivate:[AdminGuard],
-    children:[
-      {path:'broker', component:AdminBrokerComponent, 
-        children:[
-          {path:'all', component:AllBrokersComponent},
-          {path:'add', component:CreateComponent},
-          { path: 'update/:userid', component:UpdatebrokerDetailsComponent},
-        ]},
-      {path:'customer', component:AdminCustomerComponent,
-        children:[
-          {path:'all', component:AllCustomersComponent},
-          {path: 'update/:userid', component:UpdatecustomerDetailsComponent},
-          {path: 'add', component: AddCustomerComponent}
-        ]  
-
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AdminGuard],
+    children: [
+      {
+        path: 'broker',
+        component: AdminBrokerComponent,
+        children: [
+          { path: 'all', component: AllBrokersComponent },
+          { path: 'add', component: CreateComponent },
+          { path: 'update/:userid', component: UpdatebrokerDetailsComponent },
+        ],
+      },
+      {
+        path: 'customer',
+        component: AdminCustomerComponent,
+        children: [
+          { path: 'all', component: AllCustomersComponent },
+          { path: 'update/:userid', component: UpdatecustomerDetailsComponent },
+          { path: 'add', component: AddCustomerComponent },
+        ],
       },
       { path: 'deal', component: AdminDealComponent },
       {
@@ -86,16 +94,17 @@ const routes: Routes = [
     ],
   },
   {
-    path:'customer',component:CustomerComponent, canActivate:[CustomerGuard],
-    children:[
-      {path:'search',component:PropertySearchComponent},
-      {path:'criteria',component:AllPropertyByCriteriaComponent},
-      {path:'myprops',component:MyPropertiesComponent},
-      {path:'update',component:UpdateCustomerComponent},
-      {path:'deal/:propid',component:DealComponent}
-    ]
-  }
-
+    path: 'customer',
+    component: CustomerComponent,
+    canActivate: [CustomerGuard],
+    children: [
+      { path: 'search', component: PropertySearchComponent },
+      { path: 'criteria', component: AllPropertyByCriteriaComponent },
+      { path: 'myprops', component: MyPropertiesComponent },
+      { path: 'update', component: UpdateCustomerComponent },
+      { path: 'deal/:propid', component: DealComponent },
+    ],
+  },
 ];
 
 @NgModule({

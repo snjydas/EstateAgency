@@ -6,10 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class OfferPipe implements PipeTransform {
 
   transform(value: string): string {
-    if(value=="Sell"){
+    if (value == "Sell") {
       return "Buy";
     }
-    else{
+    else {
       return "Rent";
     }
   }

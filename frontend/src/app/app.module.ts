@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BrokerComponent } from './broker/broker.component';
@@ -80,8 +79,7 @@ import { ContactComponent } from './contact/contact.component';
     AddCustomerComponent,
     DevelopersComponent,
     AboutComponent,
-    ContactComponent
-
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,9 +87,9 @@ import { ContactComponent } from './contact/contact.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
   ],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
-  bootstrap: [AppComponent]
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
