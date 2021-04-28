@@ -1,7 +1,7 @@
 <br><br><br>
 <div class="container">
     <br><br>
-    
+
     <form [formGroup]="propForm" (ngSubmit)="regProperty()">
         <h1>Create Property</h1>
         <div class="form-group card-body">
@@ -16,43 +16,36 @@
                             <option value="Plot">Plot</option>
                             <option value="Shop">Shop</option>
                         </select><br>
-                        <span *ngIf="configuration?.touched && !configuration?.valid" class="badge badge-danger">Invalid Configuration</span>
+                        <span *ngIf="configuration?.touched && !configuration?.valid" class="badge badge-danger">Invalid
+                            Configuration</span>
                     </td>
-                    <!-- <td align="left">
-                        <input class="form-control" style="width: 30rem;" placeholder="Enter configuration"
-                            formControlName="configuration">
-                        <span *ngIf="configuration?.touched && !configuration.valid" class="badge badge-danger">Invalid Configuration</span>
-                    </td> -->
                 </tr>
                 <tr>
                     <td align="left" style="line-height: 50px;">Offer Type</td>
                     <td align="left">
-                        <select class="form-select" style="width: 30rem; height: 2.5rem;"
-                            formControlName='offerType'>
+                        <select class="form-select" style="width: 30rem; height: 2.5rem;" formControlName='offerType'>
                             <option value="" selected disabled>Please select an offer type</option>
                             <option value="Sell">Sell</option>
                             <option value="Rent">Rent</option>
                         </select><br>
-                        <span *ngIf="offerType?.touched && !offerType?.valid" class="badge badge-danger">Invalid offer type</span>
+                        <span *ngIf="offerType?.touched && !offerType?.valid" class="badge badge-danger">Invalid offer
+                            type</span>
                     </td>
-                    <!-- <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter type of offer"
-                            formControlName="offerType">
-                        <span *ngIf="offerType?.touched && !offerType?.valid" class="badge badge-danger">Invalid offer type</span>
-                    </td> -->
                 </tr>
                 <tr>
                     <td align="left" style="line-height: 50px;">Offer Cost</td>
-                    <td align="left"><input class="form-control" style="width: 30rem;"
-                            placeholder="Enter offer cost" formControlName="offerCost">
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter offer cost"
+                            formControlName="offerCost">
                         <span *ngIf="offerCost?.touched && !offerCost?.valid" class="badge badge-danger">Invalid
                             cost</span>
                     </td>
                 </tr>
                 <tr>
                     <td align="left" style="line-height: 50px;">Area in sqft.</td>
-                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter area" formControlName="areaSqft">
-                        <span *ngIf="areaSqft?.touched && !areaSqft?.valid" class="badge badge-danger">Invalid area</span>
-                        <!-- <span *ngIf="as?.touched && !as?.valid" class="badge badge-danger">Invalid area</span> -->
+                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter area"
+                            formControlName="areaSqft">
+                        <span *ngIf="areaSqft?.touched && !areaSqft?.valid" class="badge badge-danger">Invalid
+                            area</span>
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +55,7 @@
                             formControlName='city'>
                             <option value="" selected disabled>Please select a city </option>
                             <option value="Ahmedabad">Ahmedabad</option>
-                            <option value="Assam">Assam</option>
+                            <option value="Guwahati">Guwahati</option>
                             <option value="Bengaluru">Bengaluru</option>
                             <option value="Bhopal">Bhopal</option>
                             <option value="Chennai">Chennai</option>
@@ -87,7 +80,8 @@
                     <td align="left" style="line-height: 50px;">Address</td>
                     <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter Address"
                             formControlName="address">
-                        <span *ngIf="address?.touched && !address?.valid" class="badge badge-danger">Invalid address</span>
+                        <span *ngIf="address?.touched && !address?.valid" class="badge badge-danger">Invalid
+                            address</span>
                     </td>
                 </tr>
                 <tr>
@@ -97,86 +91,20 @@
                         <span *ngIf="street?.touched && !street?.valid" class="badge badge-danger">Invalid street</span>
                     </td>
                 </tr>
-                <!-- <tr>
-                    <td style="line-height: 50px;">Status</td>
-                    <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter status"
-                            formControlName="status">
-                        <span *ngIf="status?.touched && !status?.valid" class="badge badge-danger">Invalid status</span>
-                    </td>
-                </tr> -->
                 <tr>
                     <td align="left" align="left" style="line-height: 50px;">Status</td>
                     <td align="left">
-                        <select class="form-select" style="width: 30rem; height: 2.5rem;"
-                            formControlName='status'>
+                        <select class="form-select" style="width: 30rem; height: 2.5rem;" formControlName='status'>
                             <option value="" selected disabled>Please select status</option>
                             <option value="true">True</option>
                             <option value="false">False</option>
                         </select><br>
                         <span *ngIf="status?.touched && !status?.valid" class="badge badge-danger">Invalid status</span>
                     </td>
-                    <!-- <td align="left"><input class="form-control" style="width: 30rem;" placeholder="Enter type of offer"
-                            formControlName="offerType">
-                        <span *ngIf="offerType?.touched && !offerType?.valid" class="badge badge-danger">Invalid offer type</span>
-                    </td> -->
                 </tr>
             </table>
         </div>
         <button type="submit">Register</button>
         <br>
     </form>
-
 </div>
-
-
-
-
-
-
-<!-- <hr>
-<div class="card text-white bg-secondary" align="center" style="width: 50rem; float: center;">
-    <form [formGroup]="propForm" (ngSubmit)="regProperty()">
-        <div class="card-header">
-            <h4>Property Registration Form</h4>
-        </div>
-        <div class="form-group card-body">
-            <table>
-                <tr>
-                    <th>Configuration</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter Configuration" formControlName="configuration"></td>
-                </tr>
-                <tr>
-                    <th>Offer Type</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter Type" formControlName="offerType"></td>
-                </tr>
-                <tr>
-                    <th>Offer Cost</th>
-                    <td><input type="email" class="form-control" style="width: 30rem;" placeholder="Enter price" formControlName="offerCost"></td>
-                </tr>
-                <tr>
-                    <th>AreaSqft</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter Area in sqft." formControlName="areaSqft"></td>
-                </tr>
-                <tr>
-                    <th>City</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter city" formControlName="city"></td>
-                </tr>
-                <tr>
-                    <th>Address</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter Address" formControlName="address"></td>
-                </tr>
-                <tr>
-                    <th>Street</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter street" formControlName="street"></td>
-                </tr>
-                <tr>
-                    <th>Status</th>
-                    <td><input class="form-control" style="width: 30rem;" placeholder="Enter status" formControlName="status"></td>
-                </tr>
-            </table>
-        </div>
-        <div class="form-group card-footer">
-            <button class="btn btn-success btn-sm">Register</button>
-        </div>
-    </form>
-</div> -->
