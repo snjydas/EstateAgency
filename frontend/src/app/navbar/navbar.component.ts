@@ -9,15 +9,15 @@ import { UserServiceService } from '../user-service.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private uService:UserServiceService, private router:Router) { }
+  constructor(private uService: UserServiceService, private router: Router) { }
   ngOnInit(): void {
   }
 
-  login():boolean{
+  login(): boolean {
     return this.uService.getStatus()
   }
 
-  logout(){
+  logout() {
     this.uService.setStatus(false)
     this.uService.setUser("none");
   }

@@ -10,59 +10,59 @@ import { UserServiceService } from '../user-service.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private role:string
-  loginForm:FormGroup
-  private allow:boolean;
+  private role: string
+  loginForm: FormGroup
+  private allow: boolean;
 
-  alert:boolean
-  
-  
+  alert: boolean
 
-  constructor(private fb:FormBuilder, private uService:UserServiceService, private router:Router) { }
+
+
+  constructor(private fb: FormBuilder, private uService: UserServiceService, private router: Router) { }
 
   ngOnInit(): void {
-    this.loginForm=this.fb.group({
-      email:['',Validators.required],
-      password:['',Validators.required]
+    this.loginForm = this.fb.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
     })
   }
 
-  get email(){
+  get email() {
     return this.loginForm.get('email')
   }
 
-  get password(){
+  get password() {
     return this.loginForm.get('password')
   }
 
 
-  login(){
-    this.uService.login(this.loginForm.value).subscribe(data=>{
-      this.allow=data;
-      if(this.allow){
+  login() {
+    this.uService.login(this.loginForm.value).subscribe(data => {
+      this.allow = data;
+      if (this.allow) {
         this.uService.setStatus(true);
-        this.uService.getUserByEmail(this.loginForm.value.email).subscribe(data=>{
-          this.role=data.role
+        this.uService.getUserByEmail(this.loginForm.value.email).subscribe(data => {
+          this.role = data.role
           this.uService.setId(data.userId);
-          if(this.role==="Broker"){
+          if (this.role === "Broker") {
             this.uService.setUser("Broker")
             this.router.navigate(['/broker'])
           }
-          else if(this.role==="Admin"){
+          else if (this.role === "Admin") {
             this.uService.setUser("Admin")
             this.router.navigate(['/admin'])
           }
-          else{
+          else {
             this.uService.setUser("Customer")
             this.router.navigate(['/customer'])
           }
         })
       }
-      }, err=>{
-        this.alert=true
-      })
-    
+    }, err => {
+      this.alert = true
+    })
+
   }
-  
+
 
 }
