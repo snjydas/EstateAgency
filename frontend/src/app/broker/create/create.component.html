@@ -1,10 +1,12 @@
 <br>
-<div class="container" align="center">
+<div class="container" >
     <br>
-    <img src="/assets/img/forms.png" alt="img not found" style="float: center; height: 400px; width: 400px;">
-    <h1>Create Broker Account</h1>
-
+    <div align="center">
+        <img src="/assets/img/forms.png" alt="img not found" style="float: center; height: 400px; width: 400px;">
+    </div>
     <form [formGroup]="broForm" (ngSubmit)='regBroker()'>
+        <h1>Create Broker Account</h1>
+        <div class="form-group card-body">
             <table class="table table-borderless ">
                 <tr>
                     <td style="line-height: 50px;">Name</td>
@@ -43,11 +45,11 @@
                             formControlName='city'>
                             <option value="" selected disabled>Please select a city </option>
                             <option value="Ahmedabad">Ahmedabad</option>
-                            <option value="Guwahati">Guwahati</option>
                             <option value="Bengaluru">Bengaluru</option>
                             <option value="Bhopal">Bhopal</option>
                             <option value="Chennai">Chennai</option>
                             <option value="Delhi">Delhi</option>
+                            <option value="Guwahati">Guwahati</option>
                             <option value="Hyderabad">Hyderabad</option>
                             <option value="Jaipur">Jaipur</option>
                             <option value="Kanpur">Kanpur</option>
@@ -61,10 +63,11 @@
                             <option value="Pune">Pune</option>
                             <option value="Vizag">Vizag</option>
                         </select><br>
-                        <span *ngIf="city?.touched && !city?.valid" class="badge badge-daner">Invalid City</span>
+                        <span *ngIf="city?.touched && !city?.valid" class="badge badge-warning">Invalid City</span>
                     </td>
                 </tr>
             </table>
+        </div>
         <button type="submit">Register</button>
     </form>
     <br><br>

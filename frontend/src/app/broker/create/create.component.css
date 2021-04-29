@@ -25,9 +25,9 @@ h2 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 100;
-  line-height: 25px;
+  line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
 }
@@ -160,9 +160,6 @@ input {
 }
 
 .overlay {
-  background: #2eca6a;
-  background: -webkit-linear-gradient(to right, #60c286, #2eca6a);
-  background: linear-gradient(to right, #2eca6a, #2eca6a);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -251,14 +248,11 @@ footer a {
   text-decoration: none;
 }
 
-.card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 15px; /* Added */
+select {
+  display: block;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  border: white;
+  color: gray;
+  border-radius: 3px;
 }
-.box{
-    width: 80%;
-    position: center;
-    margin-bottom: 15px;
-}
-
