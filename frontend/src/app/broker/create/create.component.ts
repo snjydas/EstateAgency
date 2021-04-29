@@ -40,7 +40,7 @@ export class CreateComponent implements OnInit {
   }
   regBroker(){
     this.bService.addBroker(this.broForm.value).subscribe(res=>{
-      this.router.navigate(['/admin/broker'])
+      this.router.navigate(['/admin/broker/all'])
     }, err=>{
       alert("User exists with this Email or mobile number")
       console.log(err);

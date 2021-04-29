@@ -23,7 +23,7 @@ export class UpdateMypropsComponentA implements OnInit {
   }
   updateData(){
     this.pService.updateProperty(this.prop).subscribe(res=>{
-      this.router.navigate(['/admin/property/']);
+      this.router.navigate(['/admin/property/all']);
     })
   }
 

@@ -24,7 +24,7 @@ export class UpdatecustomerDetailsComponent implements OnInit {
 
   updateCustomer(){
     this.cService.updateCustomer(this.customer).subscribe(res=>{
-      this.router.navigate(['/admin/customer'])
+      this.router.navigate(['/admin/customer/all'])
     }, err=>{
       console.log(err);
     }
