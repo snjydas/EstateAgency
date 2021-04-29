@@ -16,9 +16,9 @@ export class CreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.broForm = this.fb.group({
-      broName:['',Validators.required],
+      broName:['',[Validators.required, Validators.pattern("[a-zA-Z]{3,}$")]],
       email:['',[Validators.required, Validators.pattern("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")]],
-      password: ['', Validators.required],
+      password: ['',[Validators.required, Validators.pattern("^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$")]],
       mobile:['',[Validators.required, Validators.pattern("^[7-9][0-9]{9}$")]],
       city:['', Validators.required]
     })

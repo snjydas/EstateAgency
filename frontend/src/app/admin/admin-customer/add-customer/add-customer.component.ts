@@ -15,9 +15,9 @@ export class AddCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerForm=this.fb.group({
-      custName:['',Validators.required],
+      custName:['',[Validators.required, Validators.pattern("[a-zA-Z]{3,}$")]],
       email:['',[Validators.required, Validators.pattern("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")]],
-      password:['',Validators.required],
+      password:['',[Validators.required, Validators.pattern("^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$")]],
       mobile:['',[Validators.required, Validators.pattern("^[7-9][0-9]{9}$")]],
       city:['',Validators.required]
     })

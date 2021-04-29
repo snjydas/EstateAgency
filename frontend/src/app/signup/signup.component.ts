@@ -12,15 +12,16 @@ import { CustomerServiceService } from '../customer-service.service';
 export class SignupComponent implements OnInit {
 
   signupForm: FormGroup
+  
   constructor(private fb:FormBuilder, private bService:BrokerServiceService, private cService:CustomerServiceService, private router:Router) { }
 
   ngOnInit(): void {
     this.signupForm=this.fb.group({
       broName:[''],
       custName:[''],
-      name:['',Validators.required],
+      name:['', [Validators.required, Validators.pattern("[a-zA-Z]{3,}$")]],
       email:['',[Validators.required, Validators.pattern("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")]],
-      password:['',Validators.required],
+      password:['',[Validators.required, Validators.pattern("^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$")]],
       mobile:['',[Validators.required, Validators.pattern("^[7-9][0-9]{9}$")]],
       city:['',Validators.required],
       Role:['',Validators.required],

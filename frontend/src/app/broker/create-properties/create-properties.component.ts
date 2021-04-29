@@ -21,8 +21,8 @@ export class CreatePropertiesComponent implements OnInit {
     this.propForm = this.fb.group({
       configuration:['',Validators.required],
       offerType: ['', Validators.required],
-      offerCost: ['', Validators.required],
-      areaSqft:['', Validators.required],
+      offerCost: ['', [Validators.required, Validators.pattern("[0-9]{3,}")]],
+      areaSqft:['', [Validators.required, Validators.pattern("[0-9]{2,10}")]],
       city:['', Validators.required],
       address:['', Validators.required],
       street:['', Validators.required],

@@ -33,7 +33,7 @@
 				<input type="password" placeholder="Password" formControlName="password" />
 				<span *ngIf="password?.touched && !password?.valid" class="badge badge-warning">Invalid Password</span>
 			</div>
-			<button align="center" type="submit">Sign In</button>
+			<button align="center" [disabled]="!loginForm.valid" type="submit">Sign In</button>
 
 		</form>
 
