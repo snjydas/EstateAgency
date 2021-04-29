@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,700;1,400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,700;1,400&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 h1 {
     font-weight: bold;
-    font-family: "Alegreya", serif !important;
+    /* font-family: "Alegreya", serif !important; */
+    font-family: "Montserrat", sans-serif;
     margin: 0;
   }
