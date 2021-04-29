@@ -26,6 +26,7 @@ export class UpdatebrokerDetailsComponent implements OnInit {
     this.bService.updateBroker(this.broker).subscribe(res=>{
       this.router.navigate(['/admin/broker'])
     }, err=>{
+      alert("User with this Email or mobile number alread exists. Please try with different details")
       console.log(err);
     }
     );

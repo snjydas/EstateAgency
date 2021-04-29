@@ -15,6 +15,10 @@ export class AllPropertiesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getAll();
+  }
+
+  getAll(){
     this.pService.getAllProperties().subscribe((data) => {
       this.properties = data;
     });
@@ -22,7 +26,7 @@ export class AllPropertiesComponent implements OnInit {
 
   delete(id: number) {
     this.pService.deleteProperty(id).subscribe((data) => {
-      this.router.navigate(['admin/property/']);
+      this.getAll();
     });
   }
 }

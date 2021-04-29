@@ -63,7 +63,7 @@ export class SignupComponent implements OnInit {
         this.router.navigate(['login'])
         alert("You have succesfully registered as Broker");
       }, err=>{
-        alert("User with this Email or Mobile number already exists. Try with different details");
+        alert("User with this Email or Mobile number already exists. Please try with different details");
       })
     }
     

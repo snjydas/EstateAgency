@@ -26,6 +26,7 @@ export class UpdateUserComponent implements OnInit {
       this.bService.updateBroker(this.broker).subscribe(res=>{
         this.router.navigate(['broker'])
       }, err=>{
+        alert("User with this Email or mobile number already exists. Please try with different details")
         console.log(err);
       }
       );
