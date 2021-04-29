@@ -41,7 +41,7 @@ export class CustomerServiceService {
 
   handleError(eResponse: HttpErrorResponse) {
     if (eResponse.error instanceof ErrorEvent) {
-      console.log("Clinet Side Error =" + eResponse.error.message);
+      console.log("Client Side Error =" + eResponse.error.message);
     }
     else {
       console.log("Server Side Error =" + eResponse.error.message)
