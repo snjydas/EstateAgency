@@ -23,9 +23,14 @@ export class AllBrokersComponent implements OnInit {
     
   }
   delete(broid:number){
-    this.bService.deleteBroker(broid).subscribe(data=>{
+    if(confirm("Are you sure you want to delete this item?")){
+      this.bService.deleteBroker(broid).subscribe(data=>{
+        this.getAll();
+      });
+    }
+    else{
       this.getAll();
-    })
+    }
   }
   
 
