@@ -24,9 +24,15 @@ export class MyPropertiesComponentB implements OnInit {
     });
   }
   delete(id:number){
-    this.pService.deleteProperty(id).subscribe(data=>{
+    if(confirm("Are you sure you want to delete?")){
+      this.pService.deleteProperty(id).subscribe(data=>{
+        this.getProperty();
+      });
+    }
+    else{
       this.getProperty();
-    })
+    }
+    
   }
 
 }
