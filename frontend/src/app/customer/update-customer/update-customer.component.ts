@@ -25,7 +25,8 @@ export class UpdateCustomerComponent implements OnInit {
     if(this.customer.password==this.pass)
     {
       this.cService.updateCustomer(this.customer).subscribe(res=>{
-        this.router.navigate(['customer'])
+        this.router.navigate(['customer']);
+        alert("Your details updated succesfully")
       }, err=>{
         console.log(err);
       }

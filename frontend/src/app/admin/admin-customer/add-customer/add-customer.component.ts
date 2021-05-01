@@ -43,6 +43,7 @@ export class AddCustomerComponent implements OnInit {
     this.customerForm.value.Role="customer"
     this.cService.addCustomer(this.customerForm.value).subscribe(res=>{
       this.router.navigate(['/admin/customer/all'])
+      alert("Customer added Succefully")
     }, err=>{
       alert("User with given Email or Mobile number already exists. Please try with different details")
     })

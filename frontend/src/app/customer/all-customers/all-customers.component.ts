@@ -25,9 +25,15 @@ export class AllCustomersComponent implements OnInit {
   }
 
   deleteCustomer(id: number) {
-    this.cService.deleteCustomer(id).subscribe(data => {
+    if(confirm("Are you sure you want to delete?")){
+      this.cService.deleteCustomer(id).subscribe(data => {
+        this.getAll();
+      })
+    }
+    else{
       this.getAll();
-    })
+    }
+    
   }
 
 }

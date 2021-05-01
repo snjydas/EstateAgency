@@ -33,7 +33,8 @@ export class DealComponent implements OnInit {
       }
     }
     this.dService.addDeal(this.deal).subscribe(ref=>{
-      this.router.navigate(['customer/myprops/'])
+      this.router.navigate(['customer/myprops/']);
+      alert("You have succesfully brought this property")
     })
   }
 
